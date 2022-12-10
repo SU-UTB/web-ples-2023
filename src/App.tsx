@@ -1,23 +1,22 @@
-import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
+import Headline from "./components/headline/Headline";
+import Paragraph from "./components/paragraph/Paragraph";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <Headline level={1} align="center">
+          Pátek 3. 3. 2023 od 19:00
+        </Headline>
+        <Paragraph align="right">
+          Lorem ipsum dolor sit amet consectetur. Integer aliquam fermentum
+          suspendisse odio ut a elit curabitur porttitor. Eget turpis urna etiam
+          placerat at tristique porttitor mollis adipiscing. Facilisis ultrices
+          et sed et in congue nec convallis eget. Felis dui magna vel velit
+          convallis dignissim nulla porta felis. Nisl interdum metus faucibus
+          dignissim.
+        </Paragraph>
       </header>
     </div>
   );
