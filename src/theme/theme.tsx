@@ -23,15 +23,8 @@ const theme = {
   // TODO: import fonts (.woff)
   // TODO: create fontface for each font in index.css
   fonts: {
-    body: "Clash-Display-Regular",
-    heading: "Clash-Display-Medium",
-    description: "Poppins-Regular",
-    poppinsRegular: "Poppins-Regular",
-    poppinsMedium: "Poppins-Medium",
-    poppinsBold: "Poppins-Bold",
-    clashRegular: "Clash-Display-Regular",
-    clashMedium: "Clash-Display-Medium",
-    clashBold: "Clash-Display-Bold",
+    heading: "Creative-Vintage-Draft",
+    monsterRegular: "Monsterrat-Regular",
   },
   fontSizeElements: {
     h1: 48,
@@ -44,16 +37,13 @@ const theme = {
     h2phone: 12,
     h3phone: 10,
     caption: 8,
+    paragraphDesktop: 16,
+    paragraphTablet: 14,
+    paragraphMobile: 10,
   },
   colors: {
     text: "#ffffff",
-    subtitle: "#bebebe",
-    border: "#ffffff",
-    background: "#000000",
-    primary: "#ffb22c",
-    primaryActive: "#fff500",
-    danger: "#e42528",
-    hamburger: "#1d1d1d",
+    background: "lightblue",
   },
   animation: {
     transitionBasic: "all 0.3s ease",
