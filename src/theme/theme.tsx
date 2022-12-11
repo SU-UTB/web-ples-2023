@@ -20,8 +20,6 @@ const theme = {
 
     gteDesktopLgQuery: "min-width: 1400px",
   },
-  // TODO: import fonts (.woff)
-  // TODO: create fontface for each font in index.css
   fonts: {
     heading: "Creative-Vintage-Draft",
     monsterRegular: "Monsterrat-Regular",
