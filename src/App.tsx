@@ -1,15 +1,16 @@
 import "./App.css";
 import Fold from "./components/layout/Fold";
-import Layout from "./components/layout/Layout";
 import Intro from "./sections/intro/Intro";
+import Program from "./sections/program/Program";
+import Tickets from "./sections/tickets/Tickets";
 
 function App() {
   return (
     <>
       <Fold />
-      <Layout>
-        <Intro />
-      </Layout>
+      <Intro />
+      <Tickets />
+      <Program />
     </>
   );
 }

@@ -2,17 +2,23 @@ import styled, { css } from "styled-components";
 import theme from "../../theme/theme";
 
 export const Wrapper = styled.div<{
-  level: string;
   inverse?: boolean;
-  align?: string;
+  align?: "left" | "center" | "right";
+  card?: boolean;
 }>(
-  ({ inverse, align }) => css`
+  ({ inverse, align = "left", card }) => css`
     font-family: ${theme.fonts.heading};
     display: flex;
     align-items: center;
     justify-content: space-between;
+    line-height: 2em;
     font-size: ${theme.fontSizeElements.h2}px;
-    line-height: 30px;
+
+    ${card &&
+    css`
+      font-size: ${theme.fontSizeElements.cardDesktop}px;
+      margin-bottom: 0.5em;
+    `}
 
     ${inverse &&
     css`
@@ -26,11 +32,17 @@ export const Wrapper = styled.div<{
 
     @media screen and (${theme.breakpoints.tabletQuery}) {
       font-size: ${theme.fontSizeElements.h3}px;
-      line-height: 20px;
+      ${card &&
+      css`
+        font-size: ${theme.fontSizeElements.cardTablet}px;
+      `}
     }
     @media screen and (${theme.breakpoints.mobileQuery}) {
       font-size: ${theme.fontSizeElements.h4}px;
-      line-height: 10px;
+      ${card &&
+      css`
+        font-size: ${theme.fontSizeElements.cardMobile}px;
+      `}
     }
   `
 );

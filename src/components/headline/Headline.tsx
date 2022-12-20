@@ -2,31 +2,20 @@ import React from "react";
 import { Wrapper } from "./Headline.styled";
 
 interface HeadlinePropsInterface {
-  tag?: React.ElementType | keyof JSX.IntrinsicElements;
-  level?: number | string;
-  gap?: number;
   children: React.ReactNode;
   align?: "left" | "center" | "right";
   inverse?: boolean;
-  font?: "clash" | "poppins";
+  card?: boolean;
 }
 
 const Headline: React.FC<HeadlinePropsInterface> = ({
-  tag,
-  level,
   children,
   align = "left",
   inverse,
-  font,
+  card,
 }) => {
   return (
-    <Wrapper
-      as={tag || `h${level}`}
-      level={`h${level}`}
-      align={align}
-      inverse={inverse}
-      font={font}
-    >
+    <Wrapper align={align} inverse={inverse} card={card}>
       {children}
     </Wrapper>
   );
