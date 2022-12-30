@@ -2,6 +2,7 @@ import Headline from "../../components/headline/Headline";
 import {
   WrapperSection,
   WrapperMain,
+  CardWrapper,
 } from "../../components/layout/wrapper/Wrapper.styled";
 import { timeline, sideProgram } from "./program.content";
 import {
@@ -11,7 +12,6 @@ import {
   Activity,
   ProgramCard,
   CardImageWrapper,
-  CardWrapper,
   CardText,
 } from "./Program.styled";
 import frozenImg from "../../assets/images/frozen.jpg";

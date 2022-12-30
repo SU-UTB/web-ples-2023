@@ -29,24 +29,6 @@ export const Activity = styled.div`
   text-align: left;
 `;
 
-export const CardWrapper = styled.div`
-  display: grid;
-  max-width: 90%;
-  grid-template-columns: repeat(4, 1fr);
-  margin-bottom: 2em;
-
-  @media screen and (${theme.breakpoints.tabletQuery}) {
-    grid-template-columns: repeat(2, 1fr);
-    max-width: 70%;
-    font-size: ${theme.fontSizeElements.paragraphTablet}px;
-  }
-  @media screen and (${theme.breakpoints.mobileQuery}) {
-    grid-template-columns: repeat(2, 1fr);
-    max-width: 90%;
-    font-size: ${theme.fontSizeElements.paragraphMobile}px;
-  }
-`;
-
 export const ProgramCard = styled.a`
   display: block;
   padding: 1em;
