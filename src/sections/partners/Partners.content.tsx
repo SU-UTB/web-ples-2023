@@ -1,4 +1,4 @@
-import su from "../../assets/images/su.jpg";
+import su from "../../assets/images/logos/su.jpg";
 
 export const partners = [
   {

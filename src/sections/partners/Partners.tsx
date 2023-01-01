@@ -10,7 +10,7 @@ import { PartnerLogo, PartnerImg } from "./Partners.styled";
 
 const Partners = () => {
   return (
-    <WrapperMain>
+    <WrapperMain id="partneri">
       <WrapperSection centered>
         <Headline>Partneři</Headline>
         <CardWrapper>

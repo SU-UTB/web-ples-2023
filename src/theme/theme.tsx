@@ -40,6 +40,8 @@ const theme = {
   colors: {
     text: "#ffffff",
     background: "lightblue",
+    primary: "white",
+    secondary: "black",
   },
   animation: {
     transitionBasic: "all 0.3s ease",

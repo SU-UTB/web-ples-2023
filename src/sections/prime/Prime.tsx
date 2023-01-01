@@ -1,4 +1,5 @@
 import Headline from "../../components/headline/Headline";
+import Subheadline from "../../components/headline/subheadline/Subheadline";
 import {
   WrapperMain,
   WrapperSection,
@@ -6,10 +7,10 @@ import {
 
 const Prime = () => {
   return (
-    <WrapperMain>
+    <WrapperMain background>
       <WrapperSection centered>
         <Headline>Pátek 3. 3. 2023 od 19:00</Headline>
-        <Headline>Kongresové centrum Zlín</Headline>
+        <Subheadline>Kongresové centrum Zlín</Subheadline>
       </WrapperSection>
     </WrapperMain>
   );

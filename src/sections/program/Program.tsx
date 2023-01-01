@@ -18,7 +18,7 @@ import frozenImg from "../../assets/images/frozen.jpg";
 
 const Program = () => {
   return (
-    <WrapperMain>
+    <WrapperMain id="program">
       <WrapperSection centered>
         <Headline>Program</Headline>
         <WrapperTimeline>

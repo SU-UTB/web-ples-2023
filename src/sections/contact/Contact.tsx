@@ -14,7 +14,7 @@ import {
 
 const Contact = () => {
   return (
-    <WrapperMain>
+    <WrapperMain id="kontakt">
       <WrapperSection centered>
         <Headline>Kontakty</Headline>
         <WrapperContact>
