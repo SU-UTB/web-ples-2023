@@ -1,5 +1,6 @@
 import "./App.css";
 import Fold from "./components/layout/Fold";
+import Footer from "./components/layout/footer/Footer";
 import HamburgerMenu from "./components/layout/navbar/hamburgerMenu/HamburgerMenu";
 import Navbar from "./components/layout/navbar/Navbar";
 import Contact from "./sections/contact/Contact";
@@ -27,6 +28,7 @@ function App() {
       <Program />
       <Contact />
       <Partners />
+      <Footer />
     </>
   );
 }

@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const Unfold = styled.div`
   display: none;
-  @media (max-width: 300px) {
+  @media (max-width: 320px) {
     display: block !important;
     position: fixed;
     overflow: hidden;

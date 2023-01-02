@@ -5,6 +5,7 @@ import theme from "../../theme/theme";
 
 const Wrapper = styled.div`
   text-align: left;
+  margin-right: 6em;
 `;
 
 const Link = styled.a`

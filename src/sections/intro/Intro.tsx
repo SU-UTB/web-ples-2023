@@ -11,7 +11,7 @@ import frozenImg from "../../assets/images/frozen.jpg";
 
 const Intro = () => {
   return (
-    <WrapperMain>
+    <WrapperMain id="oplese">
       <WrapperSection>
         <WrapperHalf>
           <WrapperCentered>

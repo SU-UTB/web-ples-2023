@@ -1,6 +1,5 @@
 /* @ts-ignore */
 import { slide as Menu } from "react-burger-menu";
-import styled, { css } from "styled-components";
 import theme from "../../../../theme/theme";
 
 type PropsHamburgerMenu = {
@@ -76,6 +75,9 @@ function HamburgerMenu({ pageWrapId, outerContainerId }: PropsHamburgerMenu) {
       right
       isOpen={false}
     >
+      <a className="menu-item" href="#oplese">
+        O plese
+      </a>
       <a className="menu-item" href="#vstupenky">
         Vstupenky
       </a>
