@@ -4,7 +4,6 @@ import {
   WrapperMain,
   CardWrapper,
 } from "../../components/layout/wrapper/Wrapper.styled";
-import { CardImageWrapper, ProgramCard } from "../program/Program.styled";
 import { partners } from "./Partners.content";
 import { PartnerLogo, PartnerImg } from "./Partners.styled";
 

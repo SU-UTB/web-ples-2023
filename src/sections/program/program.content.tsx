@@ -1,4 +1,7 @@
-export const timeline = [
+import ProgramItem from "../../types/TProgram";
+import SideProgramItem from "../../types/TSideProgram";
+
+export const timeline: ProgramItem[] = [
   {
     time: "19:00",
     activity: "Otevření: ve foyer zpívá Magdalena Malaníková",
@@ -49,7 +52,7 @@ export const timeline = [
   },
 ];
 
-export const sideProgram = [
+export const sideProgram: SideProgramItem[] = [
   {
     name: "Cocktail workshop",
     date: "22. 2. 2023",

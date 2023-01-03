@@ -11,11 +11,7 @@ export const Wrapper = styled.div<{
     justify-content: space-between;
     line-height: 2em;
     font-size: ${theme.fontSizeElements.h3}px;
-
-    ${inverse &&
-    css`
-      color: white;
-    `}
+    color: ${inverse ? `${theme.colors.inverse}` : `${theme.colors.text}px`};
 
     @media screen and (${theme.breakpoints.tabletQuery}) {
       font-size: ${theme.fontSizeElements.h4}px;

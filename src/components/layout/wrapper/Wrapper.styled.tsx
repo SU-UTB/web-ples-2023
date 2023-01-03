@@ -35,6 +35,7 @@ export const WrapperSection = styled.div<{
       align-items: center;
       flex-direction: column;
     `}
+
     @media screen and (${theme.breakpoints.lteTabletQuery}) {
       flex-direction: column;
       gap: 0;

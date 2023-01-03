@@ -1,5 +1,6 @@
 import { GteDesktop } from "../../../theme/MediaQueries";
 import Logo from "../../logo/Logo";
+import { navbarItems } from "./Navbar.content";
 import { Menu, MenuWrapper, MenuItem } from "./Navbar.styled";
 
 function Navbar() {
@@ -8,11 +9,11 @@ function Navbar() {
       <Logo />
       <GteDesktop>
         <Menu>
-          <MenuItem href="#oplese">O plese</MenuItem>
-          <MenuItem href="#vstupenky">Vstupenky</MenuItem>
-          <MenuItem href="#program">Program</MenuItem>
-          <MenuItem href="#kontakt">Kontakt</MenuItem>
-          <MenuItem href="#partneri">Partneři</MenuItem>
+          {navbarItems.map((item, index) => (
+            <MenuItem key={index} href={item.tag}>
+              {item.text}
+            </MenuItem>
+          ))}
         </Menu>
       </GteDesktop>
     </MenuWrapper>

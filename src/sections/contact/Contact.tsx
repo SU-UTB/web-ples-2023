@@ -22,7 +22,7 @@ const Contact = () => {
             <ContactWrapper key={index}>
               <Row>
                 <LeftSide>
-                  <div>{item.function}</div>
+                  <div>{item.position}</div>
                   <div>{item.phone}</div>
                 </LeftSide>
                 <RightSide>
