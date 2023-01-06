@@ -3,10 +3,10 @@ import theme from "../../../theme/theme";
 
 export const MenuWrapper = styled.div`
   display: flex;
-  width: 90%;
   max-width: 1600px;
-  margin: 1em auto;
-  align-items: center;
+  margin: 3em auto 0;
+  gap: 3em;
+  justify-content: center;
   @media screen and (${theme.breakpoints.lteTabletQuery}) {
     display: flex;
     align-items: center;
@@ -16,13 +16,6 @@ export const MenuWrapper = styled.div`
     margin: 0 auto;
     position: relative;
   }
-`;
-
-export const Menu = styled.div`
-  display: flex;
-  width: 100%;
-  justify-content: flex-end;
-  gap: 3em;
 `;
 
 export const MenuItem = styled.a`

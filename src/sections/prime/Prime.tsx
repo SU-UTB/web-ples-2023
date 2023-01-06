@@ -7,7 +7,7 @@ import {
 
 const Prime = () => {
   return (
-    <WrapperMain background>
+    <WrapperMain>
       <WrapperSection centered>
         <Headline>Pátek 3. 3. 2023 od 19:00</Headline>
         <Subheadline>Kongresové centrum Zlín</Subheadline>

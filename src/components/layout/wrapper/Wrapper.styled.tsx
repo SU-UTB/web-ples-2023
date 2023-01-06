@@ -1,23 +1,14 @@
 import styled, { css } from "styled-components";
 import theme from "../../../theme/theme";
 
-export const WrapperMain = styled.div<{
-  background?: boolean;
-}>(
-  ({ background }) => css`
-    font-family: ${theme.fonts.monsterRegular};
-    padding: 5rem 0;
+export const WrapperMain = styled.div`
+  font-family: ${theme.fonts.monsterRegular};
+  padding: 5rem 0;
 
-    ${background &&
-    css`
-      background-color: ${theme.colors.background};
-    `}
-
-    @media screen and (${theme.breakpoints.lteTabletQuery}) {
-      padding: 1rem 0;
-    }
-  `
-);
+  @media screen and (${theme.breakpoints.lteTabletQuery}) {
+    padding: 1rem 0;
+  }
+`;
 
 export const WrapperSection = styled.div<{
   centered?: boolean;
@@ -66,7 +57,6 @@ export const CardWrapper = styled.div`
   max-width: 90%;
   grid-template-columns: repeat(4, 1fr);
   margin-bottom: 2em;
-  background-color: yellow;
 
   @media screen and (${theme.breakpoints.tabletQuery}) {
     grid-template-columns: repeat(2, 1fr);

@@ -12,7 +12,7 @@ import { GteDesktop, LteTablet } from "../../theme/MediaQueries";
 
 const Tickets = () => {
   return (
-    <WrapperMain background id="vstupenky">
+    <WrapperMain id="vstupenky">
       <WrapperSection>
         <LteTablet>
           <>
