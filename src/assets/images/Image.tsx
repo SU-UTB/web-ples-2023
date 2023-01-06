@@ -3,11 +3,9 @@ import theme from "../../theme/theme";
 
 export const StyledImg = styled.img`
   position: relative;
-  width: 100%;
-  @media screen and (${theme.breakpoints.tabletQuery}) {
-    width: 70%;
-  }
-  @media screen and (${theme.breakpoints.mobileQuery}) {
-    width: 100%;
+  max-width: 570px;
+  max-height: 570px;
+  @media screen and (${theme.breakpoints.lteTabletQuery}) {
+    width: 50%;
   }
 `;

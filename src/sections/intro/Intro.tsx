@@ -1,38 +1,40 @@
 import { StyledImg } from "../../assets/images/Image";
-import Headline from "../../components/headline/Headline";
 import {
   WrapperSection,
   WrapperHalf,
   WrapperCentered,
 } from "../../components/layout/wrapper/Wrapper.styled";
-import Paragraph from "../../components/paragraph/Paragraph";
-import frozenImg from "../../assets/images/frozen.jpg";
+import shoe from "../../assets/images/shoe.svg";
+import { Paragraph } from "../../components/paragraph/Paragraph";
+import { Headline } from "../../components/headline/Headline";
 
 const Intro = () => {
   return (
     <WrapperSection id="oplese">
       <WrapperHalf>
         <WrapperCentered>
-          <StyledImg src={frozenImg} alt="Frozen" />
+          <StyledImg src={shoe} alt="Frozen" />
         </WrapperCentered>
       </WrapperHalf>
       <WrapperHalf>
         <WrapperCentered>
-          <Headline>O plese</Headline>
-          <Paragraph align="left">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            Necessitatibus adipisci distinctio aperiam recusandae id rem iure
-            debitis velit. Aut, vitae alias corrupti eum, laboriosam rerum
-            dignissimos placeat.
-            <br />
-            <br />
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            Necessitatibus adipisci distinctio aperiam recusandae id rem iure
-            debitis velit. Aut, vitae alias corrupti eum, laboriosam rerum
-            dignissimos placeat, ex eveniet tempora excepturi non ratione
-            assumenda iste quas. Maxime nesciunt adipisci necessitatibus
-            quibusdam hic eligendi, sed distinctio ipsam dolore officia aliquid
-            unde.
+          <Headline align="left">O plese</Headline>
+          <Paragraph>
+            Srdečně vás zveme na již XXI. ročník Reprezentačního plesu
+            Univerzity Tomáše Bati ve Zlíně. Jako každý rok se ples ponese v
+            určitém tématu, kterým je letos Zimní bál. Těšit se můžeme na
+            krásnou zimní atmosféru a večer plný elegance a dobré zábavy.
+          </Paragraph>
+          <br />
+          <Headline align="left">Dress code</Headline>
+          <Paragraph>
+            Dress Code letošního plesu se ponese v duchu black tie creative.
+            Můžete tedy povolit uzdu své fantazii a nechat se inspirovat zimní
+            atmosférou. Pánové určitě nešlápnou vedle s motýlky či kravatami v
+            barvách stříbrné, modré, fialové nebo mohou dorazit přímo v bílém
+            obleku! Dámy se mohou držet stejných barev a doplnit své večerní
+            šaty o kožešinu, aby jim z té zimní atmosféry nepřeběhl mráz po
+            zádech.
           </Paragraph>
         </WrapperCentered>
       </WrapperHalf>

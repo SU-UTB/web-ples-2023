@@ -11,10 +11,10 @@ export const MenuWrapper = styled.div`
 
   font-family: ${theme.fonts.heading};
   font-size: ${theme.fontSizeElements.h4}px;
-  color: ${theme.colors.text};
+  color: ${theme.colors.light};
 
   @media screen and (${theme.breakpoints.tabletQuery}) {
-    font-size: ${theme.fontSizeElements.paragraphTablet}px;
+    font-size: ${theme.fontSizeElements.paragraphGteTablet}px;
   }
   @media screen and (${theme.breakpoints.mobileQuery}) {
     font-size: ${theme.fontSizeElements.caption}px;
@@ -33,16 +33,16 @@ export const Menu = styled.div`
 
 export const MenuItem = styled.a`
   text-decoration: none;
-  color: ${theme.colors.text};
+  color: ${theme.colors.light};
   transition: ${theme.animation.transitionBasic};
   &:hover {
-    color: ${theme.colors.text};
+    color: ${theme.colors.light};
   }
 `;
 
 export const LogoText = styled.div`
   white-space: nowrap;
   a {
-    color: ${theme.colors.text};
+    color: ${theme.colors.light};
   }
 `;

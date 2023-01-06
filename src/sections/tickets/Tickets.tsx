@@ -1,13 +1,13 @@
 import { StyledImg } from "../../assets/images/Image";
-import Headline from "../../components/headline/Headline";
 import {
   WrapperSection,
   WrapperHalf,
   WrapperCentered,
 } from "../../components/layout/wrapper/Wrapper.styled";
-import Paragraph from "../../components/paragraph/Paragraph";
 import frozenImg from "../../assets/images/frozen.jpg";
 import { GteDesktop, LteTablet } from "../../theme/MediaQueries";
+import { Paragraph } from "../../components/paragraph/Paragraph";
+import { Headline } from "../../components/headline/Headline";
 
 const Tickets = () => {
   return (

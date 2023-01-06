@@ -1,5 +1,5 @@
-import Headline from "../../components/headline/Headline";
-import Subheadline from "../../components/headline/subheadline/Subheadline";
+import { Headline } from "../../components/headline/Headline";
+import { Subheadline } from "../../components/headline/subheadline/Subheadline";
 import { Gap, PrimeWrapper, Row } from "./Prime.styled";
 
 const Prime = () => {

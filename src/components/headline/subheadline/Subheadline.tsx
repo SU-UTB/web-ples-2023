@@ -1,16 +1,23 @@
-import React from "react";
-import { Wrapper } from "./Subheadline.styled";
+import styled, { css } from "styled-components";
+import theme from "../../../theme/theme";
 
-interface HeadlinePropsInterface {
-  children: React.ReactNode;
-  inverse?: boolean;
-}
+export const Subheadline = styled.div<{
+  colorMode?: "white" | "black" | "ice";
+}>(
+  ({ colorMode = "white" }) => css`
+    font-family: ${theme.fonts.heading};
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    line-height: 2em;
+    font-size: ${theme.fontSizeElements.h3}px;
+    color: ${colorMode === "ice" ? `${theme.colors.ice}` : `${colorMode}`};
 
-const Subheadline: React.FC<HeadlinePropsInterface> = ({
-  children,
-  inverse,
-}) => {
-  return <Wrapper inverse={inverse}>{children}</Wrapper>;
-};
-
-export default Subheadline;
+    @media screen and (${theme.breakpoints.tabletQuery}) {
+      font-size: ${theme.fontSizeElements.h4}px;
+    }
+    @media screen and (${theme.breakpoints.mobileQuery}) {
+      font-size: ${theme.fontSizeElements.h5}px;
+    }
+  `
+);

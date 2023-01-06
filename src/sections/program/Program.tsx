@@ -1,4 +1,3 @@
-import Headline from "../../components/headline/Headline";
 import {
   WrapperSection,
   CardWrapper,
@@ -14,6 +13,7 @@ import {
   CardText,
 } from "./Program.styled";
 import frozenImg from "../../assets/images/frozen.jpg";
+import { Headline } from "../../components/headline/Headline";
 
 const Program = () => {
   return (

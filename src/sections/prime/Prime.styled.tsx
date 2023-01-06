@@ -5,7 +5,7 @@ export const PrimeWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 30em;
+  padding-top: 35em;
   @media screen and (${theme.breakpoints.lteTabletQuery}) {
     padding-top: 20em;
   }
@@ -14,6 +14,7 @@ export const PrimeWrapper = styled.div`
 export const Row = styled.div`
   display: flex;
   gap: 3em;
+  margin-top: 0.5em;
   @media screen and (${theme.breakpoints.lteTabletQuery}) {
     flex-direction: column;
     align-items: center;

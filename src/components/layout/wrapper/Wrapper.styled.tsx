@@ -22,8 +22,6 @@ export const WrapperSection = styled.div<{
     width: 90%;
     max-width: 1600px;
     margin: 0 auto;
-    gap: 3rem;
-    background-color: lightgray;
     ${centered &&
     css`
       gap: 1rem;
@@ -50,7 +48,7 @@ export const WrapperCentered = styled.div`
   flex-direction: column;
   height: 100%;
   justify-content: center;
-  padding: 2rem;
+
   @media screen and (${theme.breakpoints.lteTabletQuery}) {
     align-items: center;
   }
@@ -65,7 +63,7 @@ export const CardWrapper = styled.div`
   @media screen and (${theme.breakpoints.tabletQuery}) {
     grid-template-columns: repeat(2, 1fr);
     max-width: 70%;
-    font-size: ${theme.fontSizeElements.paragraphTablet}px;
+    font-size: ${theme.fontSizeElements.paragraphGteTablet}px;
   }
   @media screen and (${theme.breakpoints.mobileQuery}) {
     grid-template-columns: repeat(2, 1fr);

@@ -1,4 +1,4 @@
-import Headline from "../../components/headline/Headline";
+import { Headline } from "../../components/headline/Headline";
 import { WrapperSection } from "../../components/layout/wrapper/Wrapper.styled";
 import { contacts } from "./contact.content";
 import {

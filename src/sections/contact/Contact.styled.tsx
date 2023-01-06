@@ -15,10 +15,10 @@ export const Row = styled.div`
   gap: 2em;
   margin: 0 1em 0.7em 1em;
   line-height: 2em;
-  font-size: ${theme.fontSizeElements.paragraphDesktop}px;
+  font-size: ${theme.fontSizeElements.paragraphGteTablet}px;
 
   @media screen and (${theme.breakpoints.tabletQuery}) {
-    font-size: ${theme.fontSizeElements.paragraphTablet}px;
+    font-size: ${theme.fontSizeElements.paragraphGteTablet}px;
   }
   @media screen and (${theme.breakpoints.mobileQuery}) {
     font-size: ${theme.fontSizeElements.paragraphMobile}px;
