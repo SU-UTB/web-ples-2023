@@ -2,35 +2,41 @@ import styled, { css } from "styled-components";
 import theme from "../../theme/theme";
 
 export const Wrapper = styled.div<{
-  level: string;
   inverse?: boolean;
-  align?: string;
+  align?: "left" | "center" | "right";
+  card?: boolean;
 }>(
-  ({ inverse, align }) => css`
+  ({ inverse, align = "left", card }) => css`
     font-family: ${theme.fonts.heading};
     display: flex;
     align-items: center;
     justify-content: space-between;
-    font-size: ${theme.fontSizeElements.h2}px;
-    line-height: 30px;
+    line-height: 2em;
 
-    ${inverse &&
+    font-size: ${card
+      ? `${theme.fontSizeElements.paragraphDesktop}px`
+      : `${theme.fontSizeElements.h2}px`};
+
+    color: ${inverse ? `${theme.colors.inverse}` : `${theme.colors.text}px`};
+
+    ${card &&
     css`
-      color: white;
+      margin-bottom: 0.5em;
     `}
-
     ${align &&
     css`
       justify-content: ${align};
     `};
 
     @media screen and (${theme.breakpoints.tabletQuery}) {
-      font-size: ${theme.fontSizeElements.h3}px;
-      line-height: 20px;
+      font-size: ${card
+        ? `${theme.fontSizeElements.paragraphTablet}px`
+        : `${theme.fontSizeElements.h3}px`};
     }
     @media screen and (${theme.breakpoints.mobileQuery}) {
-      font-size: ${theme.fontSizeElements.h4}px;
-      line-height: 10px;
+      font-size: ${card
+        ? `${theme.fontSizeElements.paragraphMobile}px`
+        : `${theme.fontSizeElements.h4}px`};
     }
   `
 );

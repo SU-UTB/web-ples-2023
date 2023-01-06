@@ -1,7 +1,8 @@
 import { ParagraphWrapper } from "./Paragraph.styled";
 
 interface PargraphInterface {
-  align?: "left" | "right";
+  align?: "left" | "center" | "right";
+  program?: boolean;
   children: React.ReactNode;
 }
 
