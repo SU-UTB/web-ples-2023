@@ -4,9 +4,11 @@ import theme from "../../../theme/theme";
 export const MenuWrapper = styled.div`
   display: flex;
   max-width: 1600px;
-  margin: 3em auto 0;
+  margin: 0 auto;
+  padding-top: 2em;
   gap: 3em;
   justify-content: center;
+
   @media screen and (${theme.breakpoints.lteTabletQuery}) {
     display: flex;
     align-items: center;

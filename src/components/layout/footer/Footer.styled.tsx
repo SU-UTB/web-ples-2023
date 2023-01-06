@@ -5,11 +5,14 @@ export const MenuWrapper = styled.div`
   display: flex;
   width: 90%;
   max-width: 1600px;
-  margin: 0em auto 2em auto;
+  margin: 0em auto;
+  padding-bottom: 2em;
   align-items: center;
+
   font-family: ${theme.fonts.heading};
   font-size: ${theme.fontSizeElements.h4}px;
   color: ${theme.colors.text};
+
   @media screen and (${theme.breakpoints.tabletQuery}) {
     font-size: ${theme.fontSizeElements.paragraphTablet}px;
   }

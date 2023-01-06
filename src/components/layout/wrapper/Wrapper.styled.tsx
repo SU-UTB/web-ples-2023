@@ -1,9 +1,13 @@
 import styled, { css } from "styled-components";
 import theme from "../../../theme/theme";
+import backgroundWinter from "../../../assets/images/backgroundWinter.svg";
 
-export const WrapperMain = styled.div`
+export const WrapperMain = styled.main`
   font-family: ${theme.fonts.monsterRegular};
-  padding: 5rem 0;
+  padding: 2em 0;
+  background-image: url(${backgroundWinter});
+  background-repeat: no-repeat;
+  background-size: cover;
 
   @media screen and (${theme.breakpoints.lteTabletQuery}) {
     padding: 1rem 0;

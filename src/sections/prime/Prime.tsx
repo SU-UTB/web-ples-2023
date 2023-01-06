@@ -1,6 +1,5 @@
 import Headline from "../../components/headline/Headline";
 import Subheadline from "../../components/headline/subheadline/Subheadline";
-import { WrapperSection } from "../../components/layout/wrapper/Wrapper.styled";
 import { Gap, PrimeWrapper, Row } from "./Prime.styled";
 
 const Prime = () => {
@@ -11,7 +10,7 @@ const Prime = () => {
       </Headline>
       <Row>
         <Subheadline>Pátek 3. 3. 2023 od 19:00</Subheadline>
-        <Subheadline>Kongresové centrumy Zlín</Subheadline>
+        <Subheadline>Kongresové centrum Zlín</Subheadline>
       </Row>
     </PrimeWrapper>
   );

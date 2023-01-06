@@ -22,5 +22,5 @@ export const Row = styled.div`
 `;
 
 export const Gap = styled.span`
-  margin-left: 0.2em;
+  margin-left: 0.1em;
 `;
