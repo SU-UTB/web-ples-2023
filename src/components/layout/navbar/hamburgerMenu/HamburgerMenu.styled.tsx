@@ -37,7 +37,7 @@ export const hamburgerStyles = {
     paddingBottom: "1em",
     height: "auto",
     textAlign: "center",
-    fontSize: theme.fontSizeElements.h5,
+    fontSize: theme.fontSizeElements.h4,
   },
   bmMorphShape: {
     fill: theme.colors.text,

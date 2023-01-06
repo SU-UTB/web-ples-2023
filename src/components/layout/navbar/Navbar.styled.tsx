@@ -21,7 +21,7 @@ export const MenuWrapper = styled.div`
 export const MenuItem = styled.a`
   text-decoration: none;
   font-family: ${theme.fonts.heading};
-  font-size: ${theme.fontSizeElements.h5}px;
+  font-size: ${theme.fontSizeElements.h4}px;
   color: ${theme.colors.text};
   transition: ${theme.animation.transitionBasic};
   &:hover {

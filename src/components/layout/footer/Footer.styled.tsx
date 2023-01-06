@@ -8,7 +8,7 @@ export const MenuWrapper = styled.div`
   margin: 0em auto 2em auto;
   align-items: center;
   font-family: ${theme.fonts.heading};
-  font-size: ${theme.fontSizeElements.h5}px;
+  font-size: ${theme.fontSizeElements.h4}px;
   color: ${theme.colors.text};
   @media screen and (${theme.breakpoints.tabletQuery}) {
     font-size: ${theme.fontSizeElements.paragraphTablet}px;
