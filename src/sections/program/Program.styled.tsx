@@ -4,7 +4,7 @@ import theme from "../../theme/theme";
 export const WrapperTimeline = styled.div`
   position: relative;
   margin-bottom: 2em;
-  color: ${theme.colors.light};
+  color: ${theme.colors.primary};
 `;
 
 export const Row = styled.div`

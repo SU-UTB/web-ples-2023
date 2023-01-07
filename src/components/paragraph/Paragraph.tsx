@@ -4,19 +4,13 @@ import theme from "../../theme/theme";
 export const Paragraph = styled.p<{
   colorMode?: "white" | "black" | "ice";
   program?: boolean;
-  event?: boolean;
 }>(
-  ({ colorMode = "white", program, event }) => css`
+  ({ colorMode = "white", program }) => css`
     font-size: ${theme.fontSizeElements.paragraphGteTablet}px;
     text-align: justify;
     line-height: 1.5;
 
     color: ${colorMode === "ice" ? `${theme.colors.ice}` : `${colorMode}`};
-
-    ${event &&
-    css`
-      margin: 0 1em;
-    `};
 
     ${program &&
     css`

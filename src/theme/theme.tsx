@@ -35,11 +35,11 @@ const theme = {
     caption: 10,
   },
   colors: {
-    light: "white",
+    primary: "white",
     background: "lightblue",
-    dark: "black",
+    secondary: "black",
     ice: "#B3CEF2",
-    card: "#171547",
+    dark: "#171547",
   },
   animation: {
     transitionBasic: "all 0.3s ease",

@@ -10,10 +10,10 @@ export const hamburgerStyles = {
   },
   bmBurgerBars: {
     height: "10%",
-    background: theme.colors.light,
+    background: theme.colors.primary,
   },
   bmBurgerBarsHover: {
-    background: theme.colors.light,
+    background: theme.colors.primary,
   },
   bmCrossButton: {
     position: "absolute",
@@ -21,38 +21,38 @@ export const hamburgerStyles = {
     top: "1.25em",
   },
   bmCross: {
-    height: "30px",
-    background: theme.colors.light,
+    height: "25px",
+    background: theme.colors.primary,
   },
   bmCrossHover: {
-    background: theme.colors.background,
+    background: theme.colors.dark,
   },
   bmMenuWrap: {
     position: "fixed",
     width: "100%",
   },
   bmMenu: {
-    background: theme.colors.background,
+    background: theme.colors.dark,
     paddingTop: "3em",
     paddingBottom: "1em",
     height: "auto",
     textAlign: "center",
-    fontSize: theme.fontSizeElements.h4,
+    fontSize: theme.fontSizeElements.h5,
   },
   bmMorphShape: {
-    fill: theme.colors.light,
+    fill: theme.colors.primary,
   },
   bmItem: {
     display: "block",
     margin: "1.5em 0",
     textDecoration: "none",
-    color: theme.colors.light,
-    fontFamily: theme.fonts.monsterRegular,
+    color: theme.colors.primary,
+    fontFamily: theme.fonts.heading,
     transform: theme.animation.transitionBasic,
   },
   bmItemHover: {
     textDecoration: "none",
-    color: theme.colors.light,
+    color: theme.colors.primary,
   },
   bmOverlay: {
     background: "rgba(0, 0, 0, 0.5)",

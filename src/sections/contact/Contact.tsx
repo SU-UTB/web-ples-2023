@@ -4,7 +4,7 @@ import { contacts } from "./Contact.content";
 import {
   LeftSide,
   RightSide,
-  ContactWrapper,
+  WrapperContactItem,
   WrapperContact,
   ContactItem,
   ContactHalf,
@@ -16,7 +16,7 @@ const Contact = () => {
       <Headline colorMode="black">Kontakty</Headline>
       <WrapperContact>
         {contacts.map((item, index) => (
-          <ContactWrapper key={index}>
+          <WrapperContactItem key={index}>
             <ContactHalf>
               <ContactItem>{item.position}</ContactItem>
               <ContactItem>{item.phone}</ContactItem>
@@ -25,9 +25,9 @@ const Contact = () => {
               <ContactItem>{item.name}</ContactItem>
               <ContactItem>{item.email}</ContactItem>
             </ContactHalf>
-          </ContactWrapper>
+          </WrapperContactItem>
         ))}
-        <ContactWrapper>
+        <WrapperContactItem>
           <ContactHalf>
             <ContactItem>Správci webu</ContactItem>
             <br />
@@ -42,7 +42,7 @@ const Contact = () => {
             <ContactItem>j_bures@sutb.cz</ContactItem>
             <ContactItem>sedlar@sutb.cz</ContactItem>
           </ContactHalf>
-        </ContactWrapper>
+        </WrapperContactItem>
       </WrapperContact>
     </WrapperSection>
   );

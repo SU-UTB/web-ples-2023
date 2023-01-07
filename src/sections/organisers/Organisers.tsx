@@ -1,6 +1,5 @@
 import { StyledImg } from "../../assets/images/Image";
 import { Headline } from "../../components/headline/Headline";
-import { MenuWrapper } from "../../components/layout/navbar/Navbar.styled";
 import { WrapperSection } from "../../components/layout/wrapper/Wrapper.styled";
 import { organisers } from "./Organisers.content";
 import { Link, OrganiserWrapper } from "./Organisers.styled";

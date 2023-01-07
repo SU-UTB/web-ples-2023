@@ -1,17 +1,17 @@
 import styled, { css } from "styled-components";
 import theme from "../../../theme/theme";
 import backgroundWinter from "../../../assets/images/backgroundWinter.svg";
+import {
+  Desktop,
+  GteDesktopCheck,
+  MobileCheck,
+} from "../../../theme/MediaQueries";
 
 export const WrapperMain = styled.main`
   font-family: ${theme.fonts.monsterRegular};
-  padding: 2em 0;
   background-image: url(${backgroundWinter});
   background-repeat: no-repeat;
   background-size: cover;
-
-  @media screen and (${theme.breakpoints.lteTabletQuery}) {
-    padding: 1rem 0;
-  }
 `;
 
 export const WrapperSection = styled.div<{
@@ -63,7 +63,7 @@ export const CardWrapper = styled.div`
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   margin: 2em 0;
-  color: ${theme.colors.light};
+  color: ${theme.colors.primary};
 
   @media screen and (${theme.breakpoints.tabletQuery}) {
     grid-template-columns: repeat(3, 1fr);

@@ -11,7 +11,7 @@ const Events = () => {
   return (
     <WrapperSection centered id="program">
       <Headline>Doprovodný program</Headline>
-      <Paragraph event>
+      <Paragraph>
         Abychom vás správně naladili, připravili jsme si po celý únor, tedy
         měsíc před plesem, několik doprovodných programů. Těšit se určitě můžete
         na bruslení na ledové ploše, promítání tématického filmu, nebo třeba

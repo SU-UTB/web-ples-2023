@@ -6,7 +6,7 @@ export const ProgramCard = styled.a`
   padding: 1em;
   margin: 0.75em;
   text-align: center;
-  background-color: ${theme.colors.card};
+  background-color: ${theme.colors.dark};
   border-radius: 0.5em;
   box-shadow: 0px 2px 2px 2px ${theme.colors.ice};
   transition: all 0.1s ease-in-out;

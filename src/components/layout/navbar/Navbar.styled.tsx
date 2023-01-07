@@ -25,9 +25,9 @@ export const MenuItem = styled.a`
   text-decoration: none;
   font-family: ${theme.fonts.heading};
   font-size: ${theme.fontSizeElements.h4}px;
-  color: ${theme.colors.dark};
+  color: ${theme.colors.secondary};
   transition: ${theme.animation.transitionBasic};
   &:hover {
-    color: ${theme.colors.dark};
+    color: ${theme.colors.secondary};
   }
 `;

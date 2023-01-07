@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 import theme from "../../theme/theme";
 
 export const WrapperContact = styled.div`
@@ -7,7 +7,7 @@ export const WrapperContact = styled.div`
   margin-top: 1em;
 `;
 
-export const ContactWrapper = styled.div`
+export const WrapperContactItem = styled.div`
   display: flex;
   justify-content: center;
   margin-bottom: 2em;
@@ -15,7 +15,7 @@ export const ContactWrapper = styled.div`
   gap: 2em;
 
   font-size: ${theme.fontSizeElements.paragraphGteTablet}px;
-  color: ${theme.colors.light};
+  color: ${theme.colors.secondary};
 
   @media screen and (${theme.breakpoints.tabletQuery}) {
     font-size: ${theme.fontSizeElements.paragraphGteTablet}px;
