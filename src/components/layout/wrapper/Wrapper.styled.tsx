@@ -16,10 +16,12 @@ export const WrapperMain = styled.main`
 
 export const WrapperSection = styled.div<{
   centered?: boolean;
+  contact?: boolean;
 }>(
-  ({ centered }) => css`
+  ({ centered, contact }) => css`
     display: flex;
     width: 80%;
+    width: ${contact ? `100%` : `80%`};
     max-width: 1600px;
     margin: 0 auto 10em;
     gap: 3em;
@@ -39,7 +41,10 @@ export const WrapperSection = styled.div<{
 );
 
 export const WrapperHalf = styled.div`
+  display: flex;
+  flex-direction: column;
   width: 50%;
+
   @media screen and (${theme.breakpoints.lteTabletQuery}) {
     width: 100%;
   }

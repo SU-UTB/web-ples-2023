@@ -2,25 +2,25 @@ import styled, { css } from "styled-components";
 import theme from "../../theme/theme";
 
 export const WrapperContact = styled.div`
-  position: relative;
-  margin-bottom: 2em;
+  display: flex;
+  flex-direction: column;
 `;
 
 export const ContactWrapper = styled.div`
-  margin-bottom: 2em;
-`;
-
-export const Row = styled.div`
   display: flex;
-  gap: 2em;
-  margin: 0 1em 0.7em 1em;
+  justify-content: center;
+  margin: 1em 0 2em;
   line-height: 2em;
+  gap: 2em;
+
   font-size: ${theme.fontSizeElements.paragraphGteTablet}px;
 
   @media screen and (${theme.breakpoints.tabletQuery}) {
     font-size: ${theme.fontSizeElements.paragraphGteTablet}px;
   }
   @media screen and (${theme.breakpoints.mobileQuery}) {
+    gap: 1em;
+
     font-size: ${theme.fontSizeElements.paragraphMobile}px;
   }
 `;
@@ -44,3 +44,22 @@ export const RightSide = styled.div`
     font-weight: bold;
   }
 `;
+
+export const ContactHalf = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  white-space: nowrap;
+
+  &:nth-child(1) {
+    align-items: flex-end;
+  }
+
+  div {
+    &:nth-child(1) {
+      font-weight: bold;
+    }
+  }
+`;
+
+export const ContactItem = styled.div``;

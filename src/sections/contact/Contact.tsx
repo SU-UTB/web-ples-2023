@@ -1,33 +1,44 @@
 import { Headline } from "../../components/headline/Headline";
 import { WrapperSection } from "../../components/layout/wrapper/Wrapper.styled";
-import { contacts } from "./contact.content";
+import { contacts } from "./Contact.content";
 import {
-  ContactWrapper,
   LeftSide,
   RightSide,
-  Row,
+  ContactWrapper,
   WrapperContact,
+  ContactItem,
+  ContactHalf,
 } from "./Contact.styled";
 
 const Contact = () => {
   return (
-    <WrapperSection centered id="kontakt">
-      <Headline>Kontakty</Headline>
+    <WrapperSection centered contact id="kontakt">
+      <Headline colorMode="black">Kontakty</Headline>
       <WrapperContact>
         {contacts.map((item, index) => (
           <ContactWrapper key={index}>
-            <Row>
-              <LeftSide>
-                <div>{item.position}</div>
-                <div>{item.phone}</div>
-              </LeftSide>
-              <RightSide>
-                <div>{item.name}</div>
-                <div>{item.email}</div>
-              </RightSide>
-            </Row>
+            <ContactHalf>
+              <ContactItem>{item.position}</ContactItem>
+              <ContactItem>{item.phone}</ContactItem>
+            </ContactHalf>
+            <ContactHalf>
+              <ContactItem>{item.name}</ContactItem>
+              <ContactItem>{item.email}</ContactItem>
+            </ContactHalf>
           </ContactWrapper>
         ))}
+        <ContactWrapper>
+          <ContactHalf>
+            <ContactItem>Správci webu</ContactItem>
+            <ContactItem>+420 731 014 934</ContactItem>
+            <ContactItem>+420 774 980 515 </ContactItem>
+          </ContactHalf>
+          <ContactHalf>
+            <ContactItem>Jan Bureš, David Sedlář</ContactItem>
+            <ContactItem>j_bures@sutb.cz</ContactItem>
+            <ContactItem>sedlar@sutb.cz</ContactItem>
+          </ContactHalf>
+        </ContactWrapper>
       </WrapperContact>
     </WrapperSection>
   );
