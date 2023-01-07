@@ -4,16 +4,18 @@ import theme from "../../theme/theme";
 export const WrapperContact = styled.div`
   display: flex;
   flex-direction: column;
+  margin-top: 1em;
 `;
 
 export const ContactWrapper = styled.div`
   display: flex;
   justify-content: center;
-  margin: 1em 0 2em;
-  line-height: 2em;
+  margin-bottom: 2em;
+  line-height: 1.5em;
   gap: 2em;
 
   font-size: ${theme.fontSizeElements.paragraphGteTablet}px;
+  color: ${theme.colors.light};
 
   @media screen and (${theme.breakpoints.tabletQuery}) {
     font-size: ${theme.fontSizeElements.paragraphGteTablet}px;
@@ -45,11 +47,11 @@ export const RightSide = styled.div`
   }
 `;
 
-export const ContactHalf = styled.div`
+export const ContactHalf = styled.span`
   display: flex;
   flex-direction: column;
   width: 50%;
-  white-space: nowrap;
+  /* white-space: nowrap; */
 
   &:nth-child(1) {
     align-items: flex-end;

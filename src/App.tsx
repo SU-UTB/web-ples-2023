@@ -7,6 +7,7 @@ import { WrapperMain } from "./components/layout/wrapper/Wrapper.styled";
 import Contact from "./sections/contact/Contact";
 import Events from "./sections/events/Events";
 import Intro from "./sections/intro/Intro";
+import Organisers from "./sections/organisers/Organisers";
 import Partners from "./sections/partners/Partners";
 import Prime from "./sections/prime/Prime";
 import Program from "./sections/program/Program";
@@ -31,6 +32,7 @@ function App() {
       <Events />
       <Contact />
       <Partners />
+      <Organisers />
       <Footer />
     </WrapperMain>
   );

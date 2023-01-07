@@ -8,6 +8,7 @@ export const MenuWrapper = styled.div`
   padding-top: 2em;
   gap: 3em;
   justify-content: center;
+  align-items: center;
 
   @media screen and (${theme.breakpoints.lteTabletQuery}) {
     display: flex;

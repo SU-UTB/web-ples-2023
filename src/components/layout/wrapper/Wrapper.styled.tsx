@@ -20,7 +20,6 @@ export const WrapperSection = styled.div<{
 }>(
   ({ centered, contact }) => css`
     display: flex;
-    width: 80%;
     width: ${contact ? `100%` : `80%`};
     max-width: 1600px;
     margin: 0 auto 10em;

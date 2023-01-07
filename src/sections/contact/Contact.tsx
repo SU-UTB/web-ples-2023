@@ -30,11 +30,15 @@ const Contact = () => {
         <ContactWrapper>
           <ContactHalf>
             <ContactItem>Správci webu</ContactItem>
+            <br />
             <ContactItem>+420 731 014 934</ContactItem>
             <ContactItem>+420 774 980 515 </ContactItem>
           </ContactHalf>
           <ContactHalf>
-            <ContactItem>Jan Bureš, David Sedlář</ContactItem>
+            <ContactItem>Jan Bureš</ContactItem>
+            <ContactItem>
+              <strong>David Sedlář </strong>
+            </ContactItem>
             <ContactItem>j_bures@sutb.cz</ContactItem>
             <ContactItem>sedlar@sutb.cz</ContactItem>
           </ContactHalf>

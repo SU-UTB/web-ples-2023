@@ -12,5 +12,4 @@ export const PartnerLogo = styled.div`
 
 export const PartnerImg = styled.img`
   width: 100%;
-  transform: scale(1.5, 1.5);
 `;
