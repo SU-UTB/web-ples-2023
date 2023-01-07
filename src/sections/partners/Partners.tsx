@@ -9,7 +9,7 @@ import { PartnerLogo, PartnerImg } from "./Partners.styled";
 const Partners = () => {
   return (
     <WrapperSection centered id="partneri">
-      <Headline colorMode="black">Partneři</Headline>
+      <Headline color="black">Partneři</Headline>
       <CardWrapper>
         {partners.map((item, index) => (
           <PartnerLogo key={index}>

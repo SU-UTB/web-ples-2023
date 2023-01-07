@@ -1,6 +1,7 @@
 import styled, { css } from "styled-components";
 import theme from "../../../theme/theme";
 import backgroundWinter from "../../../assets/images/backgroundWinter.svg";
+import background02 from "../../../assets/images/background02.svg";
 import {
   Desktop,
   GteDesktopCheck,
@@ -12,6 +13,10 @@ export const WrapperMain = styled.main`
   background-image: url(${backgroundWinter});
   background-repeat: no-repeat;
   background-size: cover;
+  @media screen and (${theme.breakpoints.lteTabletQuery}) {
+    background-image: url(${background02});
+    background-position: center 0;
+  }
 `;
 
 export const WrapperSection = styled.div<{

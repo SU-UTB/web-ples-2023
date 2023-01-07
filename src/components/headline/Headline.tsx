@@ -2,11 +2,11 @@ import styled, { css } from "styled-components";
 import theme from "../../theme/theme";
 
 export const Headline = styled.span<{
-  colorMode?: "white" | "black" | "ice";
+  color?: "white" | "black" | "ice";
   align?: "left" | "center" | "right";
   card?: boolean;
 }>(
-  ({ colorMode = "white", align = "center", card }) => css`
+  ({ color: colorMode = "white", align = "center", card }) => css`
     max-width: 80%;
     font-family: ${theme.fonts.heading};
 

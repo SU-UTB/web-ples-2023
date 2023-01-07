@@ -7,7 +7,7 @@ export const PrimeWrapper = styled.div`
   align-items: center;
   padding: 35em 0 10em;
   @media screen and (${theme.breakpoints.lteTabletQuery}) {
-    padding-top: 20em;
+    padding-top: 30em;
   }
 `;
 

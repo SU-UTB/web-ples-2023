@@ -13,7 +13,7 @@ import {
 const Contact = () => {
   return (
     <WrapperSection centered contact id="kontakt">
-      <Headline colorMode="black">Kontakty</Headline>
+      <Headline color="black">Kontakty</Headline>
       <WrapperContact>
         {contacts.map((item, index) => (
           <WrapperContactItem key={index}>
