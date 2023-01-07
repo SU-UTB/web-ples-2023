@@ -4,7 +4,7 @@ import theme from "../../theme/theme";
 export const CountdownWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
-  width: 245px;
+  width: 250px;
   border-radius: 10px;
   border: solid 2px ${theme.colors.primary};
   margin: 5em auto;
@@ -18,6 +18,7 @@ export const CountdownWrapper = styled.div`
     width: 150px;
     margin: 2em auto 7em;
     padding: 0.5em 1em;
+    /* padding: 0; */
     gap: 1.5em;
   }
 `;
