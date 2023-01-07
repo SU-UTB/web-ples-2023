@@ -3,6 +3,8 @@ import theme from "../../../theme/theme";
 
 export const FooterWrapper = styled.div`
   display: flex;
+  max-width: 2500px;
+  margin: 0 auto;
   padding: 2.5em 0;
 
   color: ${theme.colors.primary};

@@ -5,9 +5,9 @@ export const PrimeWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 35em 0 10em;
+  padding-top: 35em;
   @media screen and (${theme.breakpoints.lteTabletQuery}) {
-    padding-top: 30em;
+    padding-top: 27em;
   }
 `;
 

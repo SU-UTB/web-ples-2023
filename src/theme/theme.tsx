@@ -25,6 +25,7 @@ const theme = {
     monsterRegular: "Monsterrat-Regular",
   },
   fontSizeElements: {
+    countdown: 48,
     h1: 36,
     h2: 28,
     h3: 22,

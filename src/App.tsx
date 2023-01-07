@@ -10,6 +10,7 @@ import Intro from "./sections/intro/Intro";
 import Organisers from "./sections/organisers/Organisers";
 import Partners from "./sections/partners/Partners";
 import Prime from "./sections/prime/Prime";
+import Countdown from "./sections/countdown/Countdown";
 import Program from "./sections/program/Program";
 import Tickets from "./sections/tickets/Tickets";
 import { LteTablet } from "./theme/MediaQueries";
@@ -26,6 +27,7 @@ function App() {
       </LteTablet>
       <Navbar />
       <Prime />
+      <Countdown endTime="2023-03-03T19:00:00" />
       <Intro />
       <Program />
       <Tickets />
