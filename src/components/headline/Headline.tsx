@@ -11,7 +11,7 @@ export const Headline = styled.span<{
     font-family: ${theme.fonts.heading};
 
     font-size: ${card
-      ? `${theme.fontSizeElements.paragraphGteTablet}px`
+      ? `${theme.fontSizeElements.h4}px`
       : `${theme.fontSizeElements.h1}px`};
 
     color: ${colorMode === "ice" ? `${theme.colors.ice}` : `${colorMode}`};
@@ -27,7 +27,7 @@ export const Headline = styled.span<{
 
     @media screen and (${theme.breakpoints.tabletQuery}) {
       font-size: ${card
-        ? `${theme.fontSizeElements.paragraphGteTablet}px`
+        ? `${theme.fontSizeElements.h5}px`
         : `${theme.fontSizeElements.h2}px`};
     }
     @media screen and (${theme.breakpoints.mobileQuery}) {

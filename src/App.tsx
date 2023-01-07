@@ -5,6 +5,7 @@ import HamburgerMenu from "./components/layout/navbar/hamburgerMenu/HamburgerMen
 import Navbar from "./components/layout/navbar/Navbar";
 import { WrapperMain } from "./components/layout/wrapper/Wrapper.styled";
 import Contact from "./sections/contact/Contact";
+import Events from "./sections/events/Events";
 import Intro from "./sections/intro/Intro";
 import Partners from "./sections/partners/Partners";
 import Prime from "./sections/prime/Prime";
@@ -27,6 +28,7 @@ function App() {
       <Intro />
       <Program />
       <Tickets />
+      <Events />
       <Contact />
       <Partners />
       <Footer />

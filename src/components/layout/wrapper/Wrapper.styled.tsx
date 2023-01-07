@@ -21,7 +21,7 @@ export const WrapperSection = styled.div<{
     display: flex;
     width: 80%;
     max-width: 1600px;
-    margin: 0 auto;
+    margin: 0 auto 10em;
     gap: 3em;
 
     ${centered &&
@@ -50,7 +50,6 @@ export const WrapperCentered = styled.div`
   flex-direction: column;
   height: 100%;
   justify-content: center;
-
   @media screen and (${theme.breakpoints.lteTabletQuery}) {
     align-items: center;
   }
@@ -58,18 +57,16 @@ export const WrapperCentered = styled.div`
 
 export const CardWrapper = styled.div`
   display: grid;
-  max-width: 90%;
-  grid-template-columns: repeat(4, 1fr);
-  margin-bottom: 2em;
+  grid-template-columns: repeat(5, 1fr);
+  margin: 2em 0;
+  color: ${theme.colors.light};
 
   @media screen and (${theme.breakpoints.tabletQuery}) {
-    grid-template-columns: repeat(2, 1fr);
-    max-width: 70%;
+    grid-template-columns: repeat(3, 1fr);
     font-size: ${theme.fontSizeElements.paragraphGteTablet}px;
   }
   @media screen and (${theme.breakpoints.mobileQuery}) {
     grid-template-columns: repeat(2, 1fr);
-    max-width: 90%;
     font-size: ${theme.fontSizeElements.paragraphMobile}px;
   }
 `;

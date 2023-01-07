@@ -1,5 +1,4 @@
 import ProgramItem from "../../types/TProgram";
-import SideProgramItem from "../../types/TSideProgram";
 
 export const timeline: ProgramItem[] = [
   {
@@ -49,24 +48,5 @@ export const timeline: ProgramItem[] = [
   {
     time: "00:00",
     activity: "Electrophonix",
-  },
-];
-
-export const sideProgram: SideProgramItem[] = [
-  {
-    name: "Cocktail workshop",
-    date: "22. 2. 2023",
-  },
-  {
-    name: "Tančírna",
-    date: "23. 2. 2023",
-  },
-  {
-    name: "Kino",
-    date: "24. 2. 2023",
-  },
-  {
-    name: "Dámský salon",
-    date: "3. 3. 2023",
   },
 ];

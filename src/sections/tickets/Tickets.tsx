@@ -20,7 +20,7 @@ const Tickets = () => {
         <WrapperCentered>
           <Headline align="left">Vstupenky</Headline>
           <Paragraph>
-            Online rezervace od <strong> 1. 2. 2023 </strong>
+            Osobní rezervace od <strong> 1. 2. 2023 </strong>
             <br />
             <br />
             Bližší informace k předprodeji: Aneta Nejezchlebová

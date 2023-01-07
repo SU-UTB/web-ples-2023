@@ -39,6 +39,7 @@ const theme = {
     background: "lightblue",
     dark: "black",
     ice: "#B3CEF2",
+    card: "#2A2FA5",
   },
   animation: {
     transitionBasic: "all 0.3s ease",

@@ -1,49 +1,76 @@
 import {
+  WrapperCentered,
+  WrapperHalf,
   WrapperSection,
-  CardWrapper,
 } from "../../components/layout/wrapper/Wrapper.styled";
-import { timeline, sideProgram } from "./program.content";
-import {
-  Row,
-  WrapperTimeline,
-  Time,
-  Activity,
-  ProgramCard,
-  CardImageWrapper,
-  CardText,
-} from "./Program.styled";
-import frozenImg from "../../assets/images/frozen.jpg";
+import { timeline } from "./Program.content";
+import { Row, WrapperTimeline, Time, Activity } from "./Program.styled";
 import { Headline } from "../../components/headline/Headline";
+import { StyledImg } from "../../assets/images/Image";
+import skate from "../../assets/images/skate.svg";
+import { Paragraph } from "../../components/paragraph/Paragraph";
+import { GteDesktop, LteTablet } from "../../theme/MediaQueries";
 
 const Program = () => {
   return (
-    <WrapperSection centered id="program">
-      <Headline>Program</Headline>
-      <WrapperTimeline>
-        {timeline.map((item, index) => (
-          <Row key={index}>
-            <Time>{item.time}</Time>
-            <Activity>{item.activity}</Activity>
-          </Row>
-        ))}
-      </WrapperTimeline>
-      <Headline>Doprovodný program</Headline>
+    <>
+      <GteDesktop>
+        <WrapperSection id="program">
+          <WrapperHalf>
+            <WrapperCentered>
+              <Headline align="left">Program</Headline>
+              <Paragraph>
+                Celým večerem vás provede moderátorka Lucie Borhyová. Těšit se
+                můžete také na orchestr Prestige Symphony Orchestra a kapelu
+                Prague Louge Trio, kteří zahrají již před půlnocí a pro
+                (ne)milovníky zimního spánku i kapela Frontmen po půlnoci!
+                Věříme, že Vám zařídí nezapomenutelný večer dlouhý jako polární
+                noc!
+              </Paragraph>
+            </WrapperCentered>
+          </WrapperHalf>
+          <WrapperHalf>
+            <WrapperCentered>
+              <StyledImg mirrored src={skate} alt="Frozen" />
+            </WrapperCentered>
+          </WrapperHalf>
+        </WrapperSection>
+      </GteDesktop>
 
-      <CardWrapper>
-        {sideProgram.map((item, index) => (
-          <ProgramCard key={index}>
-            <Headline align="center" card>
-              {item.name}
-            </Headline>
-            <CardText>{item.date}</CardText>
-            <CardImageWrapper
-              src={frozenImg}
-              alt={item.name}
-            ></CardImageWrapper>
-          </ProgramCard>
-        ))}
-      </CardWrapper>
-    </WrapperSection>
+      <LteTablet>
+        <WrapperSection id="program">
+          <WrapperHalf>
+            <WrapperCentered>
+              <StyledImg mirrored src={skate} alt="Frozen" />
+            </WrapperCentered>
+          </WrapperHalf>
+          <WrapperHalf>
+            <WrapperCentered>
+              <Headline align="left">Program</Headline>
+              <Paragraph>
+                Celým večerem vás provede moderátorka Lucie Borhyová. Těšit se
+                můžete také na orchestr Prestige Symphony Orchestra a kapelu
+                Prague Louge Trio, kteří zahrají již před půlnocí a pro
+                (ne)milovníky zimního spánku i kapela Frontmen po půlnoci!
+                Věříme, že Vám zařídí nezapomenutelný večer dlouhý jako polární
+                noc!
+              </Paragraph>
+            </WrapperCentered>
+          </WrapperHalf>
+        </WrapperSection>
+      </LteTablet>
+
+      {/* <WrapperSection centered id="program">
+        <WrapperTimeline>
+          {timeline.map((item, index) => (
+            <Row key={index}>
+              <Time>{item.time}</Time>
+              <Activity>{item.activity}</Activity>
+            </Row>
+          ))}
+        </WrapperTimeline>
+      </WrapperSection> */}
+    </>
   );
 };
 
