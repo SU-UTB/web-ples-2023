@@ -19,9 +19,11 @@ export const WrapperSection = styled.div<{
 }>(
   ({ centered }) => css`
     display: flex;
-    width: 90%;
+    width: 80%;
     max-width: 1600px;
     margin: 0 auto;
+    gap: 3em;
+
     ${centered &&
     css`
       gap: 1rem;

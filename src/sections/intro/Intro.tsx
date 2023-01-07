@@ -22,8 +22,9 @@ const Intro = () => {
           <Paragraph>
             Srdečně vás zveme na již XXI. ročník Reprezentačního plesu
             Univerzity Tomáše Bati ve Zlíně. Jako každý rok se ples ponese v
-            určitém tématu, kterým je letos Zimní bál. Těšit se můžeme na
-            krásnou zimní atmosféru a večer plný elegance a dobré zábavy.
+            určitém tématu, kterým je letos <strong> Zimní bál </strong>. Těšit
+            se můžeme na krásnou zimní atmosféru a večer plný elegance a dobré
+            zábavy.
           </Paragraph>
           <br />
           <Headline align="left">Dress code</Headline>

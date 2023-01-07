@@ -9,6 +9,7 @@ export const Paragraph = styled.p<{
     font-size: ${theme.fontSizeElements.paragraphGteTablet}px;
     text-align: justify;
     line-height: 1.5;
+    margin-top: 0;
 
     color: ${colorMode === "ice" ? `${theme.colors.ice}` : `${colorMode}`};
 

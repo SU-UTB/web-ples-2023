@@ -25,8 +25,8 @@ function App() {
       <Navbar />
       <Prime />
       <Intro />
-      <Tickets />
       <Program />
+      <Tickets />
       <Contact />
       <Partners />
       <Footer />
