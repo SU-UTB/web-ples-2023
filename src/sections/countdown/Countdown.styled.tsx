@@ -4,20 +4,20 @@ import theme from "../../theme/theme";
 export const CountdownWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
-  width: 250px;
+  width: 260px;
   border-radius: 10px;
   border: solid 2px ${theme.colors.primary};
   margin: 5em auto;
-  padding: 0.7em 1.5em;
+  padding: 0.7em 1em 0.7em 1.5em;
   gap: 2.5em;
 
   color: ${theme.colors.primary};
   font-family: ${theme.fonts.heading};
 
   @media screen and (${theme.breakpoints.mobileQuery}) {
-    width: 150px;
+    width: 160px;
     margin: 2em auto 7em;
-    padding: 0.5em 1em;
+    padding: 0.5em 1em 0.5em 1.5em;
     /* padding: 0; */
     gap: 1.5em;
   }
