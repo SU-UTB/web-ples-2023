@@ -7,7 +7,7 @@ import { timeline } from "./Program.content";
 import { Row, WrapperTimeline, Time, Activity } from "./Program.styled";
 import { Headline } from "../../components/headline/Headline";
 import { StyledImg } from "../../assets/images/Image";
-import skate from "../../assets/images/skate.svg";
+import skate from "../../assets/images/skate.png";
 import { Paragraph } from "../../components/paragraph/Paragraph";
 import { GteDesktop, LteTablet } from "../../theme/MediaQueries";
 

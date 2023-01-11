@@ -6,7 +6,7 @@ import {
 } from "../../components/layout/wrapper/Wrapper.styled";
 import { Paragraph } from "../../components/paragraph/Paragraph";
 import { Headline } from "../../components/headline/Headline";
-import film from "../../assets/images/film.svg";
+import film from "../../assets/images/film.png";
 
 const Tickets = () => {
   return (

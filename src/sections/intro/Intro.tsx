@@ -4,7 +4,7 @@ import {
   WrapperHalf,
   WrapperCentered,
 } from "../../components/layout/wrapper/Wrapper.styled";
-import shoe from "../../assets/images/shoe.svg";
+import shoe from "../../assets/images/shoe.png";
 import { Paragraph } from "../../components/paragraph/Paragraph";
 import { Headline } from "../../components/headline/Headline";
 

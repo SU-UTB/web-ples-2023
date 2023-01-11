@@ -1,5 +1,4 @@
-import * as React from "react";
-import { Headline } from "../../components/headline/Headline";
+import { useEffect, useState } from "react";
 import {
   CountdownItem,
   CountdownNumber,
@@ -10,63 +9,46 @@ interface CountdownProps {
   endTime: string;
 }
 
-interface CountdownState {
-  timeLeft: number;
-}
-
-class Countdown extends React.Component<CountdownProps, CountdownState> {
-  private timer: number | undefined;
-
-  constructor(props: CountdownProps) {
-    super(props);
-    this.state = { timeLeft: this.getTimeLeft() };
-  }
-
-  componentDidMount() {
-    this.timer = window.setInterval(() => {
-      this.setState({ timeLeft: this.getTimeLeft() });
-    }, 1000);
-  }
-
-  componentWillUnmount() {
-    clearInterval(this.timer);
-  }
-
-  getTimeLeft() {
-    const endTime = new Date(this.props.endTime).getTime();
+const Countdown = ({ endTime }: CountdownProps) => {
+  const [timeLeft, setTimeLeft] = useState(() => {
+    const endTimeInMs = new Date(endTime).getTime();
     const currentTime = new Date().getTime();
-    return Math.max(endTime - currentTime, 0);
-  }
+    return Math.max(endTimeInMs - currentTime, 0);
+  });
 
-  render() {
-    const { timeLeft } = this.state;
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      const endTimeInMs = new Date(endTime).getTime();
+      const currentTime = new Date().getTime();
+      setTimeLeft(Math.max(endTimeInMs - currentTime, 0));
+    }, 1000);
+    return () => clearInterval(intervalId);
+  }, [endTime]);
 
-    const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-    const hours = Math.floor(
-      (timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-    );
-    const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+  const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+  const hours = Math.floor(
+    (timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+  );
+  const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
 
-    return (
-      <>
-        <CountdownWrapper>
-          <CountdownItem>
-            <CountdownNumber>{days}</CountdownNumber>
-            dní
-          </CountdownItem>
-          <CountdownItem>
-            <CountdownNumber>{hours}</CountdownNumber>
-            hodin
-          </CountdownItem>
-          <CountdownItem>
-            <CountdownNumber>{minutes}</CountdownNumber>
-            minut
-          </CountdownItem>
-        </CountdownWrapper>
-      </>
-    );
-  }
-}
+  return (
+    <>
+      <CountdownWrapper>
+        <CountdownItem>
+          <CountdownNumber>{days}</CountdownNumber>
+          dní
+        </CountdownItem>
+        <CountdownItem>
+          <CountdownNumber>{hours}</CountdownNumber>
+          hodin
+        </CountdownItem>
+        <CountdownItem>
+          <CountdownNumber>{minutes}</CountdownNumber>
+          minut
+        </CountdownItem>
+      </CountdownWrapper>
+    </>
+  );
+};
 
 export default Countdown;

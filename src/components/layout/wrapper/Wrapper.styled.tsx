@@ -1,7 +1,7 @@
 import styled, { css } from "styled-components";
 import theme from "../../../theme/theme";
-import backgroundWinter from "../../../assets/images/backgroundWinter.svg";
-import background02 from "../../../assets/images/background02.svg";
+import backgroundWinter from "../../../assets/images/backgroundWinter.png";
+import backgroundTablet from "../../../assets/images/backgroundWinterTablet.png";
 import {
   Desktop,
   GteDesktopCheck,
@@ -14,7 +14,7 @@ export const WrapperMain = styled.main`
   background-repeat: no-repeat;
   background-size: cover;
   @media screen and (${theme.breakpoints.lteTabletQuery}) {
-    background-image: url(${background02});
+    background-image: url(${backgroundTablet});
     background-position: center 0;
   }
 `;

@@ -4,21 +4,21 @@ import theme from "../../theme/theme";
 export const CountdownWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
-  width: 260px;
+  width: 280px;
+  justify-content: center;
   border-radius: 10px;
   border: solid 2px ${theme.colors.primary};
   margin: 5em auto;
-  padding: 0.7em 1em 0.7em 1.5em;
+  padding: 0.7em 1em;
   gap: 2.5em;
 
   color: ${theme.colors.primary};
   font-family: ${theme.fonts.heading};
 
   @media screen and (${theme.breakpoints.mobileQuery}) {
-    width: 160px;
+    width: 180px;
     margin: 2em auto 7em;
-    padding: 0.5em 1em 0.5em 1.5em;
-    /* padding: 0; */
+    padding: 0.2em 0;
     gap: 1.5em;
   }
 `;

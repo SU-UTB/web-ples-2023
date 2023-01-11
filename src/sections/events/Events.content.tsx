@@ -1,9 +1,9 @@
 import EventItem from "../../types/TEvent";
-import skate from "../../assets/images/skate.svg";
-import film from "../../assets/images/film.svg";
-import shoe from "../../assets/images/shoe.svg";
-import glass from "../../assets/images/glass.svg";
-import mirror from "../../assets/images/mirror.svg";
+import skate from "../../assets/images/skate.png";
+import film from "../../assets/images/film.png";
+import shoe from "../../assets/images/shoe.png";
+import glass from "../../assets/images/glass.png";
+import mirror from "../../assets/images/mirror.png";
 
 export const events: EventItem[] = [
   {

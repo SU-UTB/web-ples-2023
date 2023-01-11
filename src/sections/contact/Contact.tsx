@@ -8,6 +8,7 @@ import {
   WrapperContact,
   ContactItem,
   ContactHalf,
+  ContactAction,
 } from "./Contact.styled";
 
 const Contact = () => {
@@ -19,11 +20,16 @@ const Contact = () => {
           <WrapperContactItem key={index}>
             <ContactHalf>
               <ContactItem>{item.position}</ContactItem>
-              <ContactItem>{item.phone}</ContactItem>
+              <ContactAction href={item.phone}>{item.phone}</ContactAction>
             </ContactHalf>
             <ContactHalf>
               <ContactItem>{item.name}</ContactItem>
-              <ContactItem>{item.email}</ContactItem>
+              {/* <ContactAction href="mailto:">{item.email}</ContactAction> */}
+              <ContactAction
+                href={"mailto:" + item.email + "?subject=Ples UTB 2023"}
+              >
+                {item.email}
+              </ContactAction>
             </ContactHalf>
           </WrapperContactItem>
         ))}
@@ -31,16 +37,20 @@ const Contact = () => {
           <ContactHalf>
             <ContactItem>Správci webu</ContactItem>
             <br />
-            <ContactItem>+420 731 014 934</ContactItem>
-            <ContactItem>+420 774 980 515 </ContactItem>
+            <ContactAction href="+420 731 014 934">
+              +420 731 014 934
+            </ContactAction>
+            <ContactAction href="+420 774 980 515">
+              +420 774 980 515
+            </ContactAction>
           </ContactHalf>
           <ContactHalf>
             <ContactItem>Jan Bureš</ContactItem>
             <ContactItem>
-              <strong>David Sedlář </strong>
+              <strong>David Sedlář</strong>
             </ContactItem>
-            <ContactItem>j_bures@sutb.cz</ContactItem>
-            <ContactItem>sedlar@sutb.cz</ContactItem>
+            <ContactAction>j_bures@sutb.cz</ContactAction>
+            <ContactAction>sedlar@sutb.cz</ContactAction>
           </ContactHalf>
         </WrapperContactItem>
       </WrapperContact>

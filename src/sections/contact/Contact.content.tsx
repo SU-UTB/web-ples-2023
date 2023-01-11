@@ -5,7 +5,7 @@ export const contacts: ContactItem[] = [
     position: "Manažerka plesu",
     name: "Petra Němcová",
     phone: "+420 123 456 789",
-    email: "prijmeni@sutb.cz",
+    email: "nemcova@sutb.cz",
   },
   {
     position: "Zástupce manažerky",

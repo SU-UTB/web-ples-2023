@@ -65,3 +65,7 @@ export const ContactHalf = styled.span`
 `;
 
 export const ContactItem = styled.div``;
+
+export const ContactAction = styled.a`
+  color: ${theme.colors.dark};
+`;

@@ -14,8 +14,18 @@ function Navbar() {
           Vytvořila <a href="https://sunovy.utb.cz/">Studentská Unie UTB</a>
         </LogoText>
         <Menu>
-          <MenuItem href="#oplese">Facebook</MenuItem>
-          <MenuItem href="#vstupenky">Instagram</MenuItem>
+          <MenuItem
+            href="https://www.facebook.com/studentskaunieutb"
+            rel="noopener noreferrer"
+          >
+            Facebook
+          </MenuItem>
+          <MenuItem
+            href="https://www.instagram.com/studentskaunieutb/"
+            rel="noopener noreferrer"
+          >
+            Instagram
+          </MenuItem>
         </Menu>
       </ContentWrapper>
     </FooterWrapper>
