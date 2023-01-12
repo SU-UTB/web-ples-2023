@@ -3,10 +3,13 @@ import theme from "../../../theme/theme";
 
 export const MenuWrapper = styled.div`
   display: flex;
-  width: 90%;
   max-width: 1600px;
-  margin: 1em auto;
+  margin: 0 auto;
+  padding-top: 2em;
+  gap: 3em;
+  justify-content: center;
   align-items: center;
+
   @media screen and (${theme.breakpoints.lteTabletQuery}) {
     display: flex;
     align-items: center;
@@ -18,20 +21,13 @@ export const MenuWrapper = styled.div`
   }
 `;
 
-export const Menu = styled.div`
-  display: flex;
-  width: 100%;
-  justify-content: flex-end;
-  gap: 3em;
-`;
-
 export const MenuItem = styled.a`
   text-decoration: none;
   font-family: ${theme.fonts.heading};
-  font-size: ${theme.fontSizeElements.h5}px;
-  color: ${theme.colors.text};
+  font-size: ${theme.fontSizeElements.h4}px;
+  color: ${theme.colors.secondary};
   transition: ${theme.animation.transitionBasic};
   &:hover {
-    color: ${theme.colors.text};
+    color: ${theme.colors.secondary};
   }
 `;

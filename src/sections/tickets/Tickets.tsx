@@ -1,79 +1,37 @@
 import { StyledImg } from "../../assets/images/Image";
-import Headline from "../../components/headline/Headline";
 import {
   WrapperSection,
   WrapperHalf,
   WrapperCentered,
-  WrapperMain,
 } from "../../components/layout/wrapper/Wrapper.styled";
-import Paragraph from "../../components/paragraph/Paragraph";
-import frozenImg from "../../assets/images/frozen.jpg";
-import { GteDesktop, LteTablet } from "../../theme/MediaQueries";
+import { Paragraph } from "../../components/paragraph/Paragraph";
+import { Headline } from "../../components/headline/Headline";
+import film from "../../assets/images/film.png";
 
 const Tickets = () => {
   return (
-    <WrapperMain background id="vstupenky">
-      <WrapperSection>
-        <LteTablet>
-          <>
-            <WrapperHalf>
-              <WrapperCentered>
-                <StyledImg src={frozenImg} alt="Frozen" />
-              </WrapperCentered>
-            </WrapperHalf>
-            <WrapperHalf>
-              <WrapperCentered>
-                <Headline>Vstupenky</Headline>
-                <Paragraph align="center">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Necessitatibus adipisci distinctio aperiam recusandae id rem
-                  iure debitis velit. Aut, vitae alias corrupti eum, laboriosam
-                  rerum dignissimos placeat.
-                  <br />
-                  <br />
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Necessitatibus adipisci distinctio aperiam recusandae id rem
-                  iure debitis velit. Aut, vitae alias corrupti eum, laboriosam
-                  rerum dignissimos placeat, ex eveniet tempora excepturi non
-                  ratione assumenda iste quas. Maxime nesciunt adipisci
-                  necessitatibus quibusdam hic eligendi, sed distinctio ipsam
-                  dolore officia aliquid unde.
-                </Paragraph>
-              </WrapperCentered>
-            </WrapperHalf>
-          </>
-        </LteTablet>
-        <GteDesktop>
-          <>
-            <WrapperHalf>
-              <WrapperCentered>
-                <Headline align="right">Vstupenky</Headline>
-                <Paragraph align="right">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Necessitatibus adipisci distinctio aperiam recusandae id rem
-                  iure debitis velit. Aut, vitae alias corrupti eum, laboriosam
-                  rerum dignissimos placeat.
-                  <br />
-                  <br />
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Necessitatibus adipisci distinctio aperiam recusandae id rem
-                  iure debitis velit. Aut, vitae alias corrupti eum, laboriosam
-                  rerum dignissimos placeat, ex eveniet tempora excepturi non
-                  ratione assumenda iste quas. Maxime nesciunt adipisci
-                  necessitatibus quibusdam hic eligendi, sed distinctio ipsam
-                  dolore officia aliquid unde.
-                </Paragraph>
-              </WrapperCentered>
-            </WrapperHalf>
-            <WrapperHalf>
-              <WrapperCentered>
-                <StyledImg src={frozenImg} alt="Frozen" />
-              </WrapperCentered>
-            </WrapperHalf>
-          </>
-        </GteDesktop>
-      </WrapperSection>
-    </WrapperMain>
+    <WrapperSection id="vstupenky">
+      <WrapperHalf>
+        <WrapperCentered>
+          <StyledImg src={film} alt="Frozen" />
+        </WrapperCentered>
+      </WrapperHalf>
+      <WrapperHalf>
+        <WrapperCentered>
+          <Headline align="left">Vstupenky</Headline>
+          <Paragraph>
+            Osobní rezervace od <strong> 1. 2. 2023 </strong>
+            <br />
+            <br />
+            Bližší informace k předprodeji: Aneta Nejezchlebová
+            <br />
+            nejezchlebova@sutb.cz
+            <br />
+            +420 723 132 295
+          </Paragraph>
+        </WrapperCentered>
+      </WrapperHalf>
+    </WrapperSection>
   );
 };
 

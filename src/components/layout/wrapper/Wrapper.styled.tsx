@@ -1,34 +1,35 @@
 import styled, { css } from "styled-components";
 import theme from "../../../theme/theme";
+import backgroundWinter from "../../../assets/images/backgroundWinter.png";
+import backgroundTablet from "../../../assets/images/backgroundWinterTablet.png";
+import {
+  Desktop,
+  GteDesktopCheck,
+  MobileCheck,
+} from "../../../theme/MediaQueries";
 
-export const WrapperMain = styled.div<{
-  background?: boolean;
-}>(
-  ({ background }) => css`
-    font-family: ${theme.fonts.monsterRegular};
-    padding: 5rem 0;
-
-    ${background &&
-    css`
-      background-color: ${theme.colors.background};
-    `}
-
-    @media screen and (${theme.breakpoints.lteTabletQuery}) {
-      padding: 1rem 0;
-    }
-  `
-);
+export const WrapperMain = styled.main`
+  font-family: ${theme.fonts.monsterRegular};
+  background-image: url(${backgroundWinter});
+  background-repeat: no-repeat;
+  background-size: cover;
+  @media screen and (${theme.breakpoints.lteTabletQuery}) {
+    background-image: url(${backgroundTablet});
+    background-position: center 0;
+  }
+`;
 
 export const WrapperSection = styled.div<{
   centered?: boolean;
+  contact?: boolean;
 }>(
-  ({ centered }) => css`
+  ({ centered, contact }) => css`
     display: flex;
-    width: 90%;
+    width: ${contact ? `100%` : `80%`};
     max-width: 1600px;
-    margin: 0 auto;
-    gap: 3rem;
-    background-color: lightgray;
+    margin: 0 auto 10em;
+    gap: 3em;
+
     ${centered &&
     css`
       gap: 1rem;
@@ -44,7 +45,10 @@ export const WrapperSection = styled.div<{
 );
 
 export const WrapperHalf = styled.div`
+  display: flex;
+  flex-direction: column;
   width: 50%;
+
   @media screen and (${theme.breakpoints.lteTabletQuery}) {
     width: 100%;
   }
@@ -55,7 +59,6 @@ export const WrapperCentered = styled.div`
   flex-direction: column;
   height: 100%;
   justify-content: center;
-  padding: 2rem;
   @media screen and (${theme.breakpoints.lteTabletQuery}) {
     align-items: center;
   }
@@ -63,19 +66,16 @@ export const WrapperCentered = styled.div`
 
 export const CardWrapper = styled.div`
   display: grid;
-  max-width: 90%;
-  grid-template-columns: repeat(4, 1fr);
-  margin-bottom: 2em;
-  background-color: yellow;
+  grid-template-columns: repeat(5, 1fr);
+  margin: 2em 0;
+  color: ${theme.colors.primary};
 
   @media screen and (${theme.breakpoints.tabletQuery}) {
-    grid-template-columns: repeat(2, 1fr);
-    max-width: 70%;
-    font-size: ${theme.fontSizeElements.paragraphTablet}px;
+    grid-template-columns: repeat(3, 1fr);
+    font-size: ${theme.fontSizeElements.paragraphGteTablet}px;
   }
   @media screen and (${theme.breakpoints.mobileQuery}) {
     grid-template-columns: repeat(2, 1fr);
-    max-width: 90%;
     font-size: ${theme.fontSizeElements.paragraphMobile}px;
   }
 `;

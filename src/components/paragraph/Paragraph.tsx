@@ -1,13 +1,24 @@
-import { ParagraphWrapper } from "./Paragraph.styled";
+import styled, { css } from "styled-components";
+import theme from "../../theme/theme";
 
-interface PargraphInterface {
-  align?: "left" | "center" | "right";
+export const Paragraph = styled.p<{
+  colorMode?: "white" | "black" | "ice";
   program?: boolean;
-  children: React.ReactNode;
-}
+}>(
+  ({ colorMode = "white", program }) => css`
+    font-size: ${theme.fontSizeElements.paragraphGteTablet}px;
+    text-align: justify;
+    line-height: 1.5;
 
-const Paragraph: React.FC<PargraphInterface> = ({ align, children }) => {
-  return <ParagraphWrapper align={align}>{children}</ParagraphWrapper>;
-};
+    color: ${colorMode === "ice" ? `${theme.colors.ice}` : `${colorMode}`};
 
-export default Paragraph;
+    ${program &&
+    css`
+      margin: 10em;
+    `};
+
+    @media screen and (${theme.breakpoints.mobileQuery}) {
+      font-size: ${theme.fontSizeElements.paragraphMobile}px;
+    }
+  `
+);
