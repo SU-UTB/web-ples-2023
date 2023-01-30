@@ -5,7 +5,7 @@ export const ProgramCard = styled.a`
   padding: 1em;
   margin: 0.75em;
   text-align: center;
-  background-color: rgba(0, 0, 0, 0.35);
+  background-color: rgba(23, 21, 71, 0.5);
   border-radius: 0.5em;
   box-shadow: 0px 5px 10px 2px ${theme.colors.ice};
   &:hover {

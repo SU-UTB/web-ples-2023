@@ -1,17 +1,17 @@
-import styled from "styled-components";
-import theme from "../../../theme/theme";
+import styled from 'styled-components';
+import theme from '../../../theme/theme';
 
 export const FooterWrapper = styled.div`
   display: flex;
   max-width: 2500px;
   margin: 0 auto;
-  padding: 2.5em 0;
+  padding: 1.5em 0;
 
   color: ${theme.colors.primary};
-  background-color: ${theme.colors.dark};
+  background-color: ${theme.colors.background};
 
   font-family: ${theme.fonts.heading};
-  font-size: ${theme.fontSizeElements.h4}px;
+  font-size: ${theme.fontSizeElements.h5}px;
 
   @media screen and (${theme.breakpoints.tabletQuery}) {
     font-size: ${theme.fontSizeElements.paragraphGteTablet}px;
@@ -25,6 +25,7 @@ export const ContentWrapper = styled.div`
   display: flex;
   width: 80%;
   margin: 0 auto;
+  justify-content: center;
 `;
 
 export const Menu = styled.div`

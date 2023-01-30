@@ -38,7 +38,7 @@ const theme = {
   },
   colors: {
     primary: 'white',
-    background: 'lightblue',
+    background: '#171547',
     ice: '#B3CEF2',
     dark: 'black',
   },
