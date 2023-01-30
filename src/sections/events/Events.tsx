@@ -1,15 +1,15 @@
-import { Headline } from "../../components/headline/Headline";
+import Headline from '../../components/headline/Headline';
 import {
   CardWrapper,
   WrapperSection,
-} from "../../components/layout/wrapper/Wrapper.styled";
-import { Paragraph } from "../../components/paragraph/Paragraph";
-import { CardImageWrapper, CardText, ProgramCard } from "./Events.styled";
-import { events } from "./Events.content";
+} from '../../components/layout/wrapper/Wrapper.styled';
+import Paragraph from '../../components/paragraph/Paragraph';
+import { CardImageWrapper, CardText, ProgramCard } from './Events.styled';
+import { events } from './Events.content';
 
 const Events = () => {
   return (
-    <WrapperSection centered id="program">
+    <WrapperSection centered id='program'>
       <Headline>Doprovodný program</Headline>
       <Paragraph>
         Abychom vás správně naladili, připravili jsme si po celý únor, tedy
@@ -27,7 +27,7 @@ const Events = () => {
       <CardWrapper>
         {events.map((item, index) => (
           <ProgramCard key={index}>
-            <Headline align="center" card>
+            <Headline align='center' card>
               {item.name}
             </Headline>
             <CardText>{item.date}</CardText>

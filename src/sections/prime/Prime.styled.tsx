@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import theme from "../../theme/theme";
+import styled from 'styled-components';
+import theme from '../../theme/theme';
 
 export const PrimeWrapper = styled.div`
   display: flex;
@@ -8,6 +8,22 @@ export const PrimeWrapper = styled.div`
   padding-top: 35em;
   @media screen and (${theme.breakpoints.lteTabletQuery}) {
     padding-top: 27em;
+  }
+`;
+
+export const PrimeHeadline = styled.span`
+  max-width: 80%;
+  font-family: ${theme.fonts.heading};
+  font-size: ${theme.fontSizeElements.h1}px;
+
+  color: ${theme.colors.primary};
+
+  @media screen and (${theme.breakpoints.tabletQuery}) {
+    font-size: ${theme.fontSizeElements.h2}px;
+  }
+  @media screen and (${theme.breakpoints.mobileQuery}) {
+    max-width: 90%;
+    font-size: ${theme.fontSizeElements.h3}px;
   }
 `;
 
