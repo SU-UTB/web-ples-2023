@@ -15,7 +15,7 @@ export const WrapperContactItem = styled.div`
   gap: 2em;
 
   font-size: ${theme.fontSizeElements.paragraphGteTablet}px;
-  color: ${theme.colors.secondary};
+  color: ${theme.colors.primary};
 
   @media screen and (${theme.breakpoints.tabletQuery}) {
     font-size: ${theme.fontSizeElements.paragraphGteTablet}px;

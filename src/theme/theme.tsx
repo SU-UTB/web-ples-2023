@@ -38,7 +38,6 @@ const theme = {
   colors: {
     primary: "white",
     background: "lightblue",
-    secondary: "black",
     ice: "#B3CEF2",
     dark: "#171547",
   },
