@@ -7,7 +7,8 @@ import {
 import Paragraph from '../../components/paragraph/Paragraph';
 import Headline from '../../components/headline/Headline';
 
-import film from '../../assets/images/film.png';
+import tickets from '../../assets/images/tickets.png';
+import { ContactAction } from '../contact/Contact.styled';
 
 const Tickets = () => {
   return (
@@ -16,23 +17,33 @@ const Tickets = () => {
         <WrapperCentered>
           <StyledImgWrapper
             className='reveal reveal-6'
-            src={film}
-            alt='Frozen'
+            src={tickets}
+            alt='tickets'
           />
         </WrapperCentered>
       </WrapperHalf>
       <WrapperHalf>
         <WrapperCentered>
           <Headline align='left'>Vstupenky</Headline>
-          <Paragraph>
-            Osobní rezervace od <strong> 1. 2. 2023 </strong>
+          <Paragraph align>
+            Rezervace a prodej od <strong>13. 2. 2023</strong>
+            <br />
+            Vybírat můžete ze tří druhů lístků, a to na stání (350 Kč), sezení
+            (500 Kč) a sezení s rautem (750 Kč).
             <br />
             <br />
             Bližší informace k předprodeji: Aneta Nejezchlebová
             <br />
-            nejezchlebova@sutb.cz
+            <ContactAction
+              href={'mailto:nejezchlebova@sutb.cz?subject=Ples UTB 2023'}
+              tickets
+            >
+              nejezchlebova@sutb.cz
+            </ContactAction>
             <br />
-            +420 723 132 295
+            <ContactAction href='+420 723 132 295' tickets>
+              +420 723 132 295
+            </ContactAction>
           </Paragraph>
         </WrapperCentered>
       </WrapperHalf>

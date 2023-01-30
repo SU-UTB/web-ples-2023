@@ -49,8 +49,14 @@ const Contact = () => {
             <ContactItem>
               <strong>David Sedlář</strong>
             </ContactItem>
-            <ContactAction>j_bures@sutb.cz</ContactAction>
-            <ContactAction>sedlar@sutb.cz</ContactAction>
+            <ContactAction
+              href={'mailto:j_bures@sutb.cz?subject=Ples UTB 2023'}
+            >
+              j_bures@sutb.cz
+            </ContactAction>
+            <ContactAction href={'mailto:sedlar@sutb.cz?subject=Ples UTB 2023'}>
+              sedlar@sutb.cz
+            </ContactAction>
           </ContactHalf>
         </WrapperContactItem>
       </WrapperContact>

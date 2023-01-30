@@ -60,7 +60,7 @@ const Program = () => {
         </WrapperSection>
       </LteTablet>
 
-      {/* <WrapperSection centered id="program">
+      <WrapperSection centered id='program'>
         <WrapperTimeline>
           {timeline.map((item, index) => (
             <Row key={index}>
@@ -69,7 +69,7 @@ const Program = () => {
             </Row>
           ))}
         </WrapperTimeline>
-      </WrapperSection> */}
+      </WrapperSection>
     </>
   );
 };

@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import theme from "../../theme/theme";
+import styled, { css } from 'styled-components';
+import theme from '../../theme/theme';
 
 export const WrapperContact = styled.div`
   display: flex;
@@ -32,7 +32,6 @@ export const ContactHalf = styled.span`
   display: flex;
   flex-direction: column;
   width: 50%;
-  /* white-space: nowrap; */
   &:nth-child(1) {
     align-items: flex-end;
   }
@@ -45,9 +44,19 @@ export const ContactHalf = styled.span`
 
 export const ContactItem = styled.div``;
 
-export const ContactAction = styled.a`
-  color: ${theme.colors.dark};
-  @media screen and (${theme.breakpoints.gteDesktopLgQuery}) {
-    color: ${theme.colors.ice};
-  }
-`;
+export const ContactAction = styled.a<{
+  tickets?: boolean;
+}>(
+  ({ tickets }) => css`
+    ${tickets &&
+    css`
+      color: white !important;
+    `}
+
+    color: ${theme.colors.dark};
+
+    @media screen and (${theme.breakpoints.gteDesktopLgQuery}) {
+      color: ${theme.colors.ice};
+    }
+  `
+);
