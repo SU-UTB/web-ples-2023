@@ -17,6 +17,10 @@ export const WrapperContactItem = styled.div`
   font-size: ${theme.fontSizeElements.paragraphGteTablet}px;
   color: ${theme.colors.secondary};
 
+  @media screen and (${theme.breakpoints.gteDesktopLgQuery}) {
+    color: ${theme.colors.ice};
+  }
+
   @media screen and (${theme.breakpoints.tabletQuery}) {
     font-size: ${theme.fontSizeElements.paragraphGteTablet}px;
   }
@@ -24,26 +28,6 @@ export const WrapperContactItem = styled.div`
     gap: 1em;
 
     font-size: ${theme.fontSizeElements.paragraphMobile}px;
-  }
-`;
-
-export const LeftSide = styled.div`
-  display: flex;
-  flex-direction: column;
-  text-align: right;
-
-  div:nth-child(1) {
-    font-weight: bold;
-  }
-`;
-
-export const RightSide = styled.div`
-  display: flex;
-  flex-direction: column;
-  text-align: left;
-
-  div:nth-child(1) {
-    font-weight: bold;
   }
 `;
 
@@ -67,5 +51,9 @@ export const ContactHalf = styled.span`
 export const ContactItem = styled.div``;
 
 export const ContactAction = styled.a`
-  color: ${theme.colors.dark};
+  color: ${theme.colors.secondary};
+
+  @media screen and (${theme.breakpoints.gteDesktopLgQuery}) {
+    color: ${theme.colors.ice};
+  }
 `;

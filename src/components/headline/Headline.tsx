@@ -1,40 +1,23 @@
-import styled, { css } from "styled-components";
-import theme from "../../theme/theme";
+import { HeadlineWrapper } from "./Headline.styled";
 
-export const Headline = styled.span<{
+interface HeadlineInterface {
   color?: "white" | "black" | "ice";
   align?: "left" | "center" | "right";
   card?: boolean;
-}>(
-  ({ color: colorMode = "white", align = "center", card }) => css`
-    max-width: 80%;
-    font-family: ${theme.fonts.heading};
+  children: React.ReactNode;
+}
 
-    font-size: ${card
-      ? `${theme.fontSizeElements.h4}px`
-      : `${theme.fontSizeElements.h1}px`};
+const Headline: React.FC<HeadlineInterface> = ({
+  color,
+  align,
+  card,
+  children,
+}) => {
+  return (
+    <HeadlineWrapper className="reveal" color={color} align={align} card={card}>
+      {children}
+    </HeadlineWrapper>
+  );
+};
 
-    color: ${colorMode === "ice" ? `${theme.colors.ice}` : `${colorMode}`};
-
-    ${card &&
-    css`
-      margin-bottom: 0.5em;
-    `}
-    ${align &&
-    css`
-      text-align: ${align};
-    `};
-
-    @media screen and (${theme.breakpoints.tabletQuery}) {
-      font-size: ${card
-        ? `${theme.fontSizeElements.h5}px`
-        : `${theme.fontSizeElements.h2}px`};
-    }
-    @media screen and (${theme.breakpoints.mobileQuery}) {
-      max-width: 90%;
-      font-size: ${card
-        ? `${theme.fontSizeElements.paragraphMobile}px`
-        : `${theme.fontSizeElements.h3}px`};
-    }
-  `
-);
+export default Headline;

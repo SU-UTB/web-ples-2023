@@ -88,3 +88,8 @@ export const GteDesktopCheck = () => {
   const resolution = useMediaQuery({ minWidth: theme.breakpoints.lg });
   return resolution;
 };
+
+export const GteHugeDesktopCheck = () => {
+  const resolution = useMediaQuery({ minWidth: theme.breakpoints.huge });
+  return resolution;
+};

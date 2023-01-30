@@ -9,10 +9,10 @@ export const ProgramCard = styled.a`
   background-color: ${theme.colors.dark};
   border-radius: 0.5em;
   box-shadow: 0px 2px 2px 2px ${theme.colors.ice};
-  transition: all 0.1s ease-in-out;
 
   &:hover {
     cursor: pointer;
+    transition: all 0.1s ease-in-out !important;
     margin: 0.5em;
   }
   @media screen and (${theme.breakpoints.lteTabletQuery}) {

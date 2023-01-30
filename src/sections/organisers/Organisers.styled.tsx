@@ -5,7 +5,6 @@ export const OrganiserWrapper = styled.div`
   display: flex;
   max-width: 1600px;
   padding-top: 1em;
-  margin-bottom: -5em;
   gap: 5em;
   align-items: center;
   @media screen and (${theme.breakpoints.lteTabletQuery}) {

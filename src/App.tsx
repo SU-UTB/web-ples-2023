@@ -15,9 +15,19 @@ import Program from "./sections/program/Program";
 import Tickets from "./sections/tickets/Tickets";
 import { LteTablet } from "./theme/MediaQueries";
 
+import CookieConsent from "react-cookie-consent";
+
+interface WrapperMainInterface {
+  children: React.ReactNode;
+}
+
+import reveal from "./functions/reveal";
+window.addEventListener("scroll", reveal);
+
 function App() {
   return (
     <WrapperMain>
+      {/* <CookieConsent /> */}
       <Fold />
       <LteTablet>
         <HamburgerMenu

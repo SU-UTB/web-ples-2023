@@ -11,6 +11,22 @@ export const PrimeWrapper = styled.div`
   }
 `;
 
+export const PrimeHeadline = styled.span`
+  max-width: 80%;
+  font-family: ${theme.fonts.heading};
+  font-size: ${theme.fontSizeElements.h1}px;
+
+  color: ${theme.colors.primary};
+
+  @media screen and (${theme.breakpoints.tabletQuery}) {
+    font-size: ${theme.fontSizeElements.h2}px;
+  }
+  @media screen and (${theme.breakpoints.mobileQuery}) {
+    max-width: 90%;
+    font-size: ${theme.fontSizeElements.h3}px;
+  }
+`;
+
 export const Row = styled.div`
   display: flex;
   gap: 3em;

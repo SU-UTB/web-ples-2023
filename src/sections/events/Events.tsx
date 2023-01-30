@@ -1,9 +1,9 @@
-import { Headline } from "../../components/headline/Headline";
+import Headline from "../../components/headline/Headline";
 import {
   CardWrapper,
   WrapperSection,
 } from "../../components/layout/wrapper/Wrapper.styled";
-import { Paragraph } from "../../components/paragraph/Paragraph";
+import Paragraph from "../../components/paragraph/Paragraph";
 import { CardImageWrapper, CardText, ProgramCard } from "./Events.styled";
 import { events } from "./Events.content";
 
@@ -26,7 +26,7 @@ const Events = () => {
 
       <CardWrapper>
         {events.map((item, index) => (
-          <ProgramCard key={index}>
+          <ProgramCard key={index} className="reveal reveal-6">
             <Headline align="center" card>
               {item.name}
             </Headline>

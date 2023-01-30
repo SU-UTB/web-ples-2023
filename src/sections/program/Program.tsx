@@ -5,11 +5,11 @@ import {
 } from "../../components/layout/wrapper/Wrapper.styled";
 import { timeline } from "./Program.content";
 import { Row, WrapperTimeline, Time, Activity } from "./Program.styled";
-import { Headline } from "../../components/headline/Headline";
-import { StyledImg } from "../../assets/images/Image";
+import Headline from "../../components/headline/Headline";
 import skate from "../../assets/images/skate.png";
-import { Paragraph } from "../../components/paragraph/Paragraph";
+import Paragraph from "../../components/paragraph/Paragraph";
 import { GteDesktop, LteTablet } from "../../theme/MediaQueries";
+import StyledImg from "../../assets/images/StyledImg/StyledImg";
 
 const Program = () => {
   return (
@@ -31,7 +31,7 @@ const Program = () => {
           </WrapperHalf>
           <WrapperHalf>
             <WrapperCentered>
-              <StyledImg mirrored src={skate} alt="Frozen" />
+              <StyledImg mirrored src={skate} alt="skate" />
             </WrapperCentered>
           </WrapperHalf>
         </WrapperSection>
@@ -41,7 +41,7 @@ const Program = () => {
         <WrapperSection id="program">
           <WrapperHalf>
             <WrapperCentered>
-              <StyledImg mirrored src={skate} alt="Frozen" />
+              <StyledImg mirrored src={skate} alt="skate" />
             </WrapperCentered>
           </WrapperHalf>
           <WrapperHalf>

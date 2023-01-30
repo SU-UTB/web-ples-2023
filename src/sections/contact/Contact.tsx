@@ -1,9 +1,8 @@
-import { Headline } from "../../components/headline/Headline";
+import Headline from "../../components/headline/Headline";
 import { WrapperSection } from "../../components/layout/wrapper/Wrapper.styled";
+import { GteHugeDesktopCheck } from "../../theme/MediaQueries";
 import { contacts } from "./Contact.content";
 import {
-  LeftSide,
-  RightSide,
   WrapperContactItem,
   WrapperContact,
   ContactItem,
@@ -14,17 +13,18 @@ import {
 const Contact = () => {
   return (
     <WrapperSection centered contact id="kontakt">
-      <Headline color="black">Kontakty</Headline>
+      <Headline color={GteHugeDesktopCheck() ? "ice" : "black"}>
+        Kontakty
+      </Headline>
       <WrapperContact>
         {contacts.map((item, index) => (
-          <WrapperContactItem key={index}>
+          <WrapperContactItem key={index} className="reveal">
             <ContactHalf>
               <ContactItem>{item.position}</ContactItem>
               <ContactAction href={item.phone}>{item.phone}</ContactAction>
             </ContactHalf>
             <ContactHalf>
               <ContactItem>{item.name}</ContactItem>
-              {/* <ContactAction href="mailto:">{item.email}</ContactAction> */}
               <ContactAction
                 href={"mailto:" + item.email + "?subject=Ples UTB 2023"}
               >
@@ -33,7 +33,7 @@ const Contact = () => {
             </ContactHalf>
           </WrapperContactItem>
         ))}
-        <WrapperContactItem>
+        <WrapperContactItem className="reveal">
           <ContactHalf>
             <ContactItem>Správci webu</ContactItem>
             <br />

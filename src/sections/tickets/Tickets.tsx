@@ -1,11 +1,11 @@
-import { StyledImg } from "../../assets/images/Image";
+import { StyledImgWrapper } from "../../assets/images/StyledImg/StyledImg.styled";
 import {
   WrapperSection,
   WrapperHalf,
   WrapperCentered,
 } from "../../components/layout/wrapper/Wrapper.styled";
-import { Paragraph } from "../../components/paragraph/Paragraph";
-import { Headline } from "../../components/headline/Headline";
+import Paragraph from "../../components/paragraph/Paragraph";
+import Headline from "../../components/headline/Headline";
 import film from "../../assets/images/film.png";
 
 const Tickets = () => {
@@ -13,7 +13,11 @@ const Tickets = () => {
     <WrapperSection id="vstupenky">
       <WrapperHalf>
         <WrapperCentered>
-          <StyledImg src={film} alt="Frozen" />
+          <StyledImgWrapper
+            className="reveal reveal-6"
+            src={film}
+            alt="Frozen"
+          />
         </WrapperCentered>
       </WrapperHalf>
       <WrapperHalf>

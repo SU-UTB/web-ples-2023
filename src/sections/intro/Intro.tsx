@@ -1,12 +1,12 @@
-import { StyledImg } from "../../assets/images/Image";
 import {
   WrapperSection,
   WrapperHalf,
   WrapperCentered,
 } from "../../components/layout/wrapper/Wrapper.styled";
 import shoe from "../../assets/images/shoe.png";
-import { Paragraph } from "../../components/paragraph/Paragraph";
-import { Headline } from "../../components/headline/Headline";
+import Paragraph from "../../components/paragraph/Paragraph";
+import Headline from "../../components/headline/Headline";
+import StyledImg from "../../assets/images/StyledImg/StyledImg";
 
 const Intro = () => {
   return (

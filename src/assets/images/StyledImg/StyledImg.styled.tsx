@@ -1,7 +1,7 @@
 import styled, { css } from "styled-components";
-import theme from "../../theme/theme";
+import theme from "../../../theme/theme";
 
-export const StyledImg = styled.img<{
+export const StyledImgWrapper = styled.img<{
   mirrored?: boolean;
 }>(
   ({ mirrored }) => css`
@@ -12,8 +12,8 @@ export const StyledImg = styled.img<{
 
     ${mirrored &&
     css`
-      -webkit-transform: scaleX(-1);
-      transform: scaleX(-1);
+      -webkit-transform: scaleX(-1) !important;
+      transform: scaleX(-1) !important;
     `}
 
     @media screen and (${theme.breakpoints.lteTabletQuery}) {

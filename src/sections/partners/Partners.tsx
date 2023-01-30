@@ -1,4 +1,4 @@
-import { Headline } from "../../components/headline/Headline";
+import Headline from "../../components/headline/Headline";
 import {
   WrapperSection,
   CardWrapper,
@@ -12,7 +12,7 @@ const Partners = () => {
       <Headline color="black">Partneři</Headline>
       <CardWrapper>
         {partners.map((item, index) => (
-          <PartnerLogo key={index}>
+          <PartnerLogo key={index} className="reveal reveal-slow">
             <PartnerImg src={item.logoSrc} alt={item.name} />
           </PartnerLogo>
         ))}
