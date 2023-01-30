@@ -1,6 +1,6 @@
-import styled, { css } from 'styled-components';
-import theme from '../../../theme/theme';
-import backgroundWinter from '../../../assets/images/backgroundWinter.png';
+import styled, { css } from "styled-components";
+import theme from "../../../theme/theme";
+import backgroundWinter from "../../../assets/images/backgroundWinter.png";
 
 export const WrapperMain = styled.main`
   font-family: ${theme.fonts.monsterRegular};

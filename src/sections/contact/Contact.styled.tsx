@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import theme from '../../theme/theme';
+import styled from "styled-components";
+import theme from "../../theme/theme";
 
 export const WrapperContact = styled.div`
   display: flex;
@@ -14,7 +14,8 @@ export const WrapperContactItem = styled.div`
   line-height: 1.5em;
   gap: 2em;
   font-size: ${theme.fontSizeElements.paragraphGteTablet}px;
-  color: ${theme.colors.secondary};
+
+  color: ${theme.colors.dark};
   @media screen and (${theme.breakpoints.gteDesktopLgQuery}) {
     color: ${theme.colors.ice};
   }
@@ -45,7 +46,7 @@ export const ContactHalf = styled.span`
 export const ContactItem = styled.div``;
 
 export const ContactAction = styled.a`
-  color: ${theme.colors.secondary};
+  color: ${theme.colors.dark};
   @media screen and (${theme.breakpoints.gteDesktopLgQuery}) {
     color: ${theme.colors.ice};
   }
