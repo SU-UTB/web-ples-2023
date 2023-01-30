@@ -16,9 +16,15 @@ import Tickets from "./sections/tickets/Tickets";
 import { LteTablet } from "./theme/MediaQueries";
 import Snowing from "./components/snowing/Snowing";
 
+// import CookieConsent from 'react-cookie-consent';
+
+import reveal from "./functions/reveal";
+window.addEventListener("scroll", reveal);
+
 function App() {
   return (
     <WrapperMain>
+      {/* <CookieConsent /> */}
       <Fold />
       <LteTablet>
         <HamburgerMenu
@@ -29,7 +35,7 @@ function App() {
       <Navbar />
       <Snowing />
       <Prime />
-      <Countdown endTime="2023-03-03T15:00:00" />
+      <Countdown endTime='2023-03-03T15:00:00' />
       <Intro />
       <Program />
       <Tickets />

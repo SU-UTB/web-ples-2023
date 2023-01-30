@@ -6,6 +6,7 @@ const theme = {
     lg: 992,
     xl: 1200,
     xxl: 1400,
+    huge: 1800,
 
     mobileQuery: "max-width: 575px",
     gteMobileQuery: "min-width: 446px",
@@ -18,7 +19,7 @@ const theme = {
     gteDesktopQuery: "min-width: 992px",
     lteDesktopQuery: "max-width: 1399px",
 
-    gteDesktopLgQuery: "min-width: 1400px",
+    gteDesktopLgQuery: "min-width: 1800px",
   },
   fonts: {
     heading: "Creative-Vintage-Draft",

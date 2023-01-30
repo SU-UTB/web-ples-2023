@@ -7,6 +7,7 @@ export const WrapperMain = styled.main`
   background-image: url(${backgroundWinter});
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center 0;
   @media screen and (${theme.breakpoints.lteTabletQuery}) {
     background-position: center 0;
   }
