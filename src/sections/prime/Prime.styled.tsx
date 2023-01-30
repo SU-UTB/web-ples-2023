@@ -6,8 +6,8 @@ export const PrimeWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   padding-top: 35em;
-  @media screen and (${theme.breakpoints.lteTabletQuery}) {
-    padding-top: 27em;
+  @media screen and (${theme.breakpoints.tabletQuery}) {
+    padding-top: 30em;
   }
 `;
 
@@ -15,6 +15,7 @@ export const PrimeHeadline = styled.span`
   max-width: 80%;
   font-family: ${theme.fonts.heading};
   font-size: ${theme.fontSizeElements.h1}px;
+  text-align: center;
 
   color: ${theme.colors.primary};
 

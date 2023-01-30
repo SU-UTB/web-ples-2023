@@ -2,13 +2,12 @@ import styled from 'styled-components';
 import theme from '../../theme/theme';
 
 export const ProgramCard = styled.a`
-  display: block;
   padding: 1em;
   margin: 0.75em;
   text-align: center;
-  background-color: ${theme.colors.dark};
+  background-color: rgba(0, 0, 0, 0.35);
   border-radius: 0.5em;
-  box-shadow: 0px 2px 2px 2px ${theme.colors.ice};
+  box-shadow: 0px 5px 10px 2px ${theme.colors.ice};
   &:hover {
     cursor: pointer;
     transition: all 0.1s ease-in-out !important;

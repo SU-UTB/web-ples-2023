@@ -7,7 +7,7 @@ import { Link, OrganiserWrapper } from './Organisers.styled';
 const Organisers = () => {
   return (
     <WrapperSection centered>
-      <Headline color='black'>Organizátoří</Headline>
+      <Headline color='black'>Organizátoři</Headline>
       <OrganiserWrapper>
         {organisers.map((item, index) => (
           <Link href={item.link} key={index} className='reveal reveal-slow'>

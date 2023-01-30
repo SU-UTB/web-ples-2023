@@ -24,7 +24,7 @@ const Events = () => {
         slevou.
       </Paragraph>
 
-      <CardWrapper>
+      <CardWrapper className='reveal reveal-slow'>
         {events.map((item, index) => (
           <ProgramCard key={index}>
             <Headline align='center' card>
