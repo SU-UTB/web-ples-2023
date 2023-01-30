@@ -8,22 +8,22 @@ const theme = {
     xxl: 1400,
     huge: 1800,
 
-    mobileQuery: "max-width: 575px",
-    gteMobileQuery: "min-width: 446px",
+    mobileQuery: 'max-width: 575px',
+    gteMobileQuery: 'min-width: 446px',
 
-    tabletQuery: "min-width: 576px) and (max-width: 991px",
-    gteTabletQuery: "min-width: 576x",
-    lteTabletQuery: "max-width: 991px",
+    tabletQuery: 'min-width: 576px) and (max-width: 991px',
+    gteTabletQuery: 'min-width: 576x',
+    lteTabletQuery: 'max-width: 991px',
 
-    desktopQuery: "min-width: 992px) and (max-width: 1399px",
-    gteDesktopQuery: "min-width: 992px",
-    lteDesktopQuery: "max-width: 1399px",
+    desktopQuery: 'min-width: 992px) and (max-width: 1399px',
+    gteDesktopQuery: 'min-width: 992px',
+    lteDesktopQuery: 'max-width: 1399px',
 
-    gteDesktopLgQuery: "min-width: 1800px",
+    gteDesktopLgQuery: 'min-width: 1800px',
   },
   fonts: {
-    heading: "Creative-Vintage-Draft",
-    monsterRegular: "Monsterrat-Regular",
+    heading: 'Creative-Vintage-Draft',
+    monsterRegular: 'Monsterrat-Regular',
   },
   fontSizeElements: {
     countdown: 48,
@@ -37,13 +37,13 @@ const theme = {
     caption: 10,
   },
   colors: {
-    primary: "white",
-    background: "lightblue",
-    ice: "#B3CEF2",
-    dark: "#171547",
+    primary: 'white',
+    background: 'lightblue',
+    ice: '#B3CEF2',
+    dark: 'black',
   },
   animation: {
-    transitionBasic: "all 0.3s ease",
+    transitionBasic: 'all 0.3s ease',
   },
 };
 

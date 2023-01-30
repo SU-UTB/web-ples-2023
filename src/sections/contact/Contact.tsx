@@ -13,7 +13,7 @@ import {
 const Contact = () => {
   return (
     <WrapperSection centered contact id='kontakt'>
-      <Headline color={GteHugeDesktopCheck() ? 'ice' : 'black'}>
+      <Headline color={GteHugeDesktopCheck() ? 'white' : 'black'}>
         Kontakty
       </Headline>
       <WrapperContact>
