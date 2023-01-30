@@ -14,6 +14,7 @@ import Countdown from "./sections/countdown/Countdown";
 import Program from "./sections/program/Program";
 import Tickets from "./sections/tickets/Tickets";
 import { LteTablet } from "./theme/MediaQueries";
+import Snowing from "./components/snowing/Snowing";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
         />
       </LteTablet>
       <Navbar />
+      <Snowing />
       <Prime />
       <Countdown endTime="2023-03-03T15:00:00" />
       <Intro />
