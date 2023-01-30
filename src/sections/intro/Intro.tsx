@@ -2,23 +2,23 @@ import {
   WrapperSection,
   WrapperHalf,
   WrapperCentered,
-} from "../../components/layout/wrapper/Wrapper.styled";
-import shoe from "../../assets/images/shoe.png";
-import Paragraph from "../../components/paragraph/Paragraph";
-import Headline from "../../components/headline/Headline";
-import StyledImg from "../../assets/images/StyledImg/StyledImg";
+} from '../../components/layout/wrapper/Wrapper.styled';
+import shoe from '../../assets/images/shoe.png';
+import Paragraph from '../../components/paragraph/Paragraph';
+import Headline from '../../components/headline/Headline';
+import StyledImg from '../../assets/images/StyledImg/StyledImg';
 
 const Intro = () => {
   return (
-    <WrapperSection id="oplese">
+    <WrapperSection id='oplese'>
       <WrapperHalf>
         <WrapperCentered>
-          <StyledImg src={shoe} alt="Frozen" />
+          <StyledImg src={shoe} alt='Frozen' />
         </WrapperCentered>
       </WrapperHalf>
       <WrapperHalf>
         <WrapperCentered>
-          <Headline align="left">O plese</Headline>
+          <Headline align='left'>O plese</Headline>
           <Paragraph>
             Srdečně vás zveme na již XXI. ročník Reprezentačního plesu
             Univerzity Tomáše Bati ve Zlíně. Jako každý rok se ples ponese v
@@ -27,7 +27,7 @@ const Intro = () => {
             zábavy.
           </Paragraph>
           <br />
-          <Headline align="left">Dress code</Headline>
+          <Headline align='left'>Dress code</Headline>
           <Paragraph>
             Dress Code letošního plesu se ponese v duchu black tie creative.
             Můžete tedy povolit uzdu své fantazii a nechat se inspirovat zimní

@@ -1,28 +1,29 @@
-import { StyledImgWrapper } from "../../assets/images/StyledImg/StyledImg.styled";
+import { StyledImgWrapper } from '../../assets/images/StyledImg/StyledImg.styled';
 import {
   WrapperSection,
   WrapperHalf,
   WrapperCentered,
-} from "../../components/layout/wrapper/Wrapper.styled";
-import Paragraph from "../../components/paragraph/Paragraph";
-import Headline from "../../components/headline/Headline";
-import film from "../../assets/images/film.png";
+} from '../../components/layout/wrapper/Wrapper.styled';
+import Paragraph from '../../components/paragraph/Paragraph';
+import Headline from '../../components/headline/Headline';
+
+import film from '../../assets/images/film.png';
 
 const Tickets = () => {
   return (
-    <WrapperSection id="vstupenky">
+    <WrapperSection id='vstupenky'>
       <WrapperHalf>
         <WrapperCentered>
           <StyledImgWrapper
-            className="reveal reveal-6"
+            className='reveal reveal-6'
             src={film}
-            alt="Frozen"
+            alt='Frozen'
           />
         </WrapperCentered>
       </WrapperHalf>
       <WrapperHalf>
         <WrapperCentered>
-          <Headline align="left">Vstupenky</Headline>
+          <Headline align='left'>Vstupenky</Headline>
           <Paragraph>
             Osobní rezervace od <strong> 1. 2. 2023 </strong>
             <br />

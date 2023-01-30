@@ -1,11 +1,6 @@
-import styled, { css } from "styled-components";
-import theme from "../../../theme/theme";
-import backgroundWinter from "../../../assets/images/backgroundWinter.png";
-import {
-  Desktop,
-  GteDesktopCheck,
-  MobileCheck,
-} from "../../../theme/MediaQueries";
+import styled, { css } from 'styled-components';
+import theme from '../../../theme/theme';
+import backgroundWinter from '../../../assets/images/backgroundWinter.png';
 
 export const WrapperMain = styled.main`
   font-family: ${theme.fonts.monsterRegular};
@@ -13,6 +8,9 @@ export const WrapperMain = styled.main`
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center 0;
+  @media screen and (${theme.breakpoints.lteTabletQuery}) {
+    background-position: center 0;
+  }
 `;
 
 export const WrapperSection = styled.div<{

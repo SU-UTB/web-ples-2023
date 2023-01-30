@@ -2,23 +2,23 @@ import {
   WrapperCentered,
   WrapperHalf,
   WrapperSection,
-} from "../../components/layout/wrapper/Wrapper.styled";
-import { timeline } from "./Program.content";
-import { Row, WrapperTimeline, Time, Activity } from "./Program.styled";
-import Headline from "../../components/headline/Headline";
-import skate from "../../assets/images/skate.png";
-import Paragraph from "../../components/paragraph/Paragraph";
-import { GteDesktop, LteTablet } from "../../theme/MediaQueries";
-import StyledImg from "../../assets/images/StyledImg/StyledImg";
+} from '../../components/layout/wrapper/Wrapper.styled';
+import { timeline } from './Program.content';
+import { Row, WrapperTimeline, Time, Activity } from './Program.styled';
+import Headline from '../../components/headline/Headline';
+import skate from '../../assets/images/skate.png';
+import Paragraph from '../../components/paragraph/Paragraph';
+import { GteDesktop, LteTablet } from '../../theme/MediaQueries';
+import StyledImg from '../../assets/images/StyledImg/StyledImg';
 
 const Program = () => {
   return (
     <>
       <GteDesktop>
-        <WrapperSection id="program">
+        <WrapperSection id='program'>
           <WrapperHalf>
             <WrapperCentered>
-              <Headline align="left">Program</Headline>
+              <Headline align='left'>Program</Headline>
               <Paragraph>
                 Celým večerem vás provede moderátorka Lucie Borhyová. Těšit se
                 můžete také na orchestr Prestige Symphony Orchestra a kapelu
@@ -31,22 +31,22 @@ const Program = () => {
           </WrapperHalf>
           <WrapperHalf>
             <WrapperCentered>
-              <StyledImg mirrored src={skate} alt="skate" />
+              <StyledImg mirrored src={skate} alt='skate' />
             </WrapperCentered>
           </WrapperHalf>
         </WrapperSection>
       </GteDesktop>
 
       <LteTablet>
-        <WrapperSection id="program">
+        <WrapperSection id='program'>
           <WrapperHalf>
             <WrapperCentered>
-              <StyledImg mirrored src={skate} alt="skate" />
+              <StyledImg mirrored src={skate} alt='skate' />
             </WrapperCentered>
           </WrapperHalf>
           <WrapperHalf>
             <WrapperCentered>
-              <Headline align="left">Program</Headline>
+              <Headline align='left'>Program</Headline>
               <Paragraph>
                 Celým večerem vás provede moderátorka Lucie Borhyová. Těšit se
                 můžete také na orchestr Prestige Symphony Orchestra a kapelu

@@ -1,7 +1,7 @@
-import { ParagraphWrapper } from "./Paragraph.styled";
+import { ParagraphWrapper } from './Paragraph.styled';
 
 interface ParagraphInterface {
-  colorMode?: "white" | "black" | "ice";
+  colorMode?: 'white' | 'black' | 'ice';
   program?: boolean;
   children: React.ReactNode;
 }
@@ -13,7 +13,7 @@ const Paragraph: React.FC<ParagraphInterface> = ({
 }) => {
   return (
     <ParagraphWrapper
-      className="reveal"
+      className='reveal'
       colorMode={colorMode}
       program={program}
     >
