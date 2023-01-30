@@ -3,17 +3,18 @@ import {
   WrapperHalf,
   WrapperCentered,
 } from '../../components/layout/wrapper/Wrapper.styled';
-import shoe from '../../assets/images/shoe.png';
+import dress from '../../assets/images/dress.png';
 import Paragraph from '../../components/paragraph/Paragraph';
 import Headline from '../../components/headline/Headline';
 import StyledImg from '../../assets/images/StyledImg/StyledImg';
+import { Link } from '../../components/link/Link.styled';
 
 const Intro = () => {
   return (
     <WrapperSection id='oplese'>
       <WrapperHalf>
         <WrapperCentered>
-          <StyledImg src={shoe} alt='Frozen' />
+          <StyledImg src={dress} alt='shoe' />
         </WrapperCentered>
       </WrapperHalf>
       <WrapperHalf>
@@ -24,18 +25,20 @@ const Intro = () => {
             Univerzity Tomáše Bati ve Zlíně. Jako každý rok se ples ponese v
             určitém tématu, kterým je letos <strong> Zimní bál </strong>. Těšit
             se můžeme na krásnou zimní atmosféru a večer plný elegance a dobré
-            zábavy.
+            zábavy. Aktuální dění a novinky můžete sledovat na {''}
+            <Link
+              href='https://www.facebook.com/events/524426676284645'
+              rel='noopener noreferrer'
+            >
+              Facebookové události
+            </Link>
           </Paragraph>
           <br />
           <Headline align='left'>Dress code</Headline>
           <Paragraph>
-            Dress Code letošního plesu se ponese v duchu black tie creative.
-            Můžete tedy povolit uzdu své fantazii a nechat se inspirovat zimní
-            atmosférou. Pánové určitě nešlápnou vedle s motýlky či kravatami v
-            barvách stříbrné, modré, fialové nebo mohou dorazit přímo v bílém
-            obleku! Dámy se mohou držet stejných barev a doplnit své večerní
-            šaty o kožešinu, aby jim z té zimní atmosféry nepřeběhl mráz po
-            zádech.
+            Text u dresscodu změnit na: Dress Code letošního plesu se ponese v
+            duchu zimní atmosféry. Dámy ani pánové určitě nešlápnou vedle s
+            modrou, fialovou , stříbrnou nebo bílou barvou.
           </Paragraph>
         </WrapperCentered>
       </WrapperHalf>
