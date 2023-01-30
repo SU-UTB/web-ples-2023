@@ -1,6 +1,6 @@
-import styled, { css } from "styled-components";
-import theme from "../../../theme/theme";
-import backgroundWinter from "../../../assets/images/backgroundWinter.png";
+import styled, { css } from 'styled-components';
+import theme from '../../../theme/theme';
+import backgroundWinter from '../../../assets/images/backgroundWinter.png';
 
 export const WrapperMain = styled.main`
   font-family: ${theme.fonts.monsterRegular};
@@ -21,7 +21,7 @@ export const WrapperSection = styled.div<{
     display: flex;
     width: ${contact ? `100%` : `80%`};
     max-width: 1600px;
-    margin: 0 auto 10em;
+    margin: 0 auto 15em;
     gap: 3em;
 
     ${centered &&
