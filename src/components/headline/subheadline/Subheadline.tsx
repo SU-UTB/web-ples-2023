@@ -18,7 +18,6 @@ export const Subheadline = styled.div<{
     }
     @media screen and (${theme.breakpoints.mobileQuery}) {
       font-size: ${theme.fontSizeElements.h5}px;
-      color: ${theme.colors.dark};
     }
   `
 );

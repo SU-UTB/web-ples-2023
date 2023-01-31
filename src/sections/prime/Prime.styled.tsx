@@ -12,7 +12,6 @@ export const PrimeWrapper = styled.div`
   }
   @media screen and (${theme.breakpoints.mobileQuery}) {
     padding-top: 25em;
-    color: ${theme.colors.dark};
   }
 `;
 

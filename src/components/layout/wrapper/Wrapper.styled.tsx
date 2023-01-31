@@ -11,8 +11,7 @@ export const WrapperMain = styled.main`
   background-position: center 0;
   @media screen and (${theme.breakpoints.lteTabletQuery}) {
     background-image: url(${backgroundWinterTablet});
-    /* background-position: center 0; */
-    background-position: center botto;
+    background-size: auto;
   }
 `;
 
