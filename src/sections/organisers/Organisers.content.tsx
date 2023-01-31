@@ -1,6 +1,6 @@
 import OrganiserItem from '../../types/TOrganiser';
-import utb from '../../assets/images/logos/utb02.png';
-import suLong from '../../assets/images/logos/suLong.svg';
+import utb from '../../assets/images/logos/utb.svg';
+import su from '../../assets/images/logos/su.svg';
 
 export const organisers: OrganiserItem[] = [
   {
@@ -11,6 +11,6 @@ export const organisers: OrganiserItem[] = [
   {
     name: 'SU Zlin',
     link: 'https://sunovy.utb.cz/',
-    imgSrc: `${suLong}`,
+    imgSrc: `${su}`,
   },
 ];

@@ -17,6 +17,7 @@ export const OrganiserWrapper = styled.div`
 export const Link = styled.a`
   img {
     max-width: 100%;
+    max-height: 100px;
     @media screen and (${theme.breakpoints.lteTabletQuery}) {
       width: 100%;
       transform: scale(0.7);

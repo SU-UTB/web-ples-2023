@@ -1,6 +1,7 @@
 import styled, { css } from 'styled-components';
 import theme from '../../../theme/theme';
 import backgroundWinter from '../../../assets/images/backgroundWinter.png';
+import backgroundWinterTablet from '../../../assets/images/backgroundWinterTablet.png';
 
 export const WrapperMain = styled.main`
   font-family: ${theme.fonts.monsterRegular};
@@ -9,9 +10,9 @@ export const WrapperMain = styled.main`
   background-size: cover;
   background-position: center 0;
   @media screen and (${theme.breakpoints.lteTabletQuery}) {
+    background-image: url(${backgroundWinterTablet});
     /* background-position: center 0; */
-
-    background-position: 50% 50%;
+    background-position: center botto;
   }
 `;
 

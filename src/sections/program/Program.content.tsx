@@ -29,11 +29,11 @@ export const timeline: ProgramItem[] = [
   {
     time: '22:00',
     activity:
-      'Proslov rektora Univerzity Tomáše Bati prof. Mgr. Milan Adámek, Ph.D.',
+      'Proslov rektora Univerzity Tomáše Bati prof. Mgr. Milana Adámka, Ph.D.',
   },
   {
     time: '',
-    activity: 'Živé spojení s Uherským Hradištěm',
+    activity: 'Živé spojení s plesem FLKŘ v Uherským Hradištěm',
   },
   {
     time: '22:15',
