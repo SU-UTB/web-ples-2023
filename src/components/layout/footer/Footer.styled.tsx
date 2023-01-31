@@ -8,7 +8,7 @@ export const FooterWrapper = styled.div`
   padding: 1.5em 0;
 
   color: ${theme.colors.primary};
-  background-color: ${theme.colors.background};
+  background-color: ${theme.colors.dark};
 
   font-family: ${theme.fonts.heading};
   font-size: ${theme.fontSizeElements.h5}px;

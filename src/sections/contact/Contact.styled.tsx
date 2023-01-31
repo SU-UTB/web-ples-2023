@@ -14,7 +14,7 @@ export const WrapperContactItem = styled.div`
   gap: 2em;
   font-size: ${theme.fontSizeElements.paragraphGteTablet}px;
 
-  color: ${theme.colors.dark};
+  color: ${theme.colors.black};
   @media screen and (${theme.breakpoints.gteDesktopLgQuery}) {
     color: ${theme.colors.primary};
   }
@@ -52,7 +52,7 @@ export const ContactAction = styled.a<{
       color: white !important;
     `}
 
-    color: ${theme.colors.dark};
+    color: ${theme.colors.black};
 
     @media screen and (${theme.breakpoints.gteDesktopLgQuery}) {
       color: ${theme.colors.primary};

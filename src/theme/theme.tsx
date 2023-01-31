@@ -38,9 +38,9 @@ const theme = {
   },
   colors: {
     primary: 'white',
-    background: '#171547',
+    dark: '#171547',
     ice: '#B3CEF2',
-    dark: 'black',
+    black: 'black',
   },
   animation: {
     transitionBasic: 'all 0.3s ease',
