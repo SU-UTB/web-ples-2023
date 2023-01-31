@@ -19,9 +19,12 @@ import Snowing from "./components/snowing/Snowing";
 // import CookieConsent from 'react-cookie-consent';
 
 import reveal from "./functions/reveal";
+import { getAnalytics , logEvent} from "firebase/analytics";
+import { analyticsApp } from "./tools/firebase";
 window.addEventListener("scroll", reveal);
 
 function App() {
+  logEvent(getAnalytics(analyticsApp.app), "web_displayed");
   return (
     <WrapperMain>
       {/* <CookieConsent /> */}
@@ -35,7 +38,7 @@ function App() {
       <Navbar />
       <Snowing />
       <Prime />
-      <Countdown endTime='2023-03-03T15:00:00' />
+      <Countdown endTime="2023-03-03T15:00:00" />
       <Intro />
       <Program />
       <Tickets />

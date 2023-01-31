@@ -1,5 +1,7 @@
 /* @ts-ignore */
+import { getAnalytics, logEvent } from "firebase/analytics";
 import { slide as Menu } from "react-burger-menu";
+import { analyticsApp } from "../../../../tools/firebase";
 import { navbarItems } from "../Navbar.content";
 import { hamburgerStyles } from "./HamburgerMenu.styled";
 
@@ -18,7 +20,15 @@ function HamburgerMenu({ pageWrapId, outerContainerId }: PropsHamburgerMenu) {
       isOpen={false}
     >
       {navbarItems.map((item, index) => (
-        <a key={index} href={item.tag}>
+        <a
+          key={index}
+          href={item.tag}
+          onClick={() =>
+            logEvent(getAnalytics(analyticsApp.app), "hamburger_clicked", {
+              name: item.tag,
+            })
+          }
+        >
           {item.text}
         </a>
       ))}
