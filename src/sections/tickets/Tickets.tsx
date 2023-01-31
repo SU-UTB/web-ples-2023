@@ -26,7 +26,7 @@ const Tickets = () => {
         <WrapperCentered>
           <Headline align='left'>Vstupenky</Headline>
           <Paragraph align>
-            Rezervace a prodej od <strong>13. 2. 2023</strong>
+            Prodej od <strong>13. 2. 2023</strong>
             <br />
             Vybírat můžete ze tří druhů lístků, a to na stání (350 Kč), sezení
             (500 Kč) a sezení s rautem (750 Kč).
