@@ -14,7 +14,7 @@ const Intro = () => {
     <WrapperSection id='oplese'>
       <WrapperHalf>
         <WrapperCentered>
-          <StyledImg src={dress} alt='shoe' />
+          <StyledImg src={dress} alt='šaty' />
         </WrapperCentered>
       </WrapperHalf>
       <WrapperHalf>

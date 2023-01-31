@@ -18,7 +18,7 @@ const Tickets = () => {
           <StyledImgWrapper
             className='reveal reveal-6'
             src={tickets}
-            alt='tickets'
+            alt='vstupenky'
           />
         </WrapperCentered>
       </WrapperHalf>

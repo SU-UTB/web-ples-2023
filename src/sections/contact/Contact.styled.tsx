@@ -50,12 +50,12 @@ export const ContactAction = styled.a<{
   tickets?: boolean;
 }>(
   ({ tickets }) => css`
+    color: ${theme.colors.black};
+
     ${tickets &&
     css`
-      color: white !important;
+      color: white;
     `}
-
-    color: ${theme.colors.black};
 
     @media screen and (${theme.breakpoints.gteDesktopLgQuery}) {
       color: ${theme.colors.primary};
