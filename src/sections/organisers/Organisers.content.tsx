@@ -1,6 +1,5 @@
 import OrganiserItem from '../../types/TOrganiser';
 import utb from '../../assets/images/logos/utb.svg';
-// import su from '../../assets/images/logos/su.svg';
 import su from '../../assets/images/logos/suCut.png';
 
 export const organisers: OrganiserItem[] = [
