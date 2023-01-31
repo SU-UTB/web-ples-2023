@@ -3,16 +3,19 @@ import ProgramItem from '../../types/TProgram';
 export const timeline: ProgramItem[] = [
   {
     time: '19:00',
-    activity:
-      'Otevření:  Ve foyer hraje a zpívá Základní umělecká škola ZUŠ Zlín',
+    activity: 'Otevření Kongresového centra: ve foyer hraje a zpívá ZUŠ Zlín',
   },
   {
     time: '20:00',
-    activity: 'Slavnostní zahájení - Taneční vystoupení ZUŠ Zlín',
+    activity: 'Slavnostní zahájení plesu:',
   },
   {
     time: '',
-    activity: 'Úvodní slovo moderátorky',
+    activity: 'taneční vystoupení ZUŠ Zlín',
+  },
+  {
+    time: '',
+    activity: 'úvodní slovo moderátorky',
   },
   {
     time: '20:15',
@@ -28,12 +31,11 @@ export const timeline: ProgramItem[] = [
   },
   {
     time: '22:00',
-    activity:
-      'Proslov rektora Univerzity Tomáše Bati prof. Mgr. Milana Adámka, Ph.D.',
+    activity: 'Proslov rektora prof. Mgr. Milana Adámka, Ph.D.',
   },
   {
     time: '',
-    activity: 'Živé spojení s plesem FLKŘ v Uherským Hradištěm',
+    activity: 'Živé spojení s plesem FLKŘ v Uherském Hradišti',
   },
   {
     time: '22:15',
@@ -53,8 +55,7 @@ export const timeline: ProgramItem[] = [
   },
   {
     time: '23:55',
-    activity:
-      'Půlnoční překvapení: Vystoupí finalisté Česko Slovensko má talent',
+    activity: 'Půlnoční překvapení: finalisté Česko Slovensko má talent',
   },
 
   {

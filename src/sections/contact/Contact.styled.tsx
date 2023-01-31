@@ -10,6 +10,7 @@ export const WrapperContact = styled.div`
 export const WrapperContactItem = styled.div`
   display: flex;
   margin-bottom: 2em;
+  padding: 0 5em;
   line-height: 1.5em;
   gap: 2em;
   font-size: ${theme.fontSizeElements.paragraphGteTablet}px;
@@ -33,6 +34,7 @@ export const ContactHalf = styled.span`
   width: 50%;
   &:nth-child(1) {
     align-items: flex-end;
+    /* white-space: nowrap; */
   }
   div {
     &:nth-child(1) {
@@ -41,7 +43,10 @@ export const ContactHalf = styled.span`
   }
 `;
 
-export const ContactItem = styled.div``;
+export const ContactItem = styled.div`
+  display: flex;
+  align-items: flex-end;
+`;
 
 export const ContactAction = styled.a<{
   tickets?: boolean;

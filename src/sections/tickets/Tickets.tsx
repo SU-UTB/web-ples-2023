@@ -26,7 +26,8 @@ const Tickets = () => {
         <WrapperCentered>
           <Headline align='left'>Vstupenky</Headline>
           <Paragraph align>
-            Prodej od <strong>13. 2. 2023</strong>
+            Prodej od <strong>13. 2. 2023</strong> všední dny v budově Rektorátu
+            UTB (U13) na nám. T. G. Masaryka 5555, 760 01 Zlín, Česká republika.
             <br />
             Vybírat můžete ze tří druhů lístků, a to na stání (350 Kč), sezení
             (500 Kč) a sezení s rautem (750 Kč).

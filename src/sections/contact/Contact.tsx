@@ -23,6 +23,7 @@ const Contact = () => {
               <ContactItem>{item.position}</ContactItem>
               <ContactAction href={item.phoneLink}>{item.phone}</ContactAction>
             </ContactHalf>
+
             <ContactHalf>
               <ContactItem>{item.name}</ContactItem>
               <ContactAction

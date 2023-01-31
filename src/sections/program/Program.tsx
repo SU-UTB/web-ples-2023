@@ -10,7 +10,7 @@ const Program = () => {
       <WrapperSection centered id='program'>
         <Headline align='left'>Program</Headline>
         <Paragraph>
-          Celým večerem vás provede moderátorka <strong>Lucie Borhyová</strong>
+          Celým večerem vás provede moderátorka <strong>Lucie Borhyová.</strong>
         </Paragraph>
         <br />
         <WrapperTimeline className='reveal'>

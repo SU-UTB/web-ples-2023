@@ -23,22 +23,22 @@ const Intro = () => {
           <Paragraph>
             Srdečně vás zveme na již XXI. ročník Reprezentačního plesu
             Univerzity Tomáše Bati ve Zlíně. Jako každý rok se ples ponese v
-            určitém tématu, kterým je letos <strong> Zimní bál </strong>. Těšit
+            určitém tématu, kterým je letos <strong> Zimní bál.</strong> Těšit
             se můžeme na krásnou zimní atmosféru a večer plný elegance a dobré
             zábavy. Aktuální dění a novinky můžete sledovat na {''}
             <Link
               href='https://www.facebook.com/events/524426676284645'
               rel='noopener noreferrer'
             >
-              Facebookové události
+              Facebookové události.
             </Link>
           </Paragraph>
           <br />
           <Headline align='left'>Dress code</Headline>
           <Paragraph>
-            Dress Code letošního plesu se ponese v duchu zimní atmosféry. Dámy
-            ani pánové určitě nešlápnou vedle s modrou, fialovou , stříbrnou
-            nebo bílou barvou.
+            Ples se dresscodem ponese v odstínech modré, bílé, stříbrné a
+            fialové barvy. Nebojte se, povolte uzdu své fantazii a nechte se
+            inspirovat zimní atmosférou!
           </Paragraph>
         </WrapperCentered>
       </WrapperHalf>
