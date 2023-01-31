@@ -34,6 +34,8 @@ const Intro = () => {
             </Link>
           </Paragraph>
           <br />
+          <br />
+          <br />
           <Headline align='left'>Dress code</Headline>
           <Paragraph>
             Ples se dresscodem ponese v odstínech modré, bílé, stříbrné a

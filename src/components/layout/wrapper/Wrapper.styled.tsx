@@ -1,16 +1,16 @@
 import styled, { css } from 'styled-components';
 import theme from '../../../theme/theme';
-import backgroundWinter from '../../../assets/images/backgroundWinter.png';
-import backgroundWinterTablet from '../../../assets/images/backgroundWinterTablet.png';
+import bgWinter from '../../../assets/images/bg/bgWinter.png';
+import bgWinterTablet from '../../../assets/images/bg/bgWinterTablet.png';
 
 export const WrapperMain = styled.main`
   font-family: ${theme.fonts.monsterRegular};
-  background-image: url(${backgroundWinter});
+  background-image: url(${bgWinter});
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center 0;
   @media screen and (${theme.breakpoints.lteTabletQuery}) {
-    background-image: url(${backgroundWinterTablet});
+    background-image: url(${bgWinterTablet});
     background-size: auto;
   }
 `;

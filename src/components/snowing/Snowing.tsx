@@ -1,5 +1,5 @@
 import Snowfall from 'react-snowfall';
-import snowLogo from '../../assets/images/snowflake.png';
+import snowLogo from '../../assets/images/bg/snowflake.png';
 
 const snowflake = document.createElement('img');
 snowflake.src = snowLogo;

@@ -7,7 +7,7 @@ export const ParagraphWrapper = styled.p<{
   program?: boolean;
 }>(
   ({ colorMode = 'white', align, program }) => css`
-    font-size: ${theme.fontSizeElements.paragraphGteTablet}px;
+    font-size: ${theme.fontSizeElements.h4}px;
     text-align: justify;
 
     line-height: 1.5;

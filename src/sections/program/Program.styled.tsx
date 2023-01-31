@@ -10,7 +10,7 @@ export const Row = styled.div`
   display: flex;
   gap: 2em;
   margin: 0 1em 0.7em 1em;
-  font-size: ${theme.fontSizeElements.paragraphGteTablet}px;
+  font-size: ${theme.fontSizeElements.h4}px;
 
   @media screen and (${theme.breakpoints.tabletQuery}) {
     font-size: ${theme.fontSizeElements.paragraphGteTablet}px;
@@ -25,6 +25,7 @@ export const Row = styled.div`
 export const Time = styled.div`
   min-width: 4em;
   text-align: right;
+  font-weight: bold;
 `;
 
 export const Activity = styled.div`

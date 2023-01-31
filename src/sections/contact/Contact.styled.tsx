@@ -13,15 +13,13 @@ export const WrapperContactItem = styled.div`
   padding: 0 5em;
   line-height: 1.5em;
   gap: 2em;
-  font-size: ${theme.fontSizeElements.paragraphGteTablet}px;
+  font-size: ${theme.fontSizeElements.h4}px;
 
   color: ${theme.colors.black};
   @media screen and (${theme.breakpoints.gteDesktopLgQuery}) {
     color: ${theme.colors.primary};
   }
-  @media screen and (${theme.breakpoints.tabletQuery}) {
-    font-size: ${theme.fontSizeElements.paragraphGteTablet}px;
-  }
+
   @media screen and (${theme.breakpoints.mobileQuery}) {
     gap: 1em;
     font-size: ${theme.fontSizeElements.paragraphMobile}px;

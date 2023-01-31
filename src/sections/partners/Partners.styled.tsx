@@ -4,15 +4,17 @@ import theme from '../../theme/theme';
 export const PartnerLogo = styled.div`
   margin: 3em;
   transition: all 0.1s ease-in-out;
-  width: 10%;
+  max-width: 150px;
+  height: auto;
+  width: auto;
   @media screen and (${theme.breakpoints.tabletQuery}) {
+    max-width: 130px;
     margin: 1.5em;
-    width: 12%;
   }
 
   @media screen and (${theme.breakpoints.mobileQuery}) {
+    max-width: 100px;
     margin: 1.5em;
-    width: 25%;
   }
 `;
 
