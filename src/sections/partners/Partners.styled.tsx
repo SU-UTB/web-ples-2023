@@ -6,7 +6,7 @@ export const PartnerLogo = styled.div`
   transition: all 0.1s ease-in-out;
   width: 10%;
   @media screen and (${theme.breakpoints.tabletQuery}) {
-    margin: 2em;
+    margin: 1.5em;
     width: 12%;
   }
 

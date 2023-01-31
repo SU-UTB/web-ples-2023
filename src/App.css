@@ -23,6 +23,13 @@ body {
   opacity: 1;
 }
 
+.reveal-logo {
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: 1s all ease;
+}
+
 .logo {
   height: 6em;
   padding: 1.5em;

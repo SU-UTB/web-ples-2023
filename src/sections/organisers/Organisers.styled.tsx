@@ -23,3 +23,10 @@ export const Link = styled.a`
     }
   }
 `;
+
+export const LogoWrapper = styled.img`
+  max-width: 100%;
+  min-width: 300px;
+  height: auto;
+  display: block;
+`;
