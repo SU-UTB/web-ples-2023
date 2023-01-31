@@ -9,7 +9,9 @@ export const WrapperMain = styled.main`
   background-size: cover;
   background-position: center 0;
   @media screen and (${theme.breakpoints.lteTabletQuery}) {
-    background-position: center 0;
+    /* background-position: center 0; */
+
+    background-position: 50% 50%;
   }
 `;
 

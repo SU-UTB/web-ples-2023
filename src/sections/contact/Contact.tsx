@@ -21,7 +21,7 @@ const Contact = () => {
           <WrapperContactItem key={index} className='reveal'>
             <ContactHalf>
               <ContactItem>{item.position}</ContactItem>
-              <ContactAction href={item.phone}>{item.phone}</ContactAction>
+              <ContactAction href={item.phoneLink}>{item.phone}</ContactAction>
             </ContactHalf>
             <ContactHalf>
               <ContactItem>{item.name}</ContactItem>
@@ -37,10 +37,10 @@ const Contact = () => {
           <ContactHalf>
             <ContactItem>Správci webu</ContactItem>
             <br />
-            <ContactAction href='+420 731 014 934'>
+            <ContactAction href='tel:+420-731-014-934'>
               +420 731 014 934
             </ContactAction>
-            <ContactAction href='+420 774 980 515'>
+            <ContactAction href='tel:+420-774-980515'>
               +420 774 980 515
             </ContactAction>
           </ContactHalf>

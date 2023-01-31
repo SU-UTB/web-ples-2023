@@ -41,7 +41,7 @@ const Tickets = () => {
               nejezchlebova@sutb.cz
             </ContactAction>
             <br />
-            <ContactAction href='+420 723 132 295' tickets>
+            <ContactAction href='tel:+420-723-132-295' tickets>
               +420 723 132 295
             </ContactAction>
           </Paragraph>
