@@ -9,7 +9,6 @@ export const WrapperContact = styled.div`
 
 export const WrapperContactItem = styled.div`
   display: flex;
-  justify-content: center;
   margin-bottom: 2em;
   line-height: 1.5em;
   gap: 2em;

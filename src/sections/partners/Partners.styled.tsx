@@ -25,11 +25,4 @@ export const PartnerWrapper = styled.div`
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-
-  @media screen and (${theme.breakpoints.tabletQuery}) {
-    grid-template-columns: repeat(4, 1fr);
-  }
-  @media screen and (${theme.breakpoints.mobileQuery}) {
-    grid-template-columns: repeat(2, 1fr);
-  }
 `;
