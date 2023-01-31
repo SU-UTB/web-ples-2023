@@ -36,9 +36,9 @@ const Intro = () => {
           <br />
           <Headline align='left'>Dress code</Headline>
           <Paragraph>
-            Text u dresscodu změnit na: Dress Code letošního plesu se ponese v
-            duchu zimní atmosféry. Dámy ani pánové určitě nešlápnou vedle s
-            modrou, fialovou , stříbrnou nebo bílou barvou.
+            Dress Code letošního plesu se ponese v duchu zimní atmosféry. Dámy
+            ani pánové určitě nešlápnou vedle s modrou, fialovou , stříbrnou
+            nebo bílou barvou.
           </Paragraph>
         </WrapperCentered>
       </WrapperHalf>

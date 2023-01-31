@@ -12,16 +12,14 @@ const Events = () => {
     <WrapperSection centered id='program'>
       <Headline>Doprovodný program</Headline>
       <Paragraph>
-        Abychom vás správně naladili, připravili jsme si po celý únor, tedy
-        měsíc před plesem, několik doprovodných programů. Těšit se určitě můžete
-        na bruslení na ledové ploše, promítání tématického filmu, nebo třeba
-        tančírnu, kde natrénujete všechny typy tanců, či workshop na míchání
-        drinků, ze kterých vám ztuhne krev v žilách.
+        Abychom vás správně naladili, připravili jsme si po celý únor několik
+        doprovodných programů. Těšit se můžete na bruslení na ledové ploše,
+        promítání tématického filmu, tančírnu, či workshop na míchání drinků, ze
+        kterých vám ztuhne krev v žilách.
         <br />
         <br />V den D se dámy mohou přijít zkrášlit šikovnými kadeřnicemi a
-        make-up artistky přímo na budovu U44 za symbolickou částku. Nezapomněli
-        jsme ani na pány, kteří se budou moct nechat upravit v Barber shopu se
-        slevou.
+        kosmetičkami za symbolickou částku. O rezervacích do našeho salonu vás
+        budeme včas informovat.
       </Paragraph>
 
       <CardWrapper className='reveal reveal-slow'>

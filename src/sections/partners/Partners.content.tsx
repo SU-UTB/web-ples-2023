@@ -1,45 +1,59 @@
-import su from "../../assets/images/logos/su.jpg";
-import PartnerItem from "../../types/TPartner";
+import PartnerItem from '../../types/TPartner';
+import flyUnited from '../../assets/images/sponsors/flyUnited.png';
+// import Buuurger from '../../assets/images/sponsors/Buuurger.jpg';
+import hame from '../../assets/images/sponsors/hame.jpg';
+import klenotyAurum from '../../assets/images/sponsors/klenotyAurum.jpg';
+import klubPanu from '../../assets/images/sponsors/klubPanu.pdf';
+import LGZ from '../../assets/images/sponsors/LGZ.png';
+import lucy from '../../assets/images/sponsors/lucy.png';
+import patifu from '../../assets/images/sponsors/patifu.jpg';
+import topNatur from '../../assets/images/sponsors/topNatur.pdf';
+// import vitar from '../../assets/images/sponsors/vitar.jpg';
+import vitco from '../../assets/images/sponsors/vitco.png';
 
 export const partners: PartnerItem[] = [
   {
-    name: "Studentská Unie UTB",
-    logoSrc: su,
-    link: "https://sunovy.utb.cz/",
+    name: 'flyUnited',
+    logoSrc: flyUnited,
+  },
+  // {
+  //   name: 'Buuurger',
+  //   logoSrc: Buuurger,
+  // },
+  {
+    name: 'hame',
+    logoSrc: hame,
   },
   {
-    name: "Studentská Unie UTB",
-    logoSrc: su,
-    link: "https://sunovy.utb.cz/",
+    name: 'klenotyAurum',
+    logoSrc: klenotyAurum,
+  },
+  // {
+  //   name: 'klubPanu',
+  //   logoSrc: klubPanu,
+  // },
+  {
+    name: 'LGZ',
+    logoSrc: LGZ,
   },
   {
-    name: "Studentská Unie UTB",
-    logoSrc: su,
-    link: "https://sunovy.utb.cz/",
+    name: 'lucy',
+    logoSrc: lucy,
   },
   {
-    name: "Studentská Unie UTB",
-    logoSrc: su,
-    link: "https://sunovy.utb.cz/",
+    name: 'patifu',
+    logoSrc: patifu,
   },
+  // {
+  //   name: 'topNatur',
+  //   logoSrc: topNatur,
+  // },
+  // {
+  //   name: 'vitar',
+  //   logoSrc: vitar,
+  // },
   {
-    name: "Studentská Unie UTB",
-    logoSrc: su,
-    link: "https://sunovy.utb.cz/",
-  },
-  {
-    name: "Studentská Unie UTB",
-    logoSrc: su,
-    link: "https://sunovy.utb.cz/",
-  },
-  {
-    name: "Studentská Unie UTB",
-    logoSrc: su,
-    link: "https://sunovy.utb.cz/",
-  },
-  {
-    name: "Studentská Unie UTB",
-    logoSrc: su,
-    link: "https://sunovy.utb.cz/",
+    name: 'vitco',
+    logoSrc: vitco,
   },
 ];

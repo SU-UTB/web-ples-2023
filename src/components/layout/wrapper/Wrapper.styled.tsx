@@ -21,7 +21,7 @@ export const WrapperSection = styled.div<{
     display: flex;
     width: ${contact ? `100%` : `80%`};
     max-width: 1600px;
-    margin: 0 auto 15em;
+    margin: 0 auto 10em;
     gap: 3em;
 
     ${centered &&
@@ -61,7 +61,7 @@ export const WrapperCentered = styled.div`
 export const CardWrapper = styled.div`
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  margin: 2em 0;
+  margin-bottom: 5em;
   color: ${theme.colors.primary};
 
   @media screen and (${theme.breakpoints.tabletQuery}) {
