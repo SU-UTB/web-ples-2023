@@ -20,8 +20,6 @@ export const CountdownWrapper = styled.div`
     margin: 2em auto 7em;
     padding: 0.2em 0;
     gap: 1.5em;
-    border: solid 2px ${theme.colors.dark};
-    color: ${theme.colors.dark};
   }
 `;
 

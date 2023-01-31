@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import CookieConsent, { Cookies } from 'react-cookie-consent';
 import { LteTabletCheck } from '../../theme/MediaQueries';
 import theme from '../../theme/theme';
