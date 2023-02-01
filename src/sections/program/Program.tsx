@@ -36,9 +36,9 @@ const Program = () => {
         <br />
         <WrapperTimeline>
           {timeline.map((item, index) => (
-            <>
+            <div key={index}>
               {item.time !== '' && <br />}
-              <Row key={index}>
+              <Row>
                 <Time className='reveal-left'>{item.time}</Time>
                 {item.time !== '' ? (
                   <strong>
@@ -50,7 +50,7 @@ const Program = () => {
                   <Activity className='reveal-right'>{item.activity}</Activity>
                 )}
               </Row>
-            </>
+            </div>
           ))}
         </WrapperTimeline>
       </WrapperSection>

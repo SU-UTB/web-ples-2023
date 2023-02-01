@@ -43,7 +43,7 @@ body {
 
 .reveal-left {
   position: relative;
-  transform: translateX(-10vw);
+  transform: translateX(-3vw);
   opacity: 0;
   transition: 1s all ease;
 }
@@ -55,7 +55,7 @@ body {
 
 .reveal-right {
   position: relative;
-  transform: translateX(10vw);
+  transform: translateX(3vw);
   opacity: 0;
   transition: 1s all ease;
 }
