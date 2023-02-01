@@ -25,7 +25,7 @@ body {
   transition: 1s all ease;
 }
 
-.reveal-img.done {
+.reveal-img.active {
   transform: translateX(0);
   opacity: 1;
 }
@@ -36,7 +36,7 @@ body {
   opacity: 0;
   transition: 1s all ease;
 }
-.reveal-program.done {
+.reveal-program.active {
   transform: translateY(0);
   opacity: 1;
 }
@@ -48,7 +48,7 @@ body {
   transition: 1s all ease;
 }
 
-.reveal-left.done {
+.reveal-left.active {
   transform: translateX(0);
   opacity: 1;
 }
@@ -60,7 +60,7 @@ body {
   transition: 1s all ease;
 }
 
-.reveal-right.done {
+.reveal-right.active {
   transform: translateX(0);
   opacity: 1;
 }

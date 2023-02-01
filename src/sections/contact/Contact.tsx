@@ -1,8 +1,7 @@
 import { useEffect } from 'react';
 import Headline from '../../components/headline/Headline';
 import { WrapperSection } from '../../components/layout/wrapper/Wrapper.styled';
-import revealLeft from '../../functions/revealLeft';
-import revealRight from '../../functions/revealRight';
+import revealFrom from '../../functions/reveal';
 import { GteHugeDesktopCheck } from '../../theme/MediaQueries';
 import { contacts } from './Contact.content';
 import {
@@ -15,12 +14,16 @@ import {
 
 const Contact = () => {
   useEffect(() => {
-    window.addEventListener('scroll', revealLeft);
-    window.addEventListener('scroll', revealRight);
+    window.addEventListener('scroll', () => revealFrom('.reveal-left', 100));
+    window.addEventListener('scroll', () => revealFrom('.reveal-right', 100));
 
     return () => {
-      window.removeEventListener('scroll', revealLeft);
-      window.removeEventListener('scroll', revealRight);
+      window.removeEventListener('scroll', () =>
+        revealFrom('.reveal-left', 100)
+      );
+      window.removeEventListener('scroll', () =>
+        revealFrom('.reveal-right', 100)
+      );
     };
   }, []);
 

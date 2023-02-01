@@ -1,4 +1,5 @@
 import PartnerItem from '../../types/TPartner';
+import flyUnited from '../../assets/images/sponsors/flyUnited.svg';
 import buurger from '../../assets/images/sponsors/buurger.jpg';
 import hame from '../../assets/images/sponsors/hame.jpg';
 import klenotyAurum from '../../assets/images/sponsors/klenotyAurum.jpg';
@@ -14,8 +15,7 @@ import infinitMaximus from '../../assets/images/sponsors/infinitMaximus.svg';
 export const partners: PartnerItem[] = [
   {
     name: 'flyUnited',
-    logoSrc:
-      'https://www.flyunited.cz/wp-content/themes/flyunited/Assets/img/logotype.svg',
+    logoSrc: flyUnited,
   },
   {
     name: 'Buuurger',

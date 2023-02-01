@@ -8,21 +8,25 @@ import {
   Moderator,
   ProgramHeadline,
 } from './Program.styled';
-import revealRight from '../../functions/revealRight';
-import revealLeft from '../../functions/revealLeft';
-import revealProgram from '../../functions/revealProgram';
 import { useEffect } from 'react';
+import revealFrom from '../../functions/reveal';
 
 const Program = () => {
   useEffect(() => {
-    window.addEventListener('scroll', revealLeft);
-    window.addEventListener('scroll', revealRight);
-    window.addEventListener('scroll', revealProgram);
+    window.addEventListener('scroll', () => revealFrom('.reveal-left', 100));
+    window.addEventListener('scroll', () => revealFrom('.reveal-right', 100));
+    window.addEventListener('scroll', () => revealFrom('.reveal-program', 50));
 
     return () => {
-      window.removeEventListener('scroll', revealLeft);
-      window.removeEventListener('scroll', revealRight);
-      window.removeEventListener('scroll', revealProgram);
+      window.removeEventListener('scroll', () =>
+        revealFrom('.reveal-left', 100)
+      );
+      window.removeEventListener('scroll', () =>
+        revealFrom('.reveal-right', 100)
+      );
+      window.removeEventListener('scroll', () =>
+        revealFrom('.reveal-program', 50)
+      );
     };
   }, []);
 

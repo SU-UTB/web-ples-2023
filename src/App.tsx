@@ -15,15 +15,15 @@ import Program from './sections/program/Program';
 import Tickets from './sections/tickets/Tickets';
 import { LteTablet } from './theme/MediaQueries';
 import Snowing from './components/snowing/Snowing';
-import CookieConsent from './components/consent/Consent';
+import Consent from './components/consent/Consent';
 
-import reveal from './functions/reveal';
-window.addEventListener('scroll', reveal);
+import revealFrom from './functions/reveal';
+window.addEventListener('scroll', () => revealFrom('.reveal', 50));
 
 function App() {
   return (
     <WrapperMain>
-      <CookieConsent />
+      <Consent />
       <Fold />
       <LteTablet>
         <HamburgerMenu

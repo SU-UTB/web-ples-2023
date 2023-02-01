@@ -10,14 +10,16 @@ import Headline from '../../components/headline/Headline';
 import tickets from '../../assets/images/tickets.png';
 import { ContactAction } from '../contact/Contact.styled';
 import { useEffect } from 'react';
-import revealImg from '../../functions/revealImg';
+import revealFrom from '../../functions/reveal';
 
 const Tickets = () => {
   useEffect(() => {
-    window.addEventListener('scroll', revealImg);
+    window.addEventListener('scroll', () => revealFrom('.reveal-img', 500));
 
     return () => {
-      window.removeEventListener('scroll', revealImg);
+      window.removeEventListener('scroll', () =>
+        revealFrom('.reveal-img', 500)
+      );
     };
   }, []);
 

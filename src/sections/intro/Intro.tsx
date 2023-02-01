@@ -9,14 +9,16 @@ import Headline from '../../components/headline/Headline';
 import StyledImg from '../../assets/images/StyledImg/StyledImg';
 import { Link } from '../../components/link/Link.styled';
 import { useEffect } from 'react';
-import revealImg from '../../functions/revealImg';
+import revealFrom from '../../functions/reveal';
 
 const Intro = () => {
   useEffect(() => {
-    window.addEventListener('scroll', revealImg);
+    window.addEventListener('scroll', () => revealFrom('.reveal-img', 500));
 
     return () => {
-      window.removeEventListener('scroll', revealImg);
+      window.removeEventListener('scroll', () =>
+        revealFrom('.reveal-img', 500)
+      );
     };
   }, []);
 
