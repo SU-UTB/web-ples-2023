@@ -15,7 +15,7 @@ import Program from './sections/program/Program';
 import Tickets from './sections/tickets/Tickets';
 import { LteTablet } from './theme/MediaQueries';
 import Snowing from './components/snowing/Snowing';
-import Consent from './components/consent/Consent';
+import CookieConsent from './components/consent/Consent';
 
 import reveal from './functions/reveal';
 window.addEventListener('scroll', reveal);
@@ -23,7 +23,7 @@ window.addEventListener('scroll', reveal);
 function App() {
   return (
     <WrapperMain>
-      <Consent />
+      <CookieConsent />
       <Fold />
       <LteTablet>
         <HamburgerMenu

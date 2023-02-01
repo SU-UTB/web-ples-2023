@@ -1,14 +1,14 @@
-import CookieConsent, { Cookies } from 'react-cookie-consent';
+import { CookieConsent as Consent, Cookies } from 'react-cookie-consent';
 import { LteTabletCheck } from '../../theme/MediaQueries';
 import theme from '../../theme/theme';
 
-const Consent = () => {
+const CookieConsent = () => {
   const handleAccept = () => {
     Cookies.set('cookie-consent', true, { expires: 150 });
   };
 
   return (
-    <CookieConsent
+    <Consent
       location='bottom'
       buttonText='Rozumím'
       cookieName='cookie-consent'
@@ -27,8 +27,8 @@ const Consent = () => {
     >
       Tyto webové stránky používají soubory cookie ke zlepšení uživatelského
       zážitku
-    </CookieConsent>
+    </Consent>
   );
 };
 
-export default Consent;
+export default CookieConsent;
