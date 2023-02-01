@@ -6,8 +6,12 @@ export const PrimeWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   padding-top: 35em;
-  @media screen and (${theme.breakpoints.lteTabletQuery}) {
-    padding-top: 27em;
+  color: ${theme.colors.primary};
+  @media screen and (${theme.breakpoints.tabletQuery}) {
+    padding-top: 30em;
+  }
+  @media screen and (${theme.breakpoints.mobileQuery}) {
+    padding-top: 25em;
   }
 `;
 
@@ -15,8 +19,7 @@ export const PrimeHeadline = styled.span`
   max-width: 80%;
   font-family: ${theme.fonts.heading};
   font-size: ${theme.fontSizeElements.h1}px;
-
-  color: ${theme.colors.primary};
+  text-align: center;
 
   @media screen and (${theme.breakpoints.tabletQuery}) {
     font-size: ${theme.fontSizeElements.h2}px;
@@ -31,6 +34,8 @@ export const Row = styled.div`
   display: flex;
   gap: 3em;
   margin-top: 0.5em;
+  color: ${theme.colors.primary};
+
   @media screen and (${theme.breakpoints.lteTabletQuery}) {
     flex-direction: column;
     align-items: center;

@@ -1,17 +1,20 @@
-const reveal = () => {
-  let reveals = document.querySelectorAll(".reveal");
+const revealFrom = (
+  selector: string,
+  elementVisible: number,
+  ...args: any[]
+) => {
+  const reveals = document.querySelectorAll(selector);
 
   for (let i = 0; i < reveals.length; i++) {
-    let windowHeight = window.innerHeight;
-    let elementTop = reveals[i].getBoundingClientRect().top;
-    let elementVisible = 50;
+    const windowHeight = window.innerHeight;
+    const elementTop = reveals[i].getBoundingClientRect().top;
 
     if (elementTop < windowHeight - elementVisible) {
-      reveals[i].classList.add("active");
+      reveals[i].classList.add('active');
     } else {
-      reveals[i].classList.remove("active");
+      reveals[i].classList.remove('active');
     }
   }
 };
 
-export default reveal;
+export default revealFrom;

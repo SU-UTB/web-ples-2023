@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import theme from "../../theme/theme";
+import styled from 'styled-components';
+import theme from '../../theme/theme';
 
 export const CountdownWrapper = styled.div`
   display: flex;
@@ -8,7 +8,7 @@ export const CountdownWrapper = styled.div`
   justify-content: center;
   border-radius: 10px;
   border: solid 2px ${theme.colors.primary};
-  margin: 5em auto;
+  margin: 5em auto 15em;
   padding: 0.7em 1em;
   gap: 2.5em;
 

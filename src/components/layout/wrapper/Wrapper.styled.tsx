@@ -1,27 +1,32 @@
-import styled, { css } from "styled-components";
-import theme from "../../../theme/theme";
-import backgroundWinter from "../../../assets/images/backgroundWinter.png";
+import styled, { css } from 'styled-components';
+import theme from '../../../theme/theme';
+import bgWinter from '../../../assets/images/bg/bgWinter.png';
+import bgWinterTablet from '../../../assets/images/bg/bgWinterTablet.png';
 
 export const WrapperMain = styled.main`
   font-family: ${theme.fonts.monsterRegular};
-  background-image: url(${backgroundWinter});
+  background-image: url(${bgWinter});
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center 0;
-  @media screen and (${theme.breakpoints.lteTabletQuery}) {
-    background-position: center 0;
+  @media screen and (${theme.breakpoints.mobileQuery}) {
+    background-image: url(${bgWinterTablet});
+    background-size: auto;
   }
 `;
 
 export const WrapperSection = styled.div<{
   centered?: boolean;
-  contact?: boolean;
 }>(
-  ({ centered, contact }) => css`
+  ({ centered }) => css`
     display: flex;
-    width: ${contact ? `100%` : `80%`};
+    width: 80%;
     max-width: 1600px;
-    margin: 0 auto 10em;
+    margin: 0 auto 20em;
+
+    &:nth-last-child(2) {
+      margin: 0 auto 10em;
+    }
     gap: 3em;
 
     ${centered &&
@@ -34,6 +39,13 @@ export const WrapperSection = styled.div<{
     @media screen and (${theme.breakpoints.lteTabletQuery}) {
       flex-direction: column;
       gap: 0;
+    }
+
+    @media screen and (${theme.breakpoints.lteTabletQuery}) {
+      margin: 0 auto 10em;
+      &:nth-last-child(2) {
+        margin: 0 auto 7em;
+      }
     }
   `
 );
@@ -61,7 +73,7 @@ export const WrapperCentered = styled.div`
 export const CardWrapper = styled.div`
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  margin: 2em 0;
+  margin-bottom: 5em;
   color: ${theme.colors.primary};
 
   @media screen and (${theme.breakpoints.tabletQuery}) {

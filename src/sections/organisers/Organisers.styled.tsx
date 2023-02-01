@@ -17,9 +17,17 @@ export const OrganiserWrapper = styled.div`
 export const Link = styled.a`
   img {
     max-width: 100%;
+    max-height: 70px;
     @media screen and (${theme.breakpoints.lteTabletQuery}) {
       width: 100%;
       transform: scale(0.7);
     }
   }
+`;
+
+export const LogoWrapper = styled.img`
+  max-width: 100%;
+  min-width: 300px;
+  height: auto;
+  display: block;
 `;

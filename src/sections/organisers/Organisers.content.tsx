@@ -1,22 +1,16 @@
-import OrganiserItem from "../../types/TOrganiser";
-import utb from "../../assets/images/logos/utb.svg";
-import suLong from "../../assets/images/logos/suLong.svg";
-import usuh from "../../assets/images/logos/usuh.svg";
+import OrganiserItem from '../../types/TOrganiser';
+import utb from '../../assets/images/logos/utb.svg';
+import su from '../../assets/images/logos/suCut.png';
 
 export const organisers: OrganiserItem[] = [
   {
-    name: "UTB",
-    link: "https://www.utb.cz/",
+    name: 'UTB',
+    link: 'https://www.utb.cz/',
     imgSrc: `${utb}`,
   },
   {
-    name: "SU Zlin",
-    link: "https://sunovy.utb.cz/",
-    imgSrc: `${suLong}`,
-  },
-  {
-    name: "USUH UTB",
-    link: "https://www.facebook.com/UnieStudentuUH/",
-    imgSrc: `${usuh}`,
+    name: 'SU UTB Zlin',
+    link: 'https://sunovy.utb.cz/',
+    imgSrc: `${su}`,
   },
 ];

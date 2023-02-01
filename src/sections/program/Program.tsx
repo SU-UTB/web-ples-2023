@@ -1,75 +1,63 @@
-import {
-  WrapperCentered,
-  WrapperHalf,
-  WrapperSection,
-} from '../../components/layout/wrapper/Wrapper.styled';
+import { WrapperSection } from '../../components/layout/wrapper/Wrapper.styled';
 import { timeline } from './Program.content';
-import { Row, WrapperTimeline, Time, Activity } from './Program.styled';
-import Headline from '../../components/headline/Headline';
-import skate from '../../assets/images/skate.png';
-import Paragraph from '../../components/paragraph/Paragraph';
-import { GteDesktop, LteTablet } from '../../theme/MediaQueries';
-import StyledImg from '../../assets/images/StyledImg/StyledImg';
+import {
+  Row,
+  WrapperTimeline,
+  Time,
+  Activity,
+  Moderator,
+  ProgramHeadline,
+} from './Program.styled';
+import { useEffect } from 'react';
+import revealFrom from '../../functions/reveal';
 
 const Program = () => {
+  useEffect(() => {
+    window.addEventListener('scroll', () => revealFrom('.reveal-left', 100));
+    window.addEventListener('scroll', () => revealFrom('.reveal-right', 100));
+    window.addEventListener('scroll', () => revealFrom('.reveal-program', 50));
+
+    return () => {
+      window.removeEventListener('scroll', () =>
+        revealFrom('.reveal-left', 100)
+      );
+      window.removeEventListener('scroll', () =>
+        revealFrom('.reveal-right', 100)
+      );
+      window.removeEventListener('scroll', () =>
+        revealFrom('.reveal-program', 50)
+      );
+    };
+  }, []);
+
   return (
     <>
-      <GteDesktop>
-        <WrapperSection id='program'>
-          <WrapperHalf>
-            <WrapperCentered>
-              <Headline align='left'>Program</Headline>
-              <Paragraph>
-                Celým večerem vás provede moderátorka Lucie Borhyová. Těšit se
-                můžete také na orchestr Prestige Symphony Orchestra a kapelu
-                Prague Louge Trio, kteří zahrají již před půlnocí a pro
-                (ne)milovníky zimního spánku i kapela Frontmen po půlnoci!
-                Věříme, že Vám zařídí nezapomenutelný večer dlouhý jako polární
-                noc!
-              </Paragraph>
-            </WrapperCentered>
-          </WrapperHalf>
-          <WrapperHalf>
-            <WrapperCentered>
-              <StyledImg mirrored src={skate} alt='skate' />
-            </WrapperCentered>
-          </WrapperHalf>
-        </WrapperSection>
-      </GteDesktop>
-
-      <LteTablet>
-        <WrapperSection id='program'>
-          <WrapperHalf>
-            <WrapperCentered>
-              <StyledImg mirrored src={skate} alt='skate' />
-            </WrapperCentered>
-          </WrapperHalf>
-          <WrapperHalf>
-            <WrapperCentered>
-              <Headline align='left'>Program</Headline>
-              <Paragraph>
-                Celým večerem vás provede moderátorka Lucie Borhyová. Těšit se
-                můžete také na orchestr Prestige Symphony Orchestra a kapelu
-                Prague Louge Trio, kteří zahrají již před půlnocí a pro
-                (ne)milovníky zimního spánku i kapela Frontmen po půlnoci!
-                Věříme, že Vám zařídí nezapomenutelný večer dlouhý jako polární
-                noc!
-              </Paragraph>
-            </WrapperCentered>
-          </WrapperHalf>
-        </WrapperSection>
-      </LteTablet>
-
-      {/* <WrapperSection centered id="program">
+      <WrapperSection centered id='program'>
+        <ProgramHeadline className='reveal-program'>Program</ProgramHeadline>
+        <Moderator className='reveal-program'>
+          Celým večerem vás provede moderátorka <strong>Lucie Borhyová.</strong>
+        </Moderator>
+        <br />
         <WrapperTimeline>
           {timeline.map((item, index) => (
-            <Row key={index}>
-              <Time>{item.time}</Time>
-              <Activity>{item.activity}</Activity>
-            </Row>
+            <div key={index}>
+              {item.time !== '' && <br />}
+              <Row>
+                <Time className='reveal-left'>{item.time}</Time>
+                {item.time !== '' ? (
+                  <strong>
+                    <Activity className='reveal-right'>
+                      {item.activity}
+                    </Activity>
+                  </strong>
+                ) : (
+                  <Activity className='reveal-right'>{item.activity}</Activity>
+                )}
+              </Row>
+            </div>
           ))}
         </WrapperTimeline>
-      </WrapperSection> */}
+      </WrapperSection>
     </>
   );
 };
