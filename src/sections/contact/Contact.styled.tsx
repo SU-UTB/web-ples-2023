@@ -10,10 +10,10 @@ export const WrapperContact = styled.div`
 export const WrapperContactItem = styled.div`
   display: flex;
   margin-bottom: 2em;
-  padding: 0 5em;
   line-height: 1.5em;
   gap: 2em;
   font-size: ${theme.fontSizeElements.h4}px;
+  align-items: center;
 
   color: ${theme.colors.black};
   @media screen and (${theme.breakpoints.gteDesktopLgQuery}) {
@@ -29,10 +29,13 @@ export const WrapperContactItem = styled.div`
 export const ContactHalf = styled.span`
   display: flex;
   flex-direction: column;
-  width: 50%;
+  width: 45%;
+  @media screen and (${theme.breakpoints.gteDesktopQuery}) {
+    white-space: nowrap;
+  }
   &:nth-child(1) {
     align-items: flex-end;
-    /* white-space: nowrap; */
+    text-align: end;
   }
   div {
     &:nth-child(1) {
@@ -43,7 +46,6 @@ export const ContactHalf = styled.span`
 
 export const ContactItem = styled.div`
   display: flex;
-  align-items: flex-end;
 `;
 
 export const ContactAction = styled.a<{

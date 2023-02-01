@@ -17,11 +17,10 @@ export const WrapperMain = styled.main`
 
 export const WrapperSection = styled.div<{
   centered?: boolean;
-  contact?: boolean;
 }>(
-  ({ centered, contact }) => css`
+  ({ centered }) => css`
     display: flex;
-    width: ${contact ? `100%` : `80%`};
+    width: 80%;
     max-width: 1600px;
     margin: 0 auto 20em;
 
