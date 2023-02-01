@@ -9,8 +9,18 @@ import Headline from '../../components/headline/Headline';
 
 import tickets from '../../assets/images/tickets.png';
 import { ContactAction } from '../contact/Contact.styled';
+import { useEffect } from 'react';
+import revealImg from '../../functions/revealImg';
 
 const Tickets = () => {
+  useEffect(() => {
+    window.addEventListener('scroll', revealImg);
+
+    return () => {
+      window.removeEventListener('scroll', revealImg);
+    };
+  }, []);
+
   return (
     <WrapperSection id='vstupenky'>
       <WrapperHalf>

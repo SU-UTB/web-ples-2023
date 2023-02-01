@@ -30,6 +30,17 @@ body {
   opacity: 1;
 }
 
+.reveal-program {
+  position: relative;
+  transform: translateY(50px);
+  opacity: 0;
+  transition: 1s all ease;
+}
+.reveal-program.done {
+  transform: translateY(0);
+  opacity: 1;
+}
+
 .reveal-left {
   position: relative;
   transform: translateX(-10vw);

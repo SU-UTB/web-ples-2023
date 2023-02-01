@@ -1,5 +1,8 @@
+import { useEffect } from 'react';
 import Headline from '../../components/headline/Headline';
 import { WrapperSection } from '../../components/layout/wrapper/Wrapper.styled';
+import revealLeft from '../../functions/revealLeft';
+import revealRight from '../../functions/revealRight';
 import { GteHugeDesktopCheck } from '../../theme/MediaQueries';
 import { contacts } from './Contact.content';
 import {
@@ -11,6 +14,16 @@ import {
 } from './Contact.styled';
 
 const Contact = () => {
+  useEffect(() => {
+    window.addEventListener('scroll', revealLeft);
+    window.addEventListener('scroll', revealRight);
+
+    return () => {
+      window.removeEventListener('scroll', revealLeft);
+      window.removeEventListener('scroll', revealRight);
+    };
+  }, []);
+
   return (
     <WrapperSection centered id='kontakt'>
       <Headline color={GteHugeDesktopCheck() ? 'white' : 'black'}>

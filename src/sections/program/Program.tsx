@@ -1,24 +1,56 @@
 import { WrapperSection } from '../../components/layout/wrapper/Wrapper.styled';
 import { timeline } from './Program.content';
-import { Row, WrapperTimeline, Time, Activity } from './Program.styled';
-import Headline from '../../components/headline/Headline';
-import Paragraph from '../../components/paragraph/Paragraph';
+import {
+  Row,
+  WrapperTimeline,
+  Time,
+  Activity,
+  Moderator,
+  ProgramHeadline,
+} from './Program.styled';
+import revealRight from '../../functions/revealRight';
+import revealLeft from '../../functions/revealLeft';
+import revealProgram from '../../functions/revealProgram';
+import { useEffect } from 'react';
 
 const Program = () => {
+  useEffect(() => {
+    window.addEventListener('scroll', revealLeft);
+    window.addEventListener('scroll', revealRight);
+    window.addEventListener('scroll', revealProgram);
+
+    return () => {
+      window.removeEventListener('scroll', revealLeft);
+      window.removeEventListener('scroll', revealRight);
+      window.removeEventListener('scroll', revealProgram);
+    };
+  }, []);
+
   return (
     <>
       <WrapperSection centered id='program'>
-        <Headline align='left'>Program</Headline>
-        <Paragraph>
+        <ProgramHeadline className='reveal-program'>Program</ProgramHeadline>
+        <Moderator className='reveal-program'>
           Celým večerem vás provede moderátorka <strong>Lucie Borhyová.</strong>
-        </Paragraph>
+        </Moderator>
         <br />
         <WrapperTimeline>
           {timeline.map((item, index) => (
-            <Row key={index}>
-              <Time className='reveal-left'>{item.time}</Time>
-              <Activity className='reveal-right'>{item.activity}</Activity>
-            </Row>
+            <>
+              {item.time !== '' && <br />}
+              <Row key={index}>
+                <Time className='reveal-left'>{item.time}</Time>
+                {item.time !== '' ? (
+                  <strong>
+                    <Activity className='reveal-right'>
+                      {item.activity}
+                    </Activity>
+                  </strong>
+                ) : (
+                  <Activity className='reveal-right'>{item.activity}</Activity>
+                )}
+              </Row>
+            </>
           ))}
         </WrapperTimeline>
       </WrapperSection>

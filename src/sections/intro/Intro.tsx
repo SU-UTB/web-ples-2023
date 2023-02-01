@@ -8,8 +8,18 @@ import Paragraph from '../../components/paragraph/Paragraph';
 import Headline from '../../components/headline/Headline';
 import StyledImg from '../../assets/images/StyledImg/StyledImg';
 import { Link } from '../../components/link/Link.styled';
+import { useEffect } from 'react';
+import revealImg from '../../functions/revealImg';
 
 const Intro = () => {
+  useEffect(() => {
+    window.addEventListener('scroll', revealImg);
+
+    return () => {
+      window.removeEventListener('scroll', revealImg);
+    };
+  }, []);
+
   return (
     <WrapperSection id='oplese'>
       <WrapperHalf>

@@ -20,15 +20,6 @@ import Consent from './components/consent/Consent';
 import reveal from './functions/reveal';
 window.addEventListener('scroll', reveal);
 
-import revealImg from './functions/revealImg';
-window.addEventListener('scroll', revealImg);
-
-import revealLeft from './functions/revealLeft';
-window.addEventListener('scroll', revealLeft);
-
-import revealRight from './functions/revealRight';
-window.addEventListener('scroll', revealRight);
-
 function App() {
   return (
     <WrapperMain>
