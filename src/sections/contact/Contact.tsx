@@ -19,12 +19,12 @@ const Contact = () => {
       <WrapperContact>
         {contacts.map((item, index) => (
           <WrapperContactItem key={index} className='reveal'>
-            <ContactHalf>
+            <ContactHalf className='reveal-left'>
               <ContactItem>{item.position}</ContactItem>
               <ContactAction href={item.phoneLink}>{item.phone}</ContactAction>
             </ContactHalf>
 
-            <ContactHalf>
+            <ContactHalf className='reveal-right'>
               <ContactItem>{item.name}</ContactItem>
               <ContactAction
                 href={'mailto:' + item.email + '?subject=Ples UTB 2023'}

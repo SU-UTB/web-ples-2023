@@ -15,11 +15,19 @@ import Program from './sections/program/Program';
 import Tickets from './sections/tickets/Tickets';
 import { LteTablet } from './theme/MediaQueries';
 import Snowing from './components/snowing/Snowing';
+import Consent from './components/consent/Consent';
 
 import reveal from './functions/reveal';
 window.addEventListener('scroll', reveal);
 
-import Consent from './components/consent/Consent';
+import revealImg from './functions/revealImg';
+window.addEventListener('scroll', revealImg);
+
+import revealLeft from './functions/revealLeft';
+window.addEventListener('scroll', revealLeft);
+
+import revealRight from './functions/revealRight';
+window.addEventListener('scroll', revealRight);
 
 function App() {
   return (

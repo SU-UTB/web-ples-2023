@@ -13,14 +13,49 @@ body {
   opacity: 0;
   transition: 1s all ease;
 }
-
-.reveal-slow {
-  transition: 1.5s all ease !important;
-}
-
 .reveal.active {
   transform: translateY(0);
   opacity: 1;
+}
+
+.reveal-img {
+  position: relative;
+  transform: translateX(-200px);
+  opacity: 0;
+  transition: 1s all ease;
+}
+
+.reveal-img.done {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.reveal-left {
+  position: relative;
+  transform: translateX(-200px);
+  opacity: 0;
+  transition: 1s all ease;
+}
+
+.reveal-left.done {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.reveal-right {
+  position: relative;
+  transform: translateX(200px);
+  opacity: 0;
+  transition: 1s all ease;
+}
+
+.reveal-right.done {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.reveal-slow {
+  transition: 1.5s all ease !important;
 }
 
 .reveal-logo {

@@ -13,7 +13,7 @@ const Intro = () => {
   return (
     <WrapperSection id='oplese'>
       <WrapperHalf>
-        <WrapperCentered>
+        <WrapperCentered className='reveal-img'>
           <StyledImg src={dress} alt='šaty' />
         </WrapperCentered>
       </WrapperHalf>

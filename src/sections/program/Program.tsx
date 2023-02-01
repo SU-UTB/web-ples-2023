@@ -13,11 +13,11 @@ const Program = () => {
           Celým večerem vás provede moderátorka <strong>Lucie Borhyová.</strong>
         </Paragraph>
         <br />
-        <WrapperTimeline className='reveal'>
+        <WrapperTimeline>
           {timeline.map((item, index) => (
             <Row key={index}>
-              <Time>{item.time}</Time>
-              <Activity>{item.activity}</Activity>
+              <Time className='reveal-left'>{item.time}</Time>
+              <Activity className='reveal-right'>{item.activity}</Activity>
             </Row>
           ))}
         </WrapperTimeline>
