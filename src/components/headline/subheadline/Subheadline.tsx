@@ -1,17 +1,17 @@
-import styled, { css } from "styled-components";
-import theme from "../../../theme/theme";
+import styled, { css, ThemeConsumer } from 'styled-components';
+import theme from '../../../theme/theme';
 
 export const Subheadline = styled.div<{
-  colorMode?: "white" | "black" | "ice";
+  colorMode?: 'white' | 'black';
 }>(
-  ({ colorMode = "white" }) => css`
+  ({ colorMode }) => css`
     font-family: ${theme.fonts.heading};
     display: flex;
     align-items: center;
     justify-content: space-between;
     line-height: 2em;
     font-size: ${theme.fontSizeElements.h3}px;
-    color: ${colorMode === "ice" ? `${theme.colors.ice}` : `${colorMode}`};
+    color: ${theme.colors.primary};
 
     @media screen and (${theme.breakpoints.tabletQuery}) {
       font-size: ${theme.fontSizeElements.h4}px;

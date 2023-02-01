@@ -1,41 +1,41 @@
-import { Headline } from "../../components/headline/Headline";
-import {
-  CardWrapper,
-  WrapperSection,
-} from "../../components/layout/wrapper/Wrapper.styled";
-import { Paragraph } from "../../components/paragraph/Paragraph";
-import { CardImageWrapper, CardText, ProgramCard } from "./Events.styled";
+import Headline from "../../components/headline/Headline";
+import { WrapperSection } from "../../components/layout/wrapper/Wrapper.styled";
+import Paragraph from "../../components/paragraph/Paragraph";
+import { CardImage, CardText, CardWrapper, EventCard } from "./Events.styled";
 import { events } from "./Events.content";
+import { GteDesktopCheck } from "../../theme/MediaQueries";
 
 const Events = () => {
   return (
-    <WrapperSection centered id="program">
-      <Headline>Doprovodný program</Headline>
-      <Paragraph>
-        Abychom vás správně naladili, připravili jsme si po celý únor, tedy
-        měsíc před plesem, několik doprovodných programů. Těšit se určitě můžete
-        na bruslení na ledové ploše, promítání tématického filmu, nebo třeba
-        tančírnu, kde natrénujete všechny typy tanců, či workshop na míchání
-        drinků, ze kterých vám ztuhne krev v žilách.
+    <WrapperSection centered id='program'>
+      <Headline color={GteDesktopCheck() ? "white" : "black"}>
+        Doprovodný program
+      </Headline>
+      <Paragraph colorMode={GteDesktopCheck() ? "white" : "black"}>
+        Abychom vás správně naladili, připravili jsme si po celý únor několik
+        doprovodných programů. Těšit se můžete na bruslení na ledové ploše,
+        promítání tématického filmu, tančírnu, či workshop na míchání drinků, ze
+        kterých vám ztuhne krev v žilách.
         <br />
         <br />V den D se dámy mohou přijít zkrášlit šikovnými kadeřnicemi a
-        make-up artistky přímo na budovu U44 za symbolickou částku. Nezapomněli
-        jsme ani na pány, kteří se budou moct nechat upravit v Barber shopu se
-        slevou.
+        kosmetičkami za symbolickou částku. O rezervacích do našeho salonu vás
+        budeme včas informovat.
       </Paragraph>
 
       <CardWrapper>
         {events.map((item, index) => (
-          <ProgramCard key={index}>
-            <Headline align="center" card>
+          <EventCard
+            key={index}
+            href={item.link}
+            target='_blank'
+            className='reveal reveal-slow'
+          >
+            <Headline align='center' card>
               {item.name}
             </Headline>
             <CardText>{item.date}</CardText>
-            <CardImageWrapper
-              src={item.image}
-              alt={item.name}
-            ></CardImageWrapper>
-          </ProgramCard>
+            <CardImage src={item.image} alt={item.name}></CardImage>
+          </EventCard>
         ))}
       </CardWrapper>
     </WrapperSection>
