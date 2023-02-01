@@ -9,7 +9,7 @@ import patifu from '../../assets/images/sponsors/patifu.jpg';
 import topNatur from '../../assets/images/sponsors/topNatur.svg';
 import vitar from '../../assets/images/sponsors/vitar.svg';
 import vitco from '../../assets/images/sponsors/vitco.png';
-import wellnessInfinit from '../../assets/images/sponsors/wellnessInfinit.svg';
+import infinitMaximus from '../../assets/images/sponsors/infinitMaximus.svg';
 
 export const partners: PartnerItem[] = [
   {
@@ -28,6 +28,10 @@ export const partners: PartnerItem[] = [
   {
     name: 'Hame',
     logoSrc: hame,
+  },
+  {
+    name: 'Wellness Infinit Maximus',
+    logoSrc: infinitMaximus,
   },
   {
     name: 'Klenoty Aurum',
@@ -80,10 +84,6 @@ export const partners: PartnerItem[] = [
   {
     name: 'Vitco',
     logoSrc: vitco,
-  },
-  {
-    name: 'Wellness InfinitMaximus',
-    logoSrc: wellnessInfinit,
   },
   // {
   //   name: 'ZFF',

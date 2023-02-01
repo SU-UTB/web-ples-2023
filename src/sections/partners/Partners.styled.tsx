@@ -3,7 +3,6 @@ import theme from '../../theme/theme';
 
 export const PartnerLogo = styled.div`
   margin: 3em;
-  transition: all 0.1s ease-in-out;
   max-width: 150px;
   height: auto;
   width: auto;

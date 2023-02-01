@@ -1,27 +1,46 @@
 import styled from 'styled-components';
 import theme from '../../theme/theme';
 
-export const ProgramCard = styled.a`
-  padding: 1em;
-  margin: 0.75em;
-  text-align: center;
-  background-color: rgba(23, 21, 71, 0.5);
-  border-radius: 0.5em;
-  box-shadow: 0px 5px 10px 2px ${theme.colors.ice};
-  &:hover {
-    cursor: pointer;
-    transition: all 0.1s ease-in-out !important;
-    margin: 0.5em;
+export const CardWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+  max-width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+  gap: 1em;
+
+  @media screen and (${theme.breakpoints.mobileQuery}) {
+    gap: 0.5em;
   }
-  @media screen and (${theme.breakpoints.lteTabletQuery}) {
-    margin: 0.5em;
+`;
+
+export const EventCard = styled.a`
+  position: relative;
+  min-width: 260px;
+  width: 15%;
+  padding: 0.5em;
+  border-radius: 0.5em;
+  background-color: rgba(23, 21, 71, 0.5);
+  text-align: center;
+  text-decoration: none;
+
+  @media screen and (${theme.breakpoints.tabletQuery}) {
+    min-width: 180px;
+  }
+
+  @media screen and (${theme.breakpoints.mobileQuery}) {
+    min-width: 120px;
+    padding: 0.5 0;
   }
 `;
 
 export const CardText = styled.div`
+  color: ${theme.colors.primary};
   margin-bottom: 1em;
 `;
 
-export const CardImageWrapper = styled.img`
+export const CardImage = styled.img`
   width: 100%;
+  height: auto;
 `;

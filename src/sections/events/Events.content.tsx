@@ -10,6 +10,7 @@ export const events: EventItem[] = [
     name: 'Bruslení',
     date: '8. 2. 2023',
     image: `${skate}`,
+    link: 'https://www.facebook.com/events/878795206724484',
   },
   {
     name: 'Tančírna',

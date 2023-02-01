@@ -1,10 +1,7 @@
 import Headline from '../../components/headline/Headline';
-import {
-  CardWrapper,
-  WrapperSection,
-} from '../../components/layout/wrapper/Wrapper.styled';
+import { WrapperSection } from '../../components/layout/wrapper/Wrapper.styled';
 import Paragraph from '../../components/paragraph/Paragraph';
-import { CardImageWrapper, CardText, ProgramCard } from './Events.styled';
+import { CardImage, CardText, CardWrapper, EventCard } from './Events.styled';
 import { events } from './Events.content';
 
 const Events = () => {
@@ -22,18 +19,20 @@ const Events = () => {
         budeme včas informovat.
       </Paragraph>
 
-      <CardWrapper className='reveal reveal-slow'>
+      <CardWrapper>
         {events.map((item, index) => (
-          <ProgramCard key={index}>
+          <EventCard
+            key={index}
+            href={item.link}
+            target='_blank'
+            className='reveal reveal-slow'
+          >
             <Headline align='center' card>
               {item.name}
             </Headline>
             <CardText>{item.date}</CardText>
-            <CardImageWrapper
-              src={item.image}
-              alt={item.name}
-            ></CardImageWrapper>
-          </ProgramCard>
+            <CardImage src={item.image} alt={item.name}></CardImage>
+          </EventCard>
         ))}
       </CardWrapper>
     </WrapperSection>

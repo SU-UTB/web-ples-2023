@@ -29,6 +29,7 @@ const Intro = () => {
             <Link
               href='https://www.facebook.com/events/524426676284645'
               rel='noopener noreferrer'
+              target='_blank'
             >
               Facebookové události.
             </Link>
