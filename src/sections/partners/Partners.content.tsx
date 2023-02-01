@@ -1,24 +1,25 @@
-import PartnerItem from '../../types/TPartner';
-import flyUnited from '../../assets/images/sponsors/flyUnited.svg';
-import buurger from '../../assets/images/sponsors/buurger.jpg';
-import hame from '../../assets/images/sponsors/hame.jpg';
-import klenotyAurum from '../../assets/images/sponsors/klenotyAurum.jpg';
-import ponozkovice from '../../assets/images/sponsors/ponozkovice.svg';
-import LGZ from '../../assets/images/sponsors/LGZ.png';
-import lucy from '../../assets/images/sponsors/lucy.png';
-import patifu from '../../assets/images/sponsors/patifu.jpg';
-import topNatur from '../../assets/images/sponsors/topNatur.svg';
-import vitar from '../../assets/images/sponsors/vitar.svg';
-import vitco from '../../assets/images/sponsors/vitco.png';
-import infinitMaximus from '../../assets/images/sponsors/infinitMaximus.svg';
+import PartnerItem from "../../types/TPartner";
+import flyUnited from "../../assets/images/partners/flyUnited.svg";
+import buurger from "../../assets/images/partners/buurger.png";
+import hame from "../../assets/images/partners/hame.jpg";
+import klenotyAurum from "../../assets/images/partners/klenotyAurum.jpg";
+import merciiCaffe from "../../assets/images/partners/merciiCaffe.png";
+import ponozkovice from "../../assets/images/partners/ponozkovice.svg";
+import LGZ from "../../assets/images/partners/LGZ.png";
+import lucy from "../../assets/images/partners/lucy.png";
+import patifu from "../../assets/images/partners/patifu.jpg";
+import topNatur from "../../assets/images/partners/topNatur.svg";
+import vitar from "../../assets/images/partners/vitar.svg";
+import vitco from "../../assets/images/partners/vitco.png";
+import infinitMaximus from "../../assets/images/partners/infinitMaximus.svg";
 
 export const partners: PartnerItem[] = [
   {
-    name: 'flyUnited',
+    name: "flyUnited",
     logoSrc: flyUnited,
   },
   {
-    name: 'Buuurger',
+    name: "Buuurger",
     logoSrc: buurger,
   },
   // {
@@ -26,19 +27,23 @@ export const partners: PartnerItem[] = [
   //   logoSrc: greiner,
   // },
   {
-    name: 'Hame',
+    name: "Hame",
     logoSrc: hame,
   },
   {
-    name: 'Wellness Infinit Maximus',
+    name: "Wellness Infinit Maximus",
     logoSrc: infinitMaximus,
   },
   {
-    name: 'Klenoty Aurum',
+    name: "Klenoty Aurum",
     logoSrc: klenotyAurum,
   },
   {
-    name: 'Klub Panu z Ponožkovic',
+    name: "Mercii Caffé",
+    logoSrc: merciiCaffe,
+  },
+  {
+    name: "Klub Panu z Ponožkovic",
     logoSrc: ponozkovice,
   },
   // {
@@ -46,15 +51,15 @@ export const partners: PartnerItem[] = [
   //   logoSrc: lazneLuhacovice,
   // },
   {
-    name: 'LGZ',
+    name: "LGZ",
     logoSrc: LGZ,
   },
   {
-    name: 'Lucy Beaty',
+    name: "Lucy Beaty",
     logoSrc: lucy,
   },
   {
-    name: 'VETO-Patifu',
+    name: "VETO-Patifu",
     logoSrc: patifu,
   },
   // {
@@ -66,7 +71,7 @@ export const partners: PartnerItem[] = [
   //   logoSrc: pivovar,
   // },
   {
-    name: 'Top Natur',
+    name: "Top Natur",
     logoSrc: topNatur,
   },
   // {
@@ -78,11 +83,11 @@ export const partners: PartnerItem[] = [
   //   logoSrc: vitaSana,
   // },
   {
-    name: 'Vitar',
+    name: "Vitar",
     logoSrc: vitar,
   },
   {
-    name: 'Vitco',
+    name: "Vitco",
     logoSrc: vitco,
   },
   // {
