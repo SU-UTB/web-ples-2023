@@ -39,6 +39,13 @@ const LoadingBackground = styled.div`
   display: -ms-flexbox;
   display: flex;
 
+  -webkit-transition: 1s all;
+  -o-transition: 1s all;
+  transition: 1s all;
+  -webkit-transition-delay: 0.3s;
+  -o-transition-delay: 0.3s;
+  transition-delay: 0.3s;
+
   background: linear-gradient(
     to bottom,
     ${theme.colors.dark},
