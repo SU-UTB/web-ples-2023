@@ -76,14 +76,20 @@ function App() {
 
   useEffect(() => {
     const removeLoader = () => setLoading(false);
-    window.addEventListener("load", removeLoader);
+
+    if (localStorage.getItem("pageLoaded") !== "true") {
+      window.addEventListener("load", removeLoader);
+      localStorage.setItem("pageLoaded", "true");
+    } else {
+      setLoading(false);
+    }
 
     return () => {
       window.removeEventListener("load", removeLoader);
     };
   }, []);
 
-  const [visibleLoading, setVisibleLoading] = useState(false);
+  const [visibleLoading, setVisibleLoading] = useState(true);
 
   useEffect(() => {
     const interval = setInterval(() => {
