@@ -38,12 +38,12 @@ const Tickets = () => {
         <WrapperCentered>
           <Headline align='left'>Vstupenky</Headline>
           <Paragraph align>
-            Prodej vstupenek bude spuštěn<strong>13. 2. 2023</strong> a bude
+            Prodej vstupenek bude spuštěn <strong>13. 2. 2023</strong> a bude
             probíhat v budově Rektorátu UTB (U13) na nám. T. G. Masaryka 5555,
             Zlín.
             <br />
-            Prodej bude pokračovat ve všední dny od 9:00 do 16:00 až do 2. 3.
-            2023, nebo do vyprodání lístků.
+            Prodej bude pokračovat od pondělí do čtvrtka od 9:00 do 16:00 a v
+            pátky od 9:00 do 12:00 až do 2. 3. 2023, nebo do vyprodání lístků.
             <br />
             Vybírat můžete ze tří druhů lístků, a to na stání (350 Kč), sezení
             (500 Kč) a sezení s rautem (750 Kč).

@@ -12,7 +12,6 @@ export const WrapperMain = styled.main`
   visibility: hidden;
   overflow: hidden;
   transition: visibility 2s linear, overflow 2s linear;
-
   @media screen and (${theme.breakpoints.mobileQuery}) {
     background-image: url(${bgWinterTablet});
     background-size: auto;
