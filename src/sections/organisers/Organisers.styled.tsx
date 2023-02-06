@@ -14,6 +14,22 @@ export const OrganiserWrapper = styled.div`
   }
 `;
 
+export const OrganisersHeadline = styled.span`
+  max-width: 80%;
+  font-family: ${theme.fonts.heading};
+  font-size: ${theme.fontSizeElements.h1}px;
+  text-align: center;
+  color: ${theme.colors.black};
+
+  @media screen and (${theme.breakpoints.tabletQuery}) {
+    font-size: ${theme.fontSizeElements.h2}px;
+  }
+  @media screen and (${theme.breakpoints.mobileQuery}) {
+    max-width: 90%;
+    font-size: ${theme.fontSizeElements.h3}px;
+  }
+`;
+
 export const Link = styled.a`
   img {
     max-width: 100%;
