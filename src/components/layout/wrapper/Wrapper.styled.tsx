@@ -1,7 +1,7 @@
-import styled, { css } from 'styled-components';
-import theme from '../../../theme/theme';
-import bgWinter from '../../../assets/images/bg/bgWinter.png';
-import bgWinterTablet from '../../../assets/images/bg/bgWinterTablet.png';
+import styled, { css } from "styled-components";
+import theme from "../../../theme/theme";
+import bgWinter from "../../../assets/images/bg/bgWinter.png";
+import bgWinterTablet from "../../../assets/images/bg/bgWinterTablet.png";
 
 export const WrapperMain = styled.main`
   font-family: ${theme.fonts.monsterRegular};
@@ -9,6 +9,10 @@ export const WrapperMain = styled.main`
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center 0;
+  visibility: hidden;
+  overflow: hidden;
+  transition: visibility 2s linear, overflow 2s linear;
+
   @media screen and (${theme.breakpoints.mobileQuery}) {
     background-image: url(${bgWinterTablet});
     background-size: auto;
