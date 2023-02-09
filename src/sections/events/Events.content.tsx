@@ -16,6 +16,7 @@ export const events: EventItem[] = [
     name: 'Tančírna',
     date: '14. 2. 2023',
     image: `${shoe}`,
+    link: 'https://www.facebook.com/events/917395442610188',
   },
   {
     name: 'Cocktail workshop',
