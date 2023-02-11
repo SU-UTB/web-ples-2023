@@ -96,3 +96,45 @@ export const ReservationHeadline = styled.div`
     font-size: ${theme.fontSizeElements.h3}px;
   }
 `;
+
+export const WhiteText = styled.div`
+  color: white;
+  margin-right: 1em;
+
+  font-family: ${theme.fonts.monsterRegular};
+  font-size: ${theme.fontSizeElements.h4}px;
+
+  @media screen and (${theme.breakpoints.tabletQuery}) {
+    font-size: ${theme.fontSizeElements.h5}px;
+  }
+
+  @media screen and (${theme.breakpoints.mobileQuery}) {
+    font-size: ${theme.fontSizeElements.paragraphMobile}px;
+  }
+`;
+
+export const ButtonWrapper = styled.div`
+  display: flex;
+`;
+
+export const ButtonReservation = styled.button`
+  padding: 0.2rem;
+  font-family: ${theme.fonts.monsterRegular};
+  font-weight: bold;
+  font-size: 18px;
+  width: 100px;
+  border: 1px solid black;
+  border-radius: 1em;
+  background-color: lightblue;
+  cursor: pointer;
+`;
+
+export const ButtonClearSelection = styled.button`
+  padding: 0.5rem;
+  font-family: ${theme.fonts.monsterRegular};
+  font-weight: bold;
+  border: 1px solid black;
+  border-radius: 1em;
+  background-color: orange;
+  cursor: pointer;
+`;
