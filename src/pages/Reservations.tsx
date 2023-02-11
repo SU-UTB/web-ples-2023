@@ -24,14 +24,15 @@ const initialData: FormData = {
 const Reservations = () => {
   const [formData, setFormData] = useState(initialData);
   const [loggedIn, setLoggedIn] = useState<boolean>(false);
+  const [username, setUsername] = useState<string>();
 
   useEffect(() => {
-    console.log(`token: ${localStorage.getItem('token')}`);
     if (
       localStorage.getItem('token') !== undefined &&
       localStorage.getItem('token') !== null
     ) {
       setLoggedIn(true);
+      getAllReservations();
     }
   }, []);
 
@@ -57,9 +58,25 @@ const Reservations = () => {
       },
     }).then(
       (response) => {
-        console.log(response.data.token);
         localStorage.setItem('token', `${response.data.token}`);
         setLoggedIn(true);
+        setUsername(formData.email);
+        getAllReservations();
+      },
+      (error) => {
+        console.log(error);
+      }
+    );
+  };
+
+  const getAllReservations = () => {
+    axios({
+      method: 'get',
+      url: `http://sdtest.wz.cz/index.php/api/pages/reservations`,
+      headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
+    }).then(
+      (response) => {
+        console.log(response.data);
       },
       (error) => {
         console.log(error);
@@ -101,7 +118,7 @@ const Reservations = () => {
           </>
         ) : (
           <>
-            <ReservationHeadline>Přihlášen jako admin</ReservationHeadline>
+            <ReservationHeadline>Přihlášen jako {username}</ReservationHeadline>
             <FormWrapper>
               <ButtonSubmit onClick={() => logout()}>Odhlásit</ButtonSubmit>
             </FormWrapper>
