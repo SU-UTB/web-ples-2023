@@ -1,5 +1,5 @@
-import Headline from '../../components/headline/Headline';
-import { WrapperSection } from '../../components/layout/wrapper/Wrapper.styled';
+import Headline from '../../../components/headline/Headline';
+import { WrapperSection } from '../../../components/layout/wrapper/Wrapper.styled';
 import { partners } from './Partners.content';
 import { PartnerLogo, PartnerImg, PartnerWrapper } from './Partners.styled';
 

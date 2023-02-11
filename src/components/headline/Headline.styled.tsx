@@ -1,20 +1,21 @@
-import styled, { css } from "styled-components";
-import theme from "../../theme/theme";
+import styled, { css } from 'styled-components';
+import theme from '../../theme/theme';
 
 export const HeadlineWrapper = styled.span<{
-  color?: "white" | "black" | "ice";
-  align?: "left" | "center" | "right";
+  color?: 'white' | 'black' | 'ice';
+  align?: 'left' | 'center' | 'right';
   card?: boolean;
 }>(
-  ({ color: colorMode = "white", align = "center", card }) => css`
+  ({ color: colorMode = 'white', align = 'center', card }) => css`
     max-width: 80%;
     font-family: ${theme.fonts.heading};
+    z-index: 999;
 
     font-size: ${card
       ? `${theme.fontSizeElements.h4}px`
       : `${theme.fontSizeElements.h1}px`};
 
-    color: ${colorMode === "ice" ? `${theme.colors.ice}` : `${colorMode}`};
+    color: ${colorMode === 'ice' ? `${theme.colors.ice}` : `${colorMode}`};
 
     ${card &&
     css`

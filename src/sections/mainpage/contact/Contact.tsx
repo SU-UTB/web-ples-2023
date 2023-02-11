@@ -1,8 +1,8 @@
 import { useEffect } from 'react';
-import Headline from '../../components/headline/Headline';
-import { WrapperSection } from '../../components/layout/wrapper/Wrapper.styled';
-import revealFrom from '../../functions/reveal';
-import { GteHugeDesktopCheck } from '../../theme/MediaQueries';
+import Headline from '../../../components/headline/Headline';
+import { WrapperSection } from '../../../components/layout/wrapper/Wrapper.styled';
+import revealFrom from '../../../functions/reveal';
+import { GteHugeDesktopCheck } from '../../../theme/MediaQueries';
 import { contacts } from './Contact.content';
 import {
   WrapperContactItem,

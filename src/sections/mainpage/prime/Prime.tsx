@@ -1,4 +1,4 @@
-import { Subheadline } from '../../components/headline/subheadline/Subheadline';
+import { Subheadline } from '../../../components/headline/subheadline/Subheadline';
 import { Gap, PrimeHeadline, PrimeWrapper, Row } from './Prime.styled';
 
 const Prime = () => {

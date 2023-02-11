@@ -1,23 +1,23 @@
+import { useEffect } from 'react';
 import {
   WrapperSection,
   WrapperHalf,
   WrapperCentered,
-} from "../../components/layout/wrapper/Wrapper.styled";
-import dress from "../../assets/images/dress.png";
-import Paragraph from "../../components/paragraph/Paragraph";
-import Headline from "../../components/headline/Headline";
-import StyledImg from "../../assets/images/StyledImg/StyledImg";
-import { Link } from "../../components/link/Link.styled";
-import { useEffect } from "react";
-import revealFrom from "../../functions/reveal";
+} from '../../../components/layout/wrapper/Wrapper.styled';
+import dress from '../../../assets/images/dress.png';
+import Paragraph from '../../../components/paragraph/Paragraph';
+import Headline from '../../../components/headline/Headline';
+import StyledImg from '../../../assets/images/StyledImg/StyledImg';
+import { Link } from '../../../components/link/Link.styled';
+import revealFrom from '../../../functions/reveal';
 
 const Intro = () => {
   useEffect(() => {
-    window.addEventListener("scroll", () => revealFrom(".reveal-img", 500));
+    window.addEventListener('scroll', () => revealFrom('.reveal-img', 500));
 
     return () => {
-      window.removeEventListener("scroll", () =>
-        revealFrom(".reveal-img", 500)
+      window.removeEventListener('scroll', () =>
+        revealFrom('.reveal-img', 500)
       );
     };
   }, []);
@@ -37,7 +37,7 @@ const Intro = () => {
             Univerzity Tomáše Bati ve Zlíně. Jako každý rok se ples ponese v
             určitém tématu, kterým je letos <strong> Zimní bál.</strong> Těšit
             se můžeme na krásnou zimní atmosféru a večer plný elegance a dobré
-            zábavy. Aktuální dění a novinky můžete sledovat na {""}
+            zábavy. Aktuální dění a novinky můžete sledovat na {''}
             <Link
               href='https://www.facebook.com/events/524426676284645'
               rel='noopener noreferrer'

@@ -1,4 +1,4 @@
-import { WrapperSection } from '../../components/layout/wrapper/Wrapper.styled';
+import { WrapperSection } from '../../../components/layout/wrapper/Wrapper.styled';
 import { timeline } from './Program.content';
 import {
   Row,
@@ -9,7 +9,7 @@ import {
   ProgramHeadline,
 } from './Program.styled';
 import { useEffect } from 'react';
-import revealFrom from '../../functions/reveal';
+import revealFrom from '../../../functions/reveal';
 
 const Program = () => {
   useEffect(() => {

@@ -1,24 +1,24 @@
-import { StyledImgWrapper } from "../../assets/images/StyledImg/StyledImg.styled";
+import { StyledImgWrapper } from '../../../assets/images/StyledImg/StyledImg.styled';
 import {
   WrapperSection,
   WrapperHalf,
   WrapperCentered,
-} from "../../components/layout/wrapper/Wrapper.styled";
-import Paragraph from "../../components/paragraph/Paragraph";
-import Headline from "../../components/headline/Headline";
+} from '../../../components/layout/wrapper/Wrapper.styled';
+import Paragraph from '../../../components/paragraph/Paragraph';
+import Headline from '../../../components/headline/Headline';
 
-import tickets from "../../assets/images/tickets.png";
-import { ContactAction } from "../contact/Contact.styled";
-import { useEffect } from "react";
-import revealFrom from "../../functions/reveal";
+import tickets from '../../../assets/images/tickets.png';
+import { ContactAction } from '../contact/Contact.styled';
+import { useEffect } from 'react';
+import revealFrom from '../../../functions/reveal';
 
 const Tickets = () => {
   useEffect(() => {
-    window.addEventListener("scroll", () => revealFrom(".reveal-img", 500));
+    window.addEventListener('scroll', () => revealFrom('.reveal-img', 500));
 
     return () => {
-      window.removeEventListener("scroll", () =>
-        revealFrom(".reveal-img", 500)
+      window.removeEventListener('scroll', () =>
+        revealFrom('.reveal-img', 500)
       );
     };
   }, []);
@@ -52,7 +52,7 @@ const Tickets = () => {
             Bližší informace k předprodeji: Aneta Nejezchlebová
             <br />
             <ContactAction
-              href={"mailto:nejezchlebova@sutb.cz?subject=Ples UTB 2023"}
+              href={'mailto:nejezchlebova@sutb.cz?subject=Ples UTB 2023'}
               tickets
             >
               nejezchlebova@sutb.cz

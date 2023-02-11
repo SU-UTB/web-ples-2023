@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import theme from '../../theme/theme';
+import theme from '../../../theme/theme';
 
 export const ProgramHeadline = styled.span`
   max-width: 80%;
