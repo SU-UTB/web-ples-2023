@@ -17,3 +17,12 @@ export const showSomethingGoneWrong = (error: string) => {
     timer: 2000,
   });
 };
+
+export const showSuccessReservation = () => {
+  Swal.fire({
+    icon: 'success',
+    title: `Rezervace byla vytvořena`,
+    showConfirmButton: false,
+    timer: 2000,
+  });
+};

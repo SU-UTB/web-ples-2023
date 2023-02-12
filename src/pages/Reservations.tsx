@@ -14,7 +14,10 @@ import {
   WrapperReservation,
 } from './Reservations.styled';
 import axios from 'axios';
-import { showNotSelected } from '../sections/reservations/swalFunctions';
+import {
+  showNotSelected,
+  showSuccessReservation,
+} from '../sections/reservations/swalFunctions';
 import MultiSelect from 'multiselect-react-dropdown';
 // import Map from '../assets/images/reservations/Map';
 import MapID from '../assets/images/reservations/MapID';
@@ -165,10 +168,11 @@ const Reservations = () => {
       },
     }).then(
       (response) => {
-        console.log(response);
         console.log(response.data);
         setSelectedSeats([]);
+        setSelectedStand(0);
         getAllReservations();
+        showSuccessReservation();
       },
       (error) => {
         console.log(error);
@@ -188,9 +192,11 @@ const Reservations = () => {
 
   const handleRemoveAllSeats = () => {
     setSelectedSeats([]);
+    setSelectedStand(0);
   };
 
   const changeColor = () => {
+    document.getElementById('19/S')?.setAttribute('fill', 'red');
     document.getElementById('stul01')?.setAttribute('fill', 'red');
   };
 
@@ -223,7 +229,9 @@ const Reservations = () => {
           </>
         ) : (
           <>
-            <WhiteText>Místa na stání: {allSeats.availableStands}</WhiteText>
+            <WhiteText>
+              Místa na stání: {allSeats.availableStands} / 434
+            </WhiteText>
             <WhiteText>
               Místa na sezení: {allSeats.freeSeats} /{allSeats.seats.length}
             </WhiteText>
@@ -295,6 +303,7 @@ const Reservations = () => {
             </FormWrapper>
           </>
         )} */}
+        <GetSVG />
         <ButtonReservation onClick={() => changeColor()}>
           Change color
         </ButtonReservation>

@@ -139,4 +139,6 @@ export const ButtonClearSelection = styled.button`
   cursor: pointer;
 `;
 
-export const ColoredSeats = styled.a``;
+export const ColoredSeats = styled.div`
+  margin-bottom: 5em;
+`;
