@@ -1,9 +1,9 @@
 /* @ts-ignore */
-import { getAnalytics, logEvent } from "firebase/analytics";
-import { slide as Menu } from "react-burger-menu";
-import { analyticsApp } from "../../../../tools/firebase";
-import { navbarItems } from "../Navbar.content";
-import { hamburgerStyles } from "./HamburgerMenu.styled";
+import { getAnalytics, logEvent } from 'firebase/analytics';
+import { slide as Menu } from 'react-burger-menu';
+import { analyticsApp } from '../../../../tools/firebase';
+import { navbarItems } from '../Navbar.content';
+import { hamburgerStyles } from './HamburgerMenu.styled';
 
 type PropsHamburgerMenu = {
   pageWrapId: string;
@@ -24,7 +24,7 @@ function HamburgerMenu({ pageWrapId, outerContainerId }: PropsHamburgerMenu) {
           key={index}
           href={item.tag}
           onClick={() =>
-            logEvent(getAnalytics(analyticsApp.app), "hamburger_clicked", {
+            logEvent(getAnalytics(analyticsApp.app), 'hamburger_clicked', {
               name: item.tag,
             })
           }

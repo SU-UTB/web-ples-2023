@@ -1,11 +1,11 @@
 import { useEffect, useState } from 'react';
 import '../App.css';
-import Fold from '../components/layout/Fold';
 import {
   ButtonClearSelection,
   ButtonReservation,
   ButtonSubmit,
   ButtonWrapper,
+  ColoredSeats,
   FormInput,
   FormWrapper,
   LoadingBackground,
@@ -14,11 +14,12 @@ import {
   WrapperReservation,
 } from './Reservations.styled';
 import axios from 'axios';
-import {
-  showNotSelected,
-  showSomethingGoneWrong,
-} from '../sections/reservations/swalFunctions';
+import { showNotSelected } from '../sections/reservations/swalFunctions';
 import MultiSelect from 'multiselect-react-dropdown';
+// import Map from '../assets/images/reservations/Map';
+import MapID from '../assets/images/reservations/MapID';
+import Fold from '../components/layout/Fold';
+import GetSVG from './GetSVG';
 
 interface LoginData {
   email: string;
@@ -189,12 +190,16 @@ const Reservations = () => {
     setSelectedSeats([]);
   };
 
+  const changeColor = () => {
+    document.getElementById('stul01')?.setAttribute('fill', 'red');
+  };
+
   return (
     <LoadingBackground>
       <WrapperReservation>
         <Fold />
         <ReservationHeadline>Rezervace</ReservationHeadline>
-        {!loggedIn ? (
+        {/* {!loggedIn ? (
           <>
             <ReservationHeadline>Přihlášení</ReservationHeadline>
             <FormWrapper onSubmit={handleSubmitLogin}>
@@ -229,7 +234,7 @@ const Reservations = () => {
             <FormWrapper onSubmit={handleSubmitNewReservation}>
               <label>
                 <WhiteText>Místa na stání:</WhiteText>
-                <FormInput type='text' value={selectedStand} />
+                <FormInput type='text' value={selectedStand} readOnly />
               </label>
               <ButtonWrapper>
                 <ButtonReservation
@@ -289,7 +294,13 @@ const Reservations = () => {
               <ButtonSubmit type='submit'>Koupit vstupenky</ButtonSubmit>
             </FormWrapper>
           </>
-        )}
+        )} */}
+        <ButtonReservation onClick={() => changeColor()}>
+          Change color
+        </ButtonReservation>
+        <ColoredSeats>
+          <MapID />
+        </ColoredSeats>
       </WrapperReservation>
     </LoadingBackground>
   );

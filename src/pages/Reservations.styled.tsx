@@ -138,3 +138,5 @@ export const ButtonClearSelection = styled.button`
   background-color: orange;
   cursor: pointer;
 `;
+
+export const ColoredSeats = styled.a``;

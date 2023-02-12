@@ -6,13 +6,7 @@ import { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import theme from '../theme/theme';
 import revealFrom from '../functions/reveal';
-import { WrapperMain } from '../components/layout/wrapper/Wrapper.styled';
-import CookieConsent from '../components/consent/Consent';
-import Fold from '../components/layout/Fold';
 import { LteTablet } from '../theme/MediaQueries';
-import HamburgerMenu from '../components/layout/navbar/hamburgerMenu/HamburgerMenu';
-import Footer from '../components/layout/footer/Footer';
-import Snowing from '../components/snowing/Snowing';
 import Prime from '../sections/mainpage/prime/Prime';
 import Countdown from '../sections/mainpage/countdown/Countdown';
 import Intro from '../sections/mainpage/intro/Intro';
@@ -22,7 +16,13 @@ import Events from '../sections/mainpage/events/Events';
 import Contact from '../sections/mainpage/contact/Contact';
 import Partners from '../sections/mainpage/partners/Partners';
 import Organisers from '../sections/mainpage/organisers/Organisers';
+import Snowing from '../components/snowing/Snowing';
+import { WrapperMain } from '../components/layout/wrapper/Wrapper.styled';
+import Fold from '../components/layout/Fold';
+import HamburgerMenu from '../components/layout/navbar/hamburgerMenu/HamburgerMenu';
 import Navbar from '../components/layout/navbar/Navbar';
+import Footer from '../components/layout/footer/Footer';
+import CookieConsent from '../components/consent/Consent';
 
 window.addEventListener('scroll', () => revealFrom('.reveal', 50));
 
@@ -82,7 +82,6 @@ function MainPage() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    console.log('MainPage');
     const removeLoader = () => setLoading(false);
 
     if (localStorage.getItem('pageLoaded') !== 'true') {

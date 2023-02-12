@@ -1,16 +1,16 @@
 import { StyledImgWrapper } from '../../../assets/images/StyledImg/StyledImg.styled';
-import {
-  WrapperSection,
-  WrapperHalf,
-  WrapperCentered,
-} from '../../../components/layout/wrapper/Wrapper.styled';
-import Paragraph from '../../../components/paragraph/Paragraph';
-import Headline from '../../../components/headline/Headline';
 
 import tickets from '../../../assets/images/tickets.png';
 import { ContactAction } from '../contact/Contact.styled';
 import { useEffect } from 'react';
 import revealFrom from '../../../functions/reveal';
+import Headline from '../../../components/headline/Headline';
+import Paragraph from '../../../components/paragraph/Paragraph';
+import {
+  WrapperCentered,
+  WrapperHalf,
+  WrapperSection,
+} from '../../../components/layout/wrapper/Wrapper.styled';
 
 const Tickets = () => {
   useEffect(() => {
