@@ -1,4 +1,4 @@
-import ProgramItem from '../../types/TProgram';
+import ProgramItem from '../../../types/TProgram';
 
 export const timeline: ProgramItem[] = [
   {

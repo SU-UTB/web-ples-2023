@@ -8,10 +8,10 @@ import {
   ColoredSeats,
   FormInput,
   FormWrapper,
-  LoadingBackground,
+  WrapperReservation,
   ReservationHeadline,
   WhiteText,
-  WrapperReservation,
+  WrapperContent,
 } from './Reservations.styled';
 import axios from 'axios';
 import {
@@ -19,10 +19,8 @@ import {
   showSuccessReservation,
 } from '../sections/reservations/swalFunctions';
 import MultiSelect from 'multiselect-react-dropdown';
-// import Map from '../assets/images/reservations/Map';
 import MapID from '../assets/images/reservations/MapID';
 import Fold from '../components/layout/Fold';
-import GetSVG from './GetSVG';
 
 interface LoginData {
   email: string;
@@ -108,6 +106,7 @@ const Reservations = () => {
         localStorage.setItem('token', `${response.data.token}`);
         setLoggedIn(true);
         getAllReservations();
+        setLoginData(initialLoginData);
       },
       (error) => {
         console.log(error);
@@ -122,11 +121,43 @@ const Reservations = () => {
       headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
     }).then(
       (response) => {
-        console.log(response.data);
         setAllSeats(response.data);
         setAllFreeSeats(
           response.data.seats.filter((seat: any) => seat.rezervace === null)
         );
+
+        const takenSeats = response.data.seats
+          .filter((item: any) => item.rezervace !== null)
+          .map((item: any) => item.alias);
+
+        const tables = {};
+        takenSeats.forEach((takenSeat: any) => {
+          const [table, seat] = takenSeat.split('/');
+          tables[table] = (tables[table] || 0) + 1;
+          const element = document.getElementById(takenSeat);
+          if (element) {
+            element.setAttribute('fill', 'red');
+          }
+        });
+
+        // fill red also full tables
+        Object.keys(tables).forEach((table) => {
+          if (parseInt(table) <= 115 || parseInt(table) >= 128) {
+            if (tables[table] === 4) {
+              const tableElement = document.getElementById(`${table}/S`);
+              if (tableElement) {
+                tableElement.setAttribute('fill', 'red');
+              }
+            }
+          } else {
+            if (tables[table] === 2) {
+              const tableElement = document.getElementById(`${table}/S`);
+              if (tableElement) {
+                tableElement.setAttribute('fill', 'red');
+              }
+            }
+          }
+        });
       },
       (error) => {
         console.log(error);
@@ -153,10 +184,8 @@ const Reservations = () => {
       return;
     }
 
-    console.log(selectedStand);
     const seatsIds = selectedSeats?.map((seat) => seat.id);
     seatsIds?.toString().replace(' ', '');
-    console.log(seatsIds);
 
     axios({
       method: 'post',
@@ -168,7 +197,6 @@ const Reservations = () => {
       },
     }).then(
       (response) => {
-        console.log(response.data);
         setSelectedSeats([]);
         setSelectedStand(0);
         getAllReservations();
@@ -195,17 +223,14 @@ const Reservations = () => {
     setSelectedStand(0);
   };
 
-  const changeColor = () => {
-    document.getElementById('19/S')?.setAttribute('fill', 'red');
-    document.getElementById('stul01')?.setAttribute('fill', 'red');
-  };
-
   return (
-    <LoadingBackground>
-      <WrapperReservation>
+    <WrapperReservation>
+      <ColoredSeats>
+        <MapID />
+      </ColoredSeats>
+      <WrapperContent>
         <Fold />
-        <ReservationHeadline>Rezervace</ReservationHeadline>
-        {/* {!loggedIn ? (
+        {!loggedIn ? (
           <>
             <ReservationHeadline>Přihlášení</ReservationHeadline>
             <FormWrapper onSubmit={handleSubmitLogin}>
@@ -229,15 +254,19 @@ const Reservations = () => {
           </>
         ) : (
           <>
+            <FormWrapper>
+              <ButtonSubmit onClick={() => logout()}>Odhlásit</ButtonSubmit>
+            </FormWrapper>
+            <br />
+
             <WhiteText>
               Místa na stání: {allSeats.availableStands} / 434
             </WhiteText>
             <WhiteText>
               Místa na sezení: {allSeats.freeSeats} /{allSeats.seats.length}
             </WhiteText>
-            <FormWrapper>
-              <ButtonSubmit onClick={() => logout()}>Odhlásit</ButtonSubmit>
-            </FormWrapper>
+            <br />
+            <br />
             <ReservationHeadline>Nová registrace</ReservationHeadline>
             <FormWrapper onSubmit={handleSubmitNewReservation}>
               <label>
@@ -302,16 +331,9 @@ const Reservations = () => {
               <ButtonSubmit type='submit'>Koupit vstupenky</ButtonSubmit>
             </FormWrapper>
           </>
-        )} */}
-        <GetSVG />
-        <ButtonReservation onClick={() => changeColor()}>
-          Change color
-        </ButtonReservation>
-        <ColoredSeats>
-          <MapID />
-        </ColoredSeats>
-      </WrapperReservation>
-    </LoadingBackground>
+        )}
+      </WrapperContent>
+    </WrapperReservation>
   );
 };
 

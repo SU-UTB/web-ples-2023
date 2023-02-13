@@ -1,4 +1,4 @@
-import ContactItem from '../../types/TContact';
+import ContactItem from '../../../types/TContact';
 
 export const contacts: ContactItem[] = [
   {

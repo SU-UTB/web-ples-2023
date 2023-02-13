@@ -1,10 +1,34 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 import theme from '../theme/theme';
+
+export const WrapperReservation = styled.div`
+  display: flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  overflow-y: scroll;
+  padding-top: 0.5em;
+
+  background: linear-gradient(
+    to bottom,
+    ${theme.colors.dark},
+    #4056b7,
+    #b3cef2
+  );
+`;
+
+export const WrapperContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+  margin: 0 auto;
+`;
 
 export const FormWrapper = styled.form`
   display: flex;
   flex-direction: column;
-  margin-bottom: 2em;
+  margin-bottom: 1rem 0;
+  text-align: center;
 `;
 
 export const FormInput = styled.input`
@@ -25,62 +49,6 @@ export const ButtonSubmit = styled.button`
   cursor: pointer;
 `;
 
-export const FormSelect = styled.select`
-  margin-bottom: 0.5rem;
-  padding: 0.5rem;
-  border: 1px solid black;
-  border-radius: 1em;
-  width: 21em;
-`;
-
-export const FormSelectOption = styled.option`
-  margin-bottom: 0.5rem;
-  padding: 0.5rem;
-  border: 1px solid black;
-  border-radius: 1em;
-  width: 20em;
-`;
-
-export const FormError = styled.p`
-  margin-bottom: 0.5rem;
-  width: 20em;
-`;
-
-export const LoadingBackground = styled.div`
-  position: fixed;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  visibility: visible;
-  opacity: 1;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-
-  -webkit-transition: 1s all;
-  -o-transition: 1s all;
-  transition: 1s all;
-  -webkit-transition-delay: 0.3s;
-  -o-transition-delay: 0.3s;
-  transition-delay: 0.3s;
-
-  background: linear-gradient(
-    to bottom,
-    ${theme.colors.dark},
-    #4056b7,
-    #b3cef2
-  );
-`;
-
-export const WrapperReservation = styled.div`
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  align-items: center;
-  margin: 0 auto;
-`;
-
 export const ReservationHeadline = styled.div`
   color: white;
   margin-bottom: 0.5em;
@@ -99,7 +67,6 @@ export const ReservationHeadline = styled.div`
 
 export const WhiteText = styled.div`
   color: white;
-  margin-right: 1em;
 
   font-family: ${theme.fonts.monsterRegular};
   font-size: ${theme.fontSizeElements.h4}px;
@@ -139,6 +106,4 @@ export const ButtonClearSelection = styled.button`
   cursor: pointer;
 `;
 
-export const ColoredSeats = styled.div`
-  margin-bottom: 5em;
-`;
+export const ColoredSeats = styled.div``;
