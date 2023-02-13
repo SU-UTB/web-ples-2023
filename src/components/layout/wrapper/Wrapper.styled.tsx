@@ -1,7 +1,7 @@
-import styled, { css } from "styled-components";
-import theme from "../../../theme/theme";
-import bgWinter from "../../../assets/images/bg/bgWinter.png";
-import bgWinterTablet from "../../../assets/images/bg/bgWinterTablet.png";
+import styled, { css } from 'styled-components';
+import theme from '../../../theme/theme';
+import bgWinter from '../../../assets/images/bg/bgWinter.png';
+import bgWinterTablet from '../../../assets/images/bg/bgWinterTablet.png';
 
 export const WrapperMain = styled.main`
   font-family: ${theme.fonts.monsterRegular};

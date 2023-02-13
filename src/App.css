@@ -7,6 +7,11 @@ body {
   margin: 0;
 }
 
+#root {
+  width: 100%;
+  overflow: hidden;
+}
+
 .reveal {
   position: relative;
   transform: translateY(200px);
@@ -109,4 +114,14 @@ body {
 
 .read-the-docs {
   color: #888;
+}
+
+@font-face {
+  font-family: 'Creative-Vintage-Draft';
+  src: url(./assets/fonts/creativeVintageDraft/CreativeVintageDraft.ttf);
+}
+
+@font-face {
+  font-family: 'Monsterrat-Regular';
+  src: url(./assets/fonts/monsterrat/Montserrat-Regular.ttf);
 }

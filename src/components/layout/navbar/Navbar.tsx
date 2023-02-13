@@ -1,8 +1,8 @@
-import { logEvent, getAnalytics } from "firebase/analytics";
-import { GteDesktop } from "../../../theme/MediaQueries";
-import { analyticsApp } from "../../../tools/firebase";
-import { navbarItems } from "./Navbar.content";
-import { MenuWrapper, MenuItem } from "./Navbar.styled";
+import { logEvent, getAnalytics } from 'firebase/analytics';
+import { GteDesktop } from '../../../theme/MediaQueries';
+import { analyticsApp } from '../../../tools/firebase';
+import { navbarItems } from './Navbar.content';
+import { MenuWrapper, MenuItem } from './Navbar.styled';
 
 function Navbar() {
   return (
@@ -13,7 +13,7 @@ function Navbar() {
             key={index}
             href={item.tag}
             onClick={() =>
-              logEvent(getAnalytics(analyticsApp.app), "nav_clicked", {
+              logEvent(getAnalytics(analyticsApp.app), 'nav_clicked', {
                 name: item.tag,
               })
             }

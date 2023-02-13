@@ -1,10 +1,10 @@
-import { CookieConsent as Consent, Cookies } from "react-cookie-consent";
-import { LteTabletCheck } from "../../theme/MediaQueries";
-import theme from "../../theme/theme";
+import { CookieConsent as Consent, Cookies } from 'react-cookie-consent';
+import { LteTabletCheck } from '../../theme/MediaQueries';
+import theme from '../../theme/theme';
 
 const CookieConsent = () => {
   const handleAccept = () => {
-    Cookies.set("cookie-consent", true, { expires: 150 });
+    Cookies.set('cookie-consent', true, { expires: 150 });
   };
 
   return (
@@ -13,14 +13,14 @@ const CookieConsent = () => {
       buttonText='Rozumím'
       cookieName='cookie-consent'
       style={{
-        fontSize: `${LteTabletCheck() ? "12px" : "14px"}`,
+        fontSize: `${LteTabletCheck() ? '12px' : '14px'}`,
         background: `${theme.colors.dark}`,
       }}
       buttonStyle={{
         background: `${theme.colors.ice}`,
         color: `${theme.colors.black}`,
-        marginTop: `${LteTabletCheck() && "0px"}`,
-        fontSize: `${LteTabletCheck() ? "10px" : "12px"}`,
+        marginTop: `${LteTabletCheck() && '0px'}`,
+        fontSize: `${LteTabletCheck() ? '10px' : '12px'}`,
       }}
       expires={150}
       onAccept={handleAccept}

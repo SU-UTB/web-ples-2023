@@ -1,12 +1,6 @@
-import {
-  Menu,
-  FooterWrapper,
-  MenuItem,
-  LogoText,
-  ContentWrapper,
-} from './Footer.styled';
+import { FooterWrapper, LogoText, ContentWrapper } from './Footer.styled';
 
-function Navbar() {
+function Footer() {
   return (
     <FooterWrapper>
       <ContentWrapper>
@@ -18,4 +12,4 @@ function Navbar() {
   );
 }
 
-export default Navbar;
+export default Footer;
