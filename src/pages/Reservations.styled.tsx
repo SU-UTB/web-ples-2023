@@ -28,7 +28,6 @@ export const FormWrapper = styled.form`
   display: flex;
   flex-direction: column;
   margin-bottom: 1rem 0;
-  text-align: center;
 `;
 
 export const FormInput = styled.input`

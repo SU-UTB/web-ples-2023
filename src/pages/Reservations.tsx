@@ -96,7 +96,7 @@ const Reservations = () => {
   const login = () => {
     axios({
       method: 'post',
-      url: `http://sdtest.wz.cz/index.php/api/login`,
+      url: `http://rezervacesutb.wz.cz/index.php/api/login`,
       data: {
         email: `${loginData.email}`,
         password: `${loginData.password}`,
@@ -114,10 +114,15 @@ const Reservations = () => {
     );
   };
 
+  const logout = () => {
+    localStorage.removeItem('token');
+    setLoggedIn(false);
+  };
+
   const getAllReservations = () => {
     axios({
       method: 'get',
-      url: `http://sdtest.wz.cz/index.php/api/pages/reservations`,
+      url: `http://rezervacesutb.wz.cz/index.php/api/pages/reservations`,
       headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
     }).then(
       (response) => {
@@ -165,11 +170,6 @@ const Reservations = () => {
     );
   };
 
-  const logout = () => {
-    localStorage.removeItem('token');
-    setLoggedIn(false);
-  };
-
   // NEW RESERVATION
   const [selectedStand, setSelectedStand] = useState(0);
   const [selectedSeats, setSelectedSeats] = useState<Seats[]>();
@@ -189,7 +189,7 @@ const Reservations = () => {
 
     axios({
       method: 'post',
-      url: `http://sdtest.wz.cz/index.php/api/reservations`,
+      url: `http://rezervacesutb.wz.cz/index.php/api/reservations`,
       headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
       data: {
         stand: `${selectedStand}`,
