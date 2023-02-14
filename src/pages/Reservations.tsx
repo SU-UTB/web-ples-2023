@@ -96,7 +96,7 @@ const Reservations = () => {
   const login = () => {
     axios({
       method: 'post',
-      url: `http://rezervacesutb.wz.cz/index.php/api/login`,
+      url: `https://rezervacesutb.wz.cz/index.php/api/login`,
       data: {
         email: `${loginData.email}`,
         password: `${loginData.password}`,
@@ -122,7 +122,7 @@ const Reservations = () => {
   const getAllReservations = () => {
     axios({
       method: 'get',
-      url: `http://rezervacesutb.wz.cz/index.php/api/pages/reservations`,
+      url: `https://rezervacesutb.wz.cz/index.php/api/pages/reservations`,
       headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
     }).then(
       (response) => {
@@ -189,7 +189,7 @@ const Reservations = () => {
 
     axios({
       method: 'post',
-      url: `http://rezervacesutb.wz.cz/index.php/api/reservations`,
+      url: `https://rezervacesutb.wz.cz/index.php/api/reservations`,
       headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
       data: {
         stand: `${selectedStand}`,
