@@ -103,8 +103,14 @@ const Salons = () => {
 
   return (
     <WrapperReservation>
+
+
       <WrapperContent>
         <Fold />
+        {
+        //TODO Info co se tady vubec rezrevuje , klidne nejakej nav s krokem zpet na main page
+      }
+        <WhiteText>Reprezentacni ples UTB - rezervace salonu</WhiteText>
         <>
           {isLoading ? (
             <br></br>
@@ -176,6 +182,11 @@ const Salons = () => {
             </FormWrapper>
           )}
         </>
+
+        {
+        //TODO nejakou listiku, zahlavi, cokoli kde to bude napsane, nasrat na UTBcko protoze je to nas system 
+      }
+      <footer><h1>Rezervacni system SU UTB</h1></footer>
       </WrapperContent>
     </WrapperReservation>
   );
