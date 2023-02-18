@@ -95,11 +95,45 @@ const Salons = () => {
   };
 
   const onChangeMaker = (e) => {
-    let id = Number.parseInt(e.target.value);
+    const { name, value } = e.target;
+
+    let id = Number.parseInt(value);
 
     onChangeTimes(id);
     onChangeServices(id);
 
+    setReservationData({ ...reservationData, [name]: value });
+  };
+
+  const onChangeTime = (e) => {
+    const { name, value } = e.target;
+
+    setReservationData({ ...reservationData, [name]: value });
+  };
+  const onChangeService = (e) => {
+    const { name, value } = e.target;
+
+    setReservationData({ ...reservationData, [name]: value });
+  };
+  const onChangeName = (e) => {
+    const { name, value } = e.target;
+
+    setReservationData({ ...reservationData, [name]: value });
+  };
+  const onChangePhone = (e) => {
+    const { name, value } = e.target;
+
+    setReservationData({ ...reservationData, [name]: value });
+  };
+  const onChangeEmail = (e) => {
+    const { name, value } = e.target;
+
+    setReservationData({ ...reservationData, [name]: value });
+  };
+  const onChangeConsent = (e) => {
+    const { name, value } = e.target;
+
+    setReservationData({ ...reservationData, [name]: value });
   };
 
   function onChangeTimes(id: number) {
@@ -126,6 +160,9 @@ const Salons = () => {
 
   const handleSubmitReservation = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+
+    console.log(reservationData);
+    return;
     createReservation();
   };
 
@@ -174,6 +211,7 @@ const Salons = () => {
                   <FormSelect
                     id="exampleInputEmail1"
                     placeholder="Vyber makera"
+                    name="maker"
                     onChange={onChangeMaker}
                   >
                     {allMakers.makers.map((m) => (
@@ -184,7 +222,12 @@ const Salons = () => {
                     ))}
                   </FormSelect>
 
-                  <FormSelect id="exampleInputEmail1" placeholder="Vyber cas">
+                  <FormSelect
+                    id="exampleInputEmail1"
+                    placeholder="Vyber cas"
+                    name="time"
+                    onChange={onChangeTime}
+                  >
                     {availableTimes.map((t) => (
                       <option value={t} key={t}>
                         {
@@ -198,6 +241,8 @@ const Salons = () => {
                   <FormSelect
                     id="exampleInputEmail1"
                     placeholder="Vyber sluzbu"
+                    name="service"
+                    onChange={onChangeService}
                   >
                     {availableServices.map((s) => (
                       <option value={s} key={s}>
@@ -211,23 +256,29 @@ const Salons = () => {
                     type="text"
                     id="exampleInputEmail1"
                     placeholder="Enter name"
+                    name="name"
+                    onChange={onChangeName}
                   />
 
                   <FormInput
                     type="phone"
                     id="exampleInputEmail1"
                     placeholder="Enter phone"
+                    name="phone"
+                    onChange={onChangePhone}
                   />
 
                   <FormInput
                     type="email"
                     id="exampleInputEmail1"
                     placeholder="Enter email"
+                    name="email"
+                    onChange={onChangeEmail}
                   />
                 </div>
               </div>
               <div>
-                <FormInput type="checkbox" id="exampleCheck1" />
+                <FormInput type="checkbox" id="exampleCheck1" onChange={onChangeConsent} name="consent" />
                 <br />
                 <br />
                 <ButtonSubmit type="submit">Make reservation</ButtonSubmit>
