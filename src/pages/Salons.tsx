@@ -33,16 +33,38 @@ interface AllMakers {
   makerServices: Array<MakerService>;
 }
 
+interface MakerReservation {
+  maker: number;
+  time: string;
+  service: string;
+  name: string;
+  phone: string;
+  email: string;
+  consent: boolean;
+}
+
 const initialAllMakers: AllMakers = {
   makers: new Array<Maker>(),
   availableTimes: new Map<string, Array<number>>(),
   makerServices: new Array<MakerService>(),
+};
+const initialReservationData: MakerReservation = {
+  maker: 0,
+  time: "",
+  service: "",
+  name: "",
+  phone: "",
+  email: "",
+  consent: false,
 };
 
 const Salons = () => {
   //TODO
   axios.defaults.baseURL = "http://localhost";
 
+  const [reservationData, setReservationData] = useState(
+    initialReservationData
+  );
   const [isLoading, setIsLoading] = useState(true);
   const [allMakers, setAllMakers] = useState(initialAllMakers);
   const [availableTimes, setAvailableTimes] = useState(new Array<string>());
@@ -77,6 +99,7 @@ const Salons = () => {
 
     onChangeTimes(id);
     onChangeServices(id);
+
   };
 
   function onChangeTimes(id: number) {
@@ -101,21 +124,51 @@ const Salons = () => {
     setAvailableServices(availableServices as Array<string>);
   }
 
+  const handleSubmitReservation = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    createReservation();
+  };
+
+  const createReservation = () => {
+    setIsLoading(true);
+    axios({
+      method: "post",
+      url: `/api/salons`,
+      headers: {
+        "Content-Type": "Application/json",
+      },
+      data: {
+        maker: `${reservationData.maker}`,
+        time: `${reservationData.time}`,
+        service: `${reservationData.service}`,
+        name: `${reservationData.name}`,
+        phone: `${reservationData.phone}`,
+        email: `${reservationData.email}`,
+        consent: `${reservationData.consent}`,
+      },
+    }).then(
+      (response) => {
+        getAllMakers();
+        setIsLoading(false);
+      },
+      (error) => {
+        console.log(error);
+      }
+    );
+  };
   return (
     <WrapperReservation>
-
-
       <WrapperContent>
         <Fold />
         {
-        //TODO Info co se tady vubec rezrevuje , klidne nejakej nav s krokem zpet na main page
-      }
+          //TODO Info co se tady vubec rezrevuje , klidne nejakej nav s krokem zpet na main page
+        }
         <WhiteText>Reprezentacni ples UTB - rezervace salonu</WhiteText>
         <>
           {isLoading ? (
             <br></br>
           ) : (
-            <FormWrapper>
+            <FormWrapper onSubmit={handleSubmitReservation}>
               <div style={{ display: "flex" }}>
                 <div style={{ margin: "50px" }}>
                   <FormSelect
@@ -155,15 +208,15 @@ const Salons = () => {
                 </div>
                 <div style={{ margin: "50px" }}>
                   <FormInput
-                    type="email"
+                    type="text"
                     id="exampleInputEmail1"
-                    placeholder="Enter email"
+                    placeholder="Enter name"
                   />
 
                   <FormInput
-                    type="email"
+                    type="phone"
                     id="exampleInputEmail1"
-                    placeholder="Enter email"
+                    placeholder="Enter phone"
                   />
 
                   <FormInput
@@ -184,9 +237,11 @@ const Salons = () => {
         </>
 
         {
-        //TODO nejakou listiku, zahlavi, cokoli kde to bude napsane, nasrat na UTBcko protoze je to nas system 
-      }
-      <footer><h1>Rezervacni system SU UTB</h1></footer>
+          //TODO nejakou listiku, zahlavi, cokoli kde to bude napsane, nasrat na UTBcko protoze je to nas system
+        }
+        <footer>
+          <h1>Rezervacni system SU UTB</h1>
+        </footer>
       </WrapperContent>
     </WrapperReservation>
   );
