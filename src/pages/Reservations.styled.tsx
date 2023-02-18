@@ -38,6 +38,14 @@ export const FormInput = styled.input`
   width: 20em;
 `;
 
+export const FormSelect = styled.select`
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+  border: 1px solid black;
+  border-radius: 1em;
+  width: 20em;
+`;
+
 export const ButtonSubmit = styled.button`
   padding: 0.5rem;
   font-family: ${theme.fonts.monsterRegular};
