@@ -40,9 +40,15 @@ const initialAllMakers: AllMakers = {
 };
 
 const Salons = () => {
+  //TODO
+  axios.defaults.baseURL = "http://localhost";
+
   const [isLoading, setIsLoading] = useState(true);
   const [allMakers, setAllMakers] = useState(initialAllMakers);
-  axios.defaults.baseURL = "http://localhost";
+  const [availableTimes, setAvailableTimes] = useState(new Array<string>());
+  const [availableServices, setAvailableServices] = useState(
+    new Array<string>()
+  );
 
   useEffect(() => {
     getAllMakers();
@@ -66,6 +72,35 @@ const Salons = () => {
     );
   };
 
+  const onChangeMaker = (e) => {
+    let id = Number.parseInt(e.target.value);
+
+    onChangeTimes(id);
+    onChangeServices(id);
+  };
+
+  function onChangeTimes(id: number) {
+    // I just love javascript, oh gawd this motherfookin cast shit...
+    let availableMakerTimes = Array.from(
+      new Map(Object.entries(allMakers.availableTimes))
+    )
+      .map((entry) => {
+        if (entry[1].includes(id)) {
+          return entry[0];
+        }
+      })
+      .filter((t) => t !== undefined);
+
+    setAvailableTimes(availableMakerTimes as Array<string>);
+  }
+  function onChangeServices(id: number) {
+    let availableServices = allMakers.makerServices
+      .filter((ms) => ms.maker_id === id)
+      .map((ms) => ms.service);
+
+    setAvailableServices(availableServices as Array<string>);
+  }
+
   return (
     <WrapperReservation>
       <WrapperContent>
@@ -80,6 +115,7 @@ const Salons = () => {
                   <FormSelect
                     id="exampleInputEmail1"
                     placeholder="Vyber makera"
+                    onChange={onChangeMaker}
                   >
                     {allMakers.makers.map((m) => (
                       <option value={m.id} key={m.id}>
@@ -90,31 +126,26 @@ const Salons = () => {
                   </FormSelect>
 
                   <FormSelect id="exampleInputEmail1" placeholder="Vyber cas">
-                    {
-                      // I just love javascript, oh gawd this motherfookin cast shit...
-                    }
-                    {Array.from(
-                      new Map(Object.entries(allMakers.availableTimes))
-                    ).map((entry) => {
-                      for (let i = 0; i < allMakers.makers.length; i++) {
-                        if (entry[1].includes(allMakers.makers[i].id)) {
-                          return (
-                            <option value={entry[0]} key={entry[0]}>
-                              {
-                                // :))))
-                              }
-                              {entry[0].replace("00", ":00").replace("30",":30")}
-                            </option>
-                          );
+                    {availableTimes.map((t) => (
+                      <option value={t} key={t}>
+                        {
+                          // :))))
                         }
-                      }
-                    })}
+                        {t.replace("00", ":00").replace("30", ":30")}
+                      </option>
+                    ))}
                   </FormSelect>
 
                   <FormSelect
                     id="exampleInputEmail1"
                     placeholder="Vyber sluzbu"
-                  />
+                  >
+                    {availableServices.map((s) => (
+                      <option value={s} key={s}>
+                        {s}
+                      </option>
+                    ))}
+                  </FormSelect>
                 </div>
                 <div style={{ margin: "50px" }}>
                   <FormInput
