@@ -1,10 +1,10 @@
-import { Route, Routes } from 'react-router';
-import { BrowserRouter } from 'react-router-dom';
-import { ThemeProvider } from 'styled-components';
-import theme from '../src/theme/theme';
-import MainPage from './pages/MainPage';
-import Reservations from './pages/Reservations';
-import Salons from './pages/Salons';
+import { Route, Routes } from "react-router";
+import { BrowserRouter } from "react-router-dom";
+import { ThemeProvider } from "styled-components";
+import theme from "../src/theme/theme";
+import MainPage from "./pages/mainpage/MainPage";
+import Reservations from "./pages/reservations/Reservations";
+import Salons from "./pages/salons/Salons";
 
 const Routing = () => {
   return (

@@ -1,30 +1,30 @@
-import '../App.css';
+import "../../App.css";
 
-import { getAnalytics, logEvent } from 'firebase/analytics';
-import { analyticsApp } from '../tools/firebase';
-import { useEffect, useState } from 'react';
-import styled from 'styled-components';
-import theme from '../theme/theme';
-import revealFrom from '../functions/reveal';
-import { LteTablet } from '../theme/MediaQueries';
-import Prime from '../sections/mainpage/prime/Prime';
-import Countdown from '../sections/mainpage/countdown/Countdown';
-import Intro from '../sections/mainpage/intro/Intro';
-import Program from '../sections/mainpage/program/Program';
-import Tickets from '../sections/mainpage/tickets/Tickets';
-import Events from '../sections/mainpage/events/Events';
-import Contact from '../sections/mainpage/contact/Contact';
-import Partners from '../sections/mainpage/partners/Partners';
-import Organisers from '../sections/mainpage/organisers/Organisers';
-import Snowing from '../components/snowing/Snowing';
-import { WrapperMain } from '../components/layout/wrapper/Wrapper.styled';
-import Fold from '../components/layout/Fold';
-import HamburgerMenu from '../components/layout/navbar/hamburgerMenu/HamburgerMenu';
-import Navbar from '../components/layout/navbar/Navbar';
-import Footer from '../components/layout/footer/Footer';
-import CookieConsent from '../components/consent/Consent';
+import { getAnalytics, logEvent } from "firebase/analytics";
+import { analyticsApp } from "../../tools/firebase";
+import { useEffect, useState } from "react";
+import styled from "styled-components";
+import theme from "../../theme/theme";
+import revealFrom from "../../functions/reveal";
+import { LteTablet } from "../../theme/MediaQueries";
+import Prime from "../../sections/mainpage/prime/Prime";
+import Countdown from "../../sections/mainpage/countdown/Countdown";
+import Intro from "../../sections/mainpage/intro/Intro";
+import Program from "../../sections/mainpage/program/Program";
+import Tickets from "../../sections/mainpage/tickets/Tickets";
+import Events from "../../sections/mainpage/events/Events";
+import Contact from "../../sections/mainpage/contact/Contact";
+import Partners from "../../sections/mainpage/partners/Partners";
+import Organisers from "../../sections/mainpage/organisers/Organisers";
+import Snowing from "../../components/snowing/Snowing";
+import { WrapperMain } from "../../components/layout/wrapper/Wrapper.styled";
+import Fold from "../../components/layout/Fold";
+import HamburgerMenu from "../../components/layout/navbar/hamburgerMenu/HamburgerMenu";
+import Navbar from "../../components/layout/navbar/Navbar";
+import Footer from "../../components/layout/footer/Footer";
+import CookieConsent from "../../components/consent/Consent";
 
-window.addEventListener('scroll', () => revealFrom('.reveal', 50));
+window.addEventListener("scroll", () => revealFrom(".reveal", 50));
 
 const LoadingBackground = styled.div`
   z-index: 990;
@@ -78,21 +78,21 @@ const Loading = styled.div`
 `;
 
 function MainPage() {
-  logEvent(getAnalytics(analyticsApp.app), 'web_displayed');
+  logEvent(getAnalytics(analyticsApp.app), "web_displayed");
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const removeLoader = () => setLoading(false);
 
-    if (localStorage.getItem('pageLoaded') !== 'true') {
-      window.addEventListener('load', removeLoader);
-      localStorage.setItem('pageLoaded', 'true');
+    if (localStorage.getItem("pageLoaded") !== "true") {
+      window.addEventListener("load", removeLoader);
+      localStorage.setItem("pageLoaded", "true");
     } else {
       setLoading(false);
     }
 
     return () => {
-      window.removeEventListener('load', removeLoader);
+      window.removeEventListener("load", removeLoader);
     };
   }, []);
 
@@ -111,14 +111,14 @@ function MainPage() {
       <LoadingBackground
         style={{
           opacity: loading ? 1 : 0,
-          visibility: loading ? 'visible' : 'hidden',
-          overflow: loading ? '' : 'hidden',
+          visibility: loading ? "visible" : "hidden",
+          overflow: loading ? "" : "hidden",
         }}
       >
         <Loading
           style={{
             opacity: visibleLoading ? 1 : 0,
-            transition: 'opacity 2s',
+            transition: "opacity 2s",
           }}
         >
           Nahrávám...
@@ -126,16 +126,16 @@ function MainPage() {
       </LoadingBackground>
       <WrapperMain
         style={{
-          visibility: loading ? 'hidden' : 'visible',
-          overflow: loading ? 'hidden' : '',
+          visibility: loading ? "hidden" : "visible",
+          overflow: loading ? "hidden" : "",
         }}
       >
         <CookieConsent />
         <Fold />
         <LteTablet>
           <HamburgerMenu
-            pageWrapId={'page-wrap'}
-            outerContainerId={'outer-container'}
+            pageWrapId={"page-wrap"}
+            outerContainerId={"outer-container"}
           />
         </LteTablet>
         <Navbar />
