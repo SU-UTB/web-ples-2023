@@ -133,7 +133,7 @@ const Salons = () => {
   const onChangeConsent = (e) => {
     const { name, value } = e.target;
 
-    setReservationData({ ...reservationData, [name]: value });
+    setReservationData({ ...reservationData, [name]: e.target.checked });
   };
 
   function onChangeTimes(id: number) {
@@ -161,8 +161,6 @@ const Salons = () => {
   const handleSubmitReservation = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
-    console.log(reservationData);
-    return;
     createReservation();
   };
 
@@ -278,7 +276,12 @@ const Salons = () => {
                 </div>
               </div>
               <div>
-                <FormInput type="checkbox" id="exampleCheck1" onChange={onChangeConsent} name="consent" />
+                <FormInput
+                  type="checkbox"
+                  id="exampleCheck1"
+                  onChange={onChangeConsent}
+                  name="consent"
+                />
                 <br />
                 <br />
                 <ButtonSubmit type="submit">Make reservation</ButtonSubmit>
