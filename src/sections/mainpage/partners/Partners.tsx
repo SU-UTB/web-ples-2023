@@ -14,10 +14,8 @@ const Partners = () => {
     <WrapperSection centered id='partneri'>
       <Headline color='black'>Generální partner</Headline>
       <GeneralPartnerLogo className='reveal reveal-slow'>
-        <img src={flyUnited} alt='Fly United' />
+        <PartnerImg src={flyUnited} alt='Fly United' />
       </GeneralPartnerLogo>
-      <br />
-      <br />
 
       <Headline color='black'>Hlavní partneři</Headline>
       <PartnerWrapper>

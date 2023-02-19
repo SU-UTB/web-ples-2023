@@ -2,22 +2,21 @@ import styled from 'styled-components';
 import theme from '../../../theme/theme';
 
 export const GeneralPartnerLogo = styled.div`
-  margin: 3em;
-  width: 200px;
+  max-width: 250px;
+  width: 100%;
   height: auto;
+  margin: 1em auto 4em;
   @media screen and (${theme.breakpoints.tabletQuery}) {
-    max-width: 150px;
-    margin: 1.5em;
+    max-width: 200px;
   }
 
   @media screen and (${theme.breakpoints.mobileQuery}) {
-    max-width: 130px;
-    margin: 1.5em;
+    max-width: 150px;
   }
 `;
 
 export const PartnerLogo = styled.div`
-  margin: 3em;
+  margin: 1em 3em;
   width: 150px;
   height: auto;
   @media screen and (${theme.breakpoints.tabletQuery}) {

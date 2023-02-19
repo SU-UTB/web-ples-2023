@@ -25,7 +25,7 @@ export const WrapperSection = styled.div<{
     display: flex;
     width: 80%;
     max-width: 1600px;
-    margin: 0 auto 20em;
+    margin: 0 auto 10em;
 
     &:nth-last-child(2) {
       margin: 0 auto 10em;

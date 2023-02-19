@@ -194,6 +194,7 @@ const Reservations = () => {
       data: {
         stand: `${selectedStand}`,
         seats: `[${seatsIds}]`,
+        note: `rezerva pre UTB`,
       },
     }).then(
       (response) => {
