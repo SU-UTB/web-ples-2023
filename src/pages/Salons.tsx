@@ -79,7 +79,7 @@ const Salons = () => {
   const getAllMakers = () => {
     axios({
       method: "get",
-      url: `/api/salons`,
+      url: `/api/makers`,
       headers: {
         "Content-Type": "Application/json",
       },
@@ -168,7 +168,7 @@ const Salons = () => {
     setIsLoading(true);
     axios({
       method: "post",
-      url: `/api/salons`,
+      url: `/api/makers`,
       headers: {
         "Content-Type": "Application/json",
       },
@@ -211,10 +211,10 @@ const Salons = () => {
                     placeholder="Vyber makera"
                     name="maker"
                     onChange={onChangeMaker}
+                    value={reservationData.maker}
                   >
                     {allMakers.makers.map((m) => (
                       <option value={m.id} key={m.id}>
-                        {" "}
                         {m.name}
                       </option>
                     ))}
@@ -225,6 +225,7 @@ const Salons = () => {
                     placeholder="Vyber cas"
                     name="time"
                     onChange={onChangeTime}
+                    value={reservationData.time}
                   >
                     {availableTimes.map((t) => (
                       <option value={t} key={t}>
@@ -241,6 +242,7 @@ const Salons = () => {
                     placeholder="Vyber sluzbu"
                     name="service"
                     onChange={onChangeService}
+                    value={reservationData.service}
                   >
                     {availableServices.map((s) => (
                       <option value={s} key={s}>
@@ -256,6 +258,7 @@ const Salons = () => {
                     placeholder="Enter name"
                     name="name"
                     onChange={onChangeName}
+                    value={reservationData.name}
                   />
 
                   <FormInput
@@ -264,6 +267,7 @@ const Salons = () => {
                     placeholder="Enter phone"
                     name="phone"
                     onChange={onChangePhone}
+                    value={reservationData.phone}
                   />
 
                   <FormInput
@@ -272,6 +276,7 @@ const Salons = () => {
                     placeholder="Enter email"
                     name="email"
                     onChange={onChangeEmail}
+                    value={reservationData.email}
                   />
                 </div>
               </div>
@@ -280,6 +285,7 @@ const Salons = () => {
                   type="checkbox"
                   id="exampleCheck1"
                   onChange={onChangeConsent}
+                  value={reservationData.consent}
                   name="consent"
                 />
                 <br />
