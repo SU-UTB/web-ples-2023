@@ -285,7 +285,6 @@ const Salons = () => {
                   type="checkbox"
                   id="exampleCheck1"
                   onChange={onChangeConsent}
-                  value={reservationData.consent}
                   name="consent"
                 />
                 <br />
