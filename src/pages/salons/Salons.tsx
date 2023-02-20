@@ -92,6 +92,7 @@ const Salons = () => {
       url: `http://sdtest.wz.cz/api/makers`,
       headers: {
         "Content-Type": "Application/json",
+        "Access-Control-Allow-Origin": "*",
       },
     }).then(
       (response) => {
@@ -189,6 +190,7 @@ const Salons = () => {
       url: `http://sdtest.wz.cz/api/makers`,
       headers: {
         "Content-Type": "Application/json",
+        "Access-Control-Allow-Origin": "*",
       },
       data: {
         maker: `${reservationData.maker}`,
@@ -238,9 +240,9 @@ const Salons = () => {
               <RowWrapper>
                 <Label>Obsluha</Label>
                 <FormSelect
-                  id='exampleInputEmail1'
-                  placeholder='Vyber makera'
-                  name='maker'
+                  id="exampleInputEmail1"
+                  placeholder="Vyber makera"
+                  name="maker"
                   onChange={onChangeMaker}
                   value={reservationData.maker}
                 >
@@ -255,9 +257,9 @@ const Salons = () => {
               <RowWrapper>
                 <Label>Čas rezervace</Label>
                 <FormSelect
-                  id='exampleInputEmail1'
-                  placeholder='Vyber cas'
-                  name='time'
+                  id="exampleInputEmail1"
+                  placeholder="Vyber cas"
+                  name="time"
                   onChange={onChangeTime}
                   value={reservationData.time}
                 >
@@ -275,9 +277,9 @@ const Salons = () => {
               <RowWrapper>
                 <Label>Služba </Label>
                 <FormSelect
-                  id='exampleInputEmail1'
-                  placeholder='Vyber sluzbu'
-                  name='service'
+                  id="exampleInputEmail1"
+                  placeholder="Vyber sluzbu"
+                  name="service"
                   onChange={onChangeService}
                   value={reservationData.service}
                 >
@@ -294,10 +296,10 @@ const Salons = () => {
               <RowWrapper>
                 <Label>Jméno</Label>
                 <FormInput
-                  type='text'
-                  id='exampleInputEmail1'
-                  placeholder='Jméno'
-                  name='name'
+                  type="text"
+                  id="exampleInputEmail1"
+                  placeholder="Jméno"
+                  name="name"
                   onChange={onChangeName}
                   value={reservationData.name}
                 />
@@ -306,10 +308,10 @@ const Salons = () => {
               <RowWrapper>
                 <Label>Telefon</Label>
                 <FormInput
-                  type='phone'
-                  id='exampleInputEmail1'
-                  placeholder='Telefon'
-                  name='phone'
+                  type="phone"
+                  id="exampleInputEmail1"
+                  placeholder="Telefon"
+                  name="phone"
                   onChange={onChangePhone}
                   value={reservationData.phone}
                 />
@@ -318,10 +320,10 @@ const Salons = () => {
               <RowWrapper>
                 <Label>Email</Label>
                 <FormInput
-                  type='email'
-                  id='exampleInputEmail1'
-                  placeholder='Email'
-                  name='email'
+                  type="email"
+                  id="exampleInputEmail1"
+                  placeholder="Email"
+                  name="email"
                   onChange={onChangeEmail}
                   value={reservationData.email}
                 />
@@ -332,15 +334,15 @@ const Salons = () => {
                 Souhlasím se zpracováním osobních údajů
               </SalonsConsent>
               <FormCheckbox
-                type='checkbox'
-                id='exampleCheck1'
-                name='consent'
+                type="checkbox"
+                id="exampleCheck1"
+                name="consent"
                 onChange={onChangeConsent}
                 checked={reservationData.consent}
               />
               <Spacer />
 
-              <ButtonSubmit type='submit'>Vytvořit rezervaci</ButtonSubmit>
+              <ButtonSubmit type="submit">Vytvořit rezervaci</ButtonSubmit>
             </FormWrapper>
           )}
         </>
