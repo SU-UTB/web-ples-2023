@@ -70,7 +70,7 @@ const Salons = () => {
   const handleGoToMainpage = () => navigate("/");
 
   //TODO
-  axios.defaults.baseURL = "http://localhost";
+  //axios.defaults.baseURL = "http://localhost";
 
   const [reservationData, setReservationData] = useState(
     initialReservationData
@@ -89,7 +89,7 @@ const Salons = () => {
   const getAllMakers = () => {
     axios({
       method: "get",
-      url: `/api/makers`,
+      url: `http://sdtest.wz.cz/api/makers`,
       headers: {
         "Content-Type": "Application/json",
       },
@@ -186,7 +186,7 @@ const Salons = () => {
     setIsLoading(true);
     axios({
       method: "post",
-      url: `/api/makers`,
+      url: `http://sdtest.wz.cz/api/makers`,
       headers: {
         "Content-Type": "Application/json",
       },
