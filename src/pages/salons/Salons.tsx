@@ -204,13 +204,18 @@ const Salons = () => {
       },
     }).then(
       (response) => {
+        setAllMakers(initialAllMakers);
+        setName("");
+        setEmail("");
+        setPhone("");
+        setConsent(false);
         getAllMakers();
         setIsLoading(false);
       },
       (error) => {
         //TODO
         if (error) {
-        //TODO TADY VYPIS ERROR MESSAGE JEN PRI 400
+          //TODO TADY VYPIS ERROR MESSAGE JEN PRI 400
         }
         console.log(error);
       }
