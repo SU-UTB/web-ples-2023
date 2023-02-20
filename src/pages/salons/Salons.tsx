@@ -257,10 +257,10 @@ const Salons = () => {
           ) : (
             <FormWrapper onSubmit={handleSubmitReservation}>
               <RowWrapper>
-                <Label>Obsluha</Label>
+                <Label>Kadeřnice/kosmetička</Label>
                 <FormSelect
-                  id="exampleInputEmail1"
-                  placeholder="Vyber makera"
+                  id="maker"
+                  placeholder="Obsluha"
                   name="maker"
                   onChange={onChangeMaker}
                   value={maker}
@@ -276,8 +276,8 @@ const Salons = () => {
               <RowWrapper>
                 <Label>Čas rezervace</Label>
                 <FormSelect
-                  id="exampleInputEmail1"
-                  placeholder="Vyber cas"
+                  id="time"
+                  placeholder="Čas"
                   name="time"
                   onChange={onChangeTime}
                   value={time}
@@ -296,8 +296,8 @@ const Salons = () => {
               <RowWrapper>
                 <Label>Služba </Label>
                 <FormSelect
-                  id="exampleInputEmail1"
-                  placeholder="Vyber sluzbu"
+                  id="service"
+                  placeholder="Služna"
                   name="service"
                   onChange={onChangeService}
                   value={service}
@@ -316,7 +316,7 @@ const Salons = () => {
                 <Label>Jméno</Label>
                 <FormInput
                   type="text"
-                  id="exampleInputEmail1"
+                  id="name"
                   placeholder="Jméno"
                   name="name"
                   onChange={onChangeName}
@@ -329,7 +329,7 @@ const Salons = () => {
                 <Label>Telefon</Label>
                 <FormInput
                   type="phone"
-                  id="exampleInputEmail1"
+                  id="phone"
                   placeholder="Telefon"
                   name="phone"
                   onChange={onChangePhone}
@@ -342,7 +342,7 @@ const Salons = () => {
                 <Label>Email</Label>
                 <FormInput
                   type="email"
-                  id="exampleInputEmail1"
+                  id="email"
                   placeholder="Email"
                   name="email"
                   onChange={onChangeEmail}
@@ -357,7 +357,7 @@ const Salons = () => {
               </SalonsConsent>
               <FormCheckbox
                 type="checkbox"
-                id="exampleCheck1"
+                id="consent"
                 name="consent"
                 onChange={onChangeConsent}
                 checked={consent}
