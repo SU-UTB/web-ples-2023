@@ -89,7 +89,7 @@ const Salons = () => {
   const getAllMakers = () => {
     axios({
       method: "get",
-      url: `http://sdtest.wz.cz/api/makers`,
+      url: `https://cors-anywhere.herokuapp.com/http://sdtest.wz.cz/api/makers`,
       headers: {
         "Content-Type": "Application/json",
         "Access-Control-Allow-Origin": "*",
@@ -187,7 +187,7 @@ const Salons = () => {
     setIsLoading(true);
     axios({
       method: "post",
-      url: `http://sdtest.wz.cz/api/makers`,
+      url: `https://cors-anywhere.herokuapp.com/http://sdtest.wz.cz/api/makers`,
       headers: {
         "Content-Type": "Application/json",
         "Access-Control-Allow-Origin": "*",
