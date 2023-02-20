@@ -312,6 +312,7 @@ const Salons = () => {
                   name="name"
                   onChange={onChangeName}
                   value={name}
+                  required
                 />
               </RowWrapper>
 
@@ -324,6 +325,7 @@ const Salons = () => {
                   name="phone"
                   onChange={onChangePhone}
                   value={phone}
+                  required
                 />
               </RowWrapper>
 
@@ -336,6 +338,7 @@ const Salons = () => {
                   name="email"
                   onChange={onChangeEmail}
                   value={email}
+                  required
                 />
               </RowWrapper>
               <Spacer />
@@ -349,6 +352,7 @@ const Salons = () => {
                 name="consent"
                 onChange={onChangeConsent}
                 checked={consent}
+                required
               />
               <Spacer />
 
