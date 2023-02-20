@@ -23,7 +23,10 @@ import {
 import { useNavigate } from "react-router-dom";
 import Fold from "../../components/layout/Fold";
 import axios, { all } from "axios";
-import { showReservedMakerResponse } from "../../sections/reservations/swalFunctions";
+import {
+  showGdprModal,
+  showReservedMakerResponse,
+} from "../../sections/reservations/swalFunctions";
 
 interface Maker {
   id: number;
@@ -221,12 +224,15 @@ const Salons = () => {
       }
     );
   };
+
+  const showGDPR = () => {
+    showGdprModal();
+  };
   return (
     <SalonsWrapperBg>
       <SalonsWrapper>
         <Fold />
         {
-          //TODO Info co se tady vubec rezrevuje , klidne nejakej nav s krokem zpet na main page\
           <LinkWrapper>
             <LinkToMainPage onClick={handleGoToMainpage}>
               Zpět na hlavní stránku
@@ -343,7 +349,7 @@ const Salons = () => {
               </RowWrapper>
               <Spacer />
 
-              <SalonsConsent>
+              <SalonsConsent onClick={showGDPR}>
                 Souhlasím se zpracováním osobních údajů
               </SalonsConsent>
               <FormCheckbox

@@ -122,9 +122,12 @@ export const FormCheckbox = styled.input`
   cursor: pointer;
 `;
 
-export const SalonsConsent = styled.div`
+export const SalonsConsent = styled.a`
   font-size: ${theme.fontSizeElements.paragraphGteTablet}px;
   text-align: center;
+  text-decoration: underline;
+  margin-bottom: 5px;
+  cursor: pointer;
 `;
 
 export const FooterSU = styled.div`
