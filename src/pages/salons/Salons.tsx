@@ -198,7 +198,7 @@ const Salons = () => {
       },
       data: {
         maker: `${maker}`,
-        time: `1600`,
+        time: `${time}`,
         service: `${service}`,
         name: `${name}`,
         phone: `${phone}`,
