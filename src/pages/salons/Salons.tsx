@@ -22,7 +22,7 @@ import {
 } from "../reservations/Reservations.styled";
 import { useNavigate } from "react-router-dom";
 import Fold from "../../components/layout/Fold";
-import axios from "axios";
+import axios, { all } from "axios";
 
 interface Maker {
   id: number;
@@ -42,8 +42,6 @@ interface AllMakers {
 
 interface MakerReservation {
   maker: number;
-  time: string;
-  service: string;
   name: string;
   phone: string;
   email: string;
@@ -57,8 +55,6 @@ const initialAllMakers: AllMakers = {
 };
 const initialReservationData: MakerReservation = {
   maker: 0,
-  time: "",
-  service: "",
   name: "",
   phone: "",
   email: "",
@@ -69,12 +65,14 @@ const Salons = () => {
   const navigate = useNavigate();
   const handleGoToMainpage = () => navigate("/");
 
-  //TODO
-  //axios.defaults.baseURL = "http://localhost";
-
-  const [reservationData, setReservationData] = useState(
-    initialReservationData
-  );
+  const [maker, setMaker] = useState(0);
+  const [time, setTime] = useState("");
+  const [service, setService] = useState("");
+  const [name, setName] = useState("");
+  const [phone, setPhone] = useState("");
+  const [email, setEmail] = useState("");
+  const [consent, setConsent] = useState(false);
+  //
   const [isLoading, setIsLoading] = useState(true);
   const [allMakers, setAllMakers] = useState(initialAllMakers);
   const [availableTimes, setAvailableTimes] = useState(new Array<string>());
@@ -105,41 +103,53 @@ const Salons = () => {
     );
   };
 
+  useEffect(() => {
+    setMaker(allMakers.makers[0]?.id ?? 0);
+  }, [allMakers]);
+
+  useEffect(() => {
+    onChangeTimes();
+    onChangeServices();
+  }, [maker]);
+
+  useEffect(() => {
+    setTime(availableTimes[0]);
+  }, [availableTimes]);
+
+  useEffect(() => {
+    setService(availableServices[0]);
+  }, [availableServices]);
+
   const onChangeMaker = (e) => {
     const { name, value } = e.target;
 
-    let id = Number.parseInt(value);
-
-    onChangeTimes(id);
-    onChangeServices(id);
-
-    setReservationData({ ...reservationData, [name]: value });
+    setMaker(value);
   };
 
   const onChangeTime = (e) => {
     const { name, value } = e.target;
 
-    setReservationData({ ...reservationData, [name]: value });
+    setTime(value);
   };
   const onChangeService = (e) => {
     const { name, value } = e.target;
 
-    setReservationData({ ...reservationData, [name]: value });
+    setService(value);
   };
   const onChangeName = (e) => {
     const { name, value } = e.target;
 
-    setReservationData({ ...reservationData, [name]: value });
+    setName(value);
   };
   const onChangePhone = (e) => {
     const { name, value } = e.target;
 
-    setReservationData({ ...reservationData, [name]: value });
+    setPhone(value);
   };
   const onChangeEmail = (e) => {
     const { name, value } = e.target;
 
-    setReservationData({ ...reservationData, [name]: value });
+    setEmail(value);
   };
   // const onChangeConsent = (e) => {
   //   const { name, value } = e.target;
@@ -149,29 +159,25 @@ const Salons = () => {
 
   const onChangeConsent = (event: React.ChangeEvent<HTMLInputElement>) => {
     const { checked } = event.target;
-    setReservationData({
-      ...reservationData,
-      consent: checked,
-    });
+    setConsent(checked);
   };
 
-  function onChangeTimes(id: number) {
+  function onChangeTimes() {
     // I just love javascript, oh gawd this motherfookin cast shit...
     let availableMakerTimes = Array.from(
       new Map(Object.entries(allMakers.availableTimes))
     )
       .map((entry) => {
-        if (entry[1].includes(id)) {
+        if (entry[1].includes(Number.parseInt(maker.toString()))) {
           return entry[0];
         }
       })
       .filter((t) => t !== undefined);
-
     setAvailableTimes(availableMakerTimes as Array<string>);
   }
-  function onChangeServices(id: number) {
+  function onChangeServices() {
     let availableServices = allMakers.makerServices
-      .filter((ms) => ms.maker_id === id)
+      .filter((ms) => ms.maker_id === Number.parseInt(maker.toString()))
       .map((ms) => ms.service);
 
     setAvailableServices(availableServices as Array<string>);
@@ -193,13 +199,13 @@ const Salons = () => {
         "Access-Control-Allow-Origin": "*",
       },
       data: {
-        maker: `${reservationData.maker}`,
-        time: `${reservationData.time}`,
-        service: `${reservationData.service}`,
-        name: `${reservationData.name}`,
-        phone: `${reservationData.phone}`,
-        email: `${reservationData.email}`,
-        consent: `${reservationData.consent}`,
+        maker: `${maker}`,
+        time: `${time}`,
+        service: `${service}`,
+        name: `${name}`,
+        phone: `${phone}`,
+        email: `${email}`,
+        consent: `${consent}`,
       },
     }).then(
       (response) => {
@@ -244,7 +250,7 @@ const Salons = () => {
                   placeholder="Vyber makera"
                   name="maker"
                   onChange={onChangeMaker}
-                  value={reservationData.maker}
+                  value={maker}
                 >
                   {allMakers.makers.map((m) => (
                     <option value={m.id} key={m.id}>
@@ -261,7 +267,7 @@ const Salons = () => {
                   placeholder="Vyber cas"
                   name="time"
                   onChange={onChangeTime}
-                  value={reservationData.time}
+                  value={time}
                 >
                   {availableTimes.map((t) => (
                     <option value={t} key={t}>
@@ -281,7 +287,7 @@ const Salons = () => {
                   placeholder="Vyber sluzbu"
                   name="service"
                   onChange={onChangeService}
-                  value={reservationData.service}
+                  value={service}
                 >
                   {availableServices.map((s) => (
                     <option value={s} key={s}>
@@ -301,7 +307,7 @@ const Salons = () => {
                   placeholder="Jméno"
                   name="name"
                   onChange={onChangeName}
-                  value={reservationData.name}
+                  value={name}
                 />
               </RowWrapper>
 
@@ -313,7 +319,7 @@ const Salons = () => {
                   placeholder="Telefon"
                   name="phone"
                   onChange={onChangePhone}
-                  value={reservationData.phone}
+                  value={phone}
                 />
               </RowWrapper>
 
@@ -325,7 +331,7 @@ const Salons = () => {
                   placeholder="Email"
                   name="email"
                   onChange={onChangeEmail}
-                  value={reservationData.email}
+                  value={email}
                 />
               </RowWrapper>
               <Spacer />
@@ -338,7 +344,7 @@ const Salons = () => {
                 id="exampleCheck1"
                 name="consent"
                 onChange={onChangeConsent}
-                checked={reservationData.consent}
+                checked={consent}
               />
               <Spacer />
 
