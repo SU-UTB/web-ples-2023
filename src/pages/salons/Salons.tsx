@@ -231,7 +231,7 @@ const Salons = () => {
         </ParagraphWrapper>
         <Spacer />
         <>
-          {!isLoading ? ( // revert logic
+          {isLoading ? ( // revert logic
             <br></br>
           ) : (
             <FormWrapper onSubmit={handleSubmitReservation}>
