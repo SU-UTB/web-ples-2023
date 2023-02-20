@@ -210,10 +210,7 @@ const Salons = () => {
       (error) => {
         //TODO
         if (error) {
-          showReservedMakerResponse({
-            makerName: "TODO",
-            time: "TODO",
-          });
+        //TODO TADY VYPIS ERROR MESSAGE JEN PRI 400
         }
         console.log(error);
       }
