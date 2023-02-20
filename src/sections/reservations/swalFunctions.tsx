@@ -27,19 +27,13 @@ export const showSuccessReservation = () => {
   });
 };
 
-export interface ReservedMakerResponse {
-  makerName: string;
-  time: string;
-}
-
-export const showReservedMakerResponse = (response: ReservedMakerResponse) => {
+export const showAlreadyReservedError = (message: string) => {
   Swal.fire({
     icon: "error",
-    title: `Rezervace u vizážistky "${response.makerName}" na ${response.time} je již bohužel vytvořena, prosím zvolte jiný čas.`,
+    title: message,
     showConfirmButton: true,
-    timer: 2000,
   });
-};
+}
 
 export const showGdprModal = () => {
   Swal.fire({

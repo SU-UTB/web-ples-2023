@@ -24,8 +24,8 @@ import { useNavigate } from "react-router-dom";
 import Fold from "../../components/layout/Fold";
 import axios, { all } from "axios";
 import {
+  showAlreadyReservedError,
   showGdprModal,
-  showReservedMakerResponse,
 } from "../../sections/reservations/swalFunctions";
 
 interface Maker {
@@ -198,7 +198,7 @@ const Salons = () => {
       },
       data: {
         maker: `${maker}`,
-        time: `${time}`,
+        time: `1600`,
         service: `${service}`,
         name: `${name}`,
         phone: `${phone}`,
@@ -207,22 +207,25 @@ const Salons = () => {
       },
     }).then(
       (response) => {
-        setAllMakers(initialAllMakers);
-        setName("");
-        setEmail("");
-        setPhone("");
-        setConsent(false);
-        getAllMakers();
-        setIsLoading(false);
+        reloadData();
       },
       (error) => {
-        //TODO
-        if (error) {
-          //TODO TADY VYPIS ERROR MESSAGE JEN PRI 400
+        if (error.response.status === 400) {
+          showAlreadyReservedError(error.response.data.error);
         }
-        console.log(error);
+        setIsLoading(false);
       }
     );
+  };
+
+  const reloadData = () => {
+    setAllMakers(initialAllMakers);
+    setName("");
+    setEmail("");
+    setPhone("");
+    setConsent(false);
+    getAllMakers();
+    setIsLoading(false);
   };
 
   const showGDPR = () => {
