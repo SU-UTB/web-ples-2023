@@ -23,6 +23,7 @@ import {
 import { useNavigate } from "react-router-dom";
 import Fold from "../../components/layout/Fold";
 import axios, { all } from "axios";
+import { showReservedMakerResponse } from "../../sections/reservations/swalFunctions";
 
 interface Maker {
   id: number;
@@ -87,10 +88,9 @@ const Salons = () => {
   const getAllMakers = () => {
     axios({
       method: "get",
-      url: `https://cors-anywhere.herokuapp.com/http://sdtest.wz.cz/api/makers`,
+      url: `https://rezervacesutb.wz.cz/api/makers`,
       headers: {
         "Content-Type": "Application/json",
-        "Access-Control-Allow-Origin": "*",
       },
     }).then(
       (response) => {
@@ -151,11 +151,6 @@ const Salons = () => {
 
     setEmail(value);
   };
-  // const onChangeConsent = (e) => {
-  //   const { name, value } = e.target;
-
-  //   setReservationData({ ...reservationData, [name]: e.target.checked });
-  // };
 
   const onChangeConsent = (event: React.ChangeEvent<HTMLInputElement>) => {
     const { checked } = event.target;
@@ -191,12 +186,12 @@ const Salons = () => {
 
   const createReservation = () => {
     setIsLoading(true);
+    //TODO validations
     axios({
       method: "post",
-      url: `https://cors-anywhere.herokuapp.com/http://sdtest.wz.cz/api/makers`,
+      url: `https://rezervacesutb.wz.cz/api/makers`,
       headers: {
         "Content-Type": "Application/json",
-        "Access-Control-Allow-Origin": "*",
       },
       data: {
         maker: `${maker}`,
@@ -213,6 +208,13 @@ const Salons = () => {
         setIsLoading(false);
       },
       (error) => {
+        //TODO
+        if (error) {
+          showReservedMakerResponse({
+            makerName: "TODO",
+            time: "TODO",
+          });
+        }
         console.log(error);
       }
     );
