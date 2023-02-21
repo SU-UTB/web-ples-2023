@@ -38,14 +38,21 @@ export const showAlreadyReservedError = (message: string) => {
 export const showGdprModal = () => {
   Swal.fire({
     title: `Nařízení EU 2016/679 (GDPR)
-    Obecné nařízení o ochraně osobních údajů.
-    
-    Vyplněním těchto osobních údajů "Jméno, Mobil, E-mail" při dokončení rezervace souhlasíte s uchováním těchto informací, které jsou také bezpodmínečně nutné pro správné dokončení zvolené rezervace.
-    
-    Zanechané osobní údaje nejsou sdělovány žádné třetí straně a výhradně slouží pro zvolený účel.
-    
-    Účel uchovaných dat:
-    Identifikace v systému pro správné dokončení zvolené rezervace, zaslání emailu za účelem připomenutí objednávky, kontaktování SMS v případě nutnosti změny termínu, viditelnost historie rezervací, možnost zrušení rezervace, vedení historie návštěv.`,
+    Obecné nařízení o ochraně osobních údajů.`,
+
+    html: `
+    Vyplněním těchto osobních údajů "Jméno, Mobil, E-mail" při dokončení rezervace souhlasíte s uchováním těchto informací, které jsou také bezpodmínečně nutné pro správné dokončení zvolené rezervace.<br><br>
+  
+    Zanechané osobní údaje nejsou sdělovány žádné třetí straně a výhradně slouží pro zvolený účel.<br><br>
+  
+    <strong>Účel uchovaných dat:</strong>
+    <li>identifikace v systému pro správné dokončení zvolené rezervace </li>
+    <li>zaslání emailu za účelem připomenutí objednávky </li>
+    <li>kontaktování SMS v případě nutnosti změny termínu</li>
+    <li> viditelnost historie rezervací
+    <li>možnost zrušení rezervace </li> 
+    <li>vedení historie návštěv </li>
+    `,
     showConfirmButton: true,
   });
 };

@@ -28,6 +28,8 @@ import {
   showGdprModal,
   showSuccessReservation,
 } from '../../sections/reservations/swalFunctions';
+import { Oval } from 'react-loader-spinner';
+import { LteDesktop } from '../../theme/MediaQueries';
 
 interface Maker {
   id: number;
@@ -78,6 +80,7 @@ const Salons = () => {
   const [email, setEmail] = useState('');
   const [consent, setConsent] = useState(false);
   //
+  const [isLoading, setIsLoading] = useState(true);
   const [allMakers, setAllMakers] = useState(initialAllMakers);
   const [availableTimes, setAvailableTimes] = useState(new Array<string>());
   const [availableServices, setAvailableServices] = useState(
@@ -98,6 +101,7 @@ const Salons = () => {
     }).then(
       (response) => {
         setAllMakers(response.data);
+        setIsLoading(false);
       },
       (error) => {
         console.log(error);
@@ -187,6 +191,8 @@ const Salons = () => {
   };
 
   const createReservation = () => {
+    setIsLoading(true);
+    //TODO validations
     axios({
       method: 'post',
       url: `https://rezervacesutb.wz.cz/api/makers`,
@@ -211,6 +217,7 @@ const Salons = () => {
         if (error.response.status === 400) {
           showAlreadyReservedError(error.response.data.error);
         }
+        setIsLoading(false);
       }
     );
   };
@@ -222,11 +229,13 @@ const Salons = () => {
     setPhone('');
     setConsent(false);
     getAllMakers();
+    setIsLoading(false);
   };
 
   const showGDPR = () => {
     showGdprModal();
   };
+
   return (
     <SalonsWrapperBg>
       <SalonsWrapper>
@@ -248,120 +257,131 @@ const Salons = () => {
         </ParagraphWrapper>
         <Spacer />
         <>
-          <FormWrapper onSubmit={handleSubmitReservation}>
-            <RowWrapper>
-              <Label>Kadeřnice/kosmetička</Label>
-              <FormSelect
-                id='maker'
-                placeholder='Obsluha'
-                name='maker'
-                onChange={onChangeMaker}
-                value={maker}
-              >
-                {allMakers.makers.map((m) => (
-                  <option value={m.id} key={m.id}>
-                    {m.name}
-                  </option>
-                ))}
-              </FormSelect>
-            </RowWrapper>
+          {isLoading ? (
+            <>
+              <Oval color='white' secondaryColor='lightblue' width='80%' />
+              <FooterSU style={{ position: 'fixed' }}>
+                Rezervační systém SU UTB
+              </FooterSU>
+            </>
+          ) : (
+            <>
+              <FormWrapper onSubmit={handleSubmitReservation}>
+                <RowWrapper>
+                  <Label>Kadeřnice/kosmetička</Label>
+                  <FormSelect
+                    id='maker'
+                    placeholder='Obsluha'
+                    name='maker'
+                    onChange={onChangeMaker}
+                    value={maker}
+                  >
+                    {allMakers.makers.map((m) => (
+                      <option value={m.id} key={m.id}>
+                        {m.name}
+                      </option>
+                    ))}
+                  </FormSelect>
+                </RowWrapper>
 
-            <RowWrapper>
-              <Label>Čas rezervace</Label>
-              <FormSelect
-                id='time'
-                placeholder='Čas'
-                name='time'
-                onChange={onChangeTime}
-                value={time}
-              >
-                {availableTimes.map((t) => (
-                  <option value={t} key={t}>
-                    {
-                      // :))))
-                    }
-                    {t.replace('00', ':00').replace('30', ':30')}
-                  </option>
-                ))}
-              </FormSelect>
-            </RowWrapper>
+                <RowWrapper>
+                  <Label>Čas rezervace</Label>
+                  <FormSelect
+                    id='time'
+                    placeholder='Čas'
+                    name='time'
+                    onChange={onChangeTime}
+                    value={time}
+                  >
+                    {availableTimes.map((t) => (
+                      <option value={t} key={t}>
+                        {
+                          // :))))
+                        }
+                        {t.replace('00', ':00').replace('30', ':30')}
+                      </option>
+                    ))}
+                  </FormSelect>
+                </RowWrapper>
 
-            <RowWrapper>
-              <Label>Služba </Label>
-              <FormSelect
-                id='service'
-                placeholder='Služna'
-                name='service'
-                onChange={onChangeService}
-                value={service}
-              >
-                {availableServices.map((s) => (
-                  <option value={s} key={s}>
-                    {s}
-                  </option>
-                ))}
-              </FormSelect>
-            </RowWrapper>
+                <RowWrapper>
+                  <Label>Služba </Label>
+                  <FormSelect
+                    id='service'
+                    placeholder='Služna'
+                    name='service'
+                    onChange={onChangeService}
+                    value={service}
+                  >
+                    {availableServices.map((s) => (
+                      <option value={s} key={s}>
+                        {s}
+                      </option>
+                    ))}
+                  </FormSelect>
+                </RowWrapper>
 
-            <Spacer />
+                <Spacer />
 
-            <RowWrapper>
-              <Label>Jméno</Label>
-              <FormInput
-                type='text'
-                id='name'
-                placeholder='Jméno'
-                name='name'
-                onChange={onChangeName}
-                value={name}
-                required
-              />
-            </RowWrapper>
+                <RowWrapper>
+                  <Label>Jméno</Label>
+                  <FormInput
+                    type='text'
+                    id='name'
+                    placeholder='Jméno'
+                    name='name'
+                    onChange={onChangeName}
+                    value={name}
+                    required
+                  />
+                </RowWrapper>
 
-            <RowWrapper>
-              <Label>Telefon</Label>
-              <FormInput
-                type='phone'
-                id='phone'
-                placeholder='Telefon'
-                name='phone'
-                onChange={onChangePhone}
-                value={phone}
-                required
-              />
-            </RowWrapper>
+                <RowWrapper>
+                  <Label>Telefon</Label>
+                  <FormInput
+                    type='phone'
+                    id='phone'
+                    placeholder='Telefon'
+                    name='phone'
+                    onChange={onChangePhone}
+                    value={phone}
+                    required
+                  />
+                </RowWrapper>
 
-            <RowWrapper>
-              <Label>Email</Label>
-              <FormInput
-                type='email'
-                id='email'
-                placeholder='Email'
-                name='email'
-                onChange={onChangeEmail}
-                value={email}
-                required
-              />
-            </RowWrapper>
-            <Spacer />
+                <RowWrapper>
+                  <Label>Email</Label>
+                  <FormInput
+                    type='email'
+                    id='email'
+                    placeholder='Email'
+                    name='email'
+                    onChange={onChangeEmail}
+                    value={email}
+                    required
+                  />
+                </RowWrapper>
+                <Spacer />
 
-            <SalonsConsent onClick={showGDPR}>
-              Souhlasím se zpracováním osobních údajů
-            </SalonsConsent>
-            <FormCheckbox
-              type='checkbox'
-              id='consent'
-              name='consent'
-              onChange={onChangeConsent}
-              checked={consent}
-              required
-            />
-            <Spacer />
+                <SalonsConsent onClick={showGDPR}>
+                  Souhlasím se zpracováním osobních údajů
+                </SalonsConsent>
+                <FormCheckbox
+                  type='checkbox'
+                  id='consent'
+                  name='consent'
+                  onChange={onChangeConsent}
+                  checked={consent}
+                  required
+                />
+                <Spacer />
 
-            <ButtonSubmit type='submit'>Vytvořit rezervaci</ButtonSubmit>
-          </FormWrapper>
+                <ButtonSubmit type='submit'>Vytvořit rezervaci</ButtonSubmit>
+              </FormWrapper>
+              <FooterSU>Rezervační systém SU UTB</FooterSU>
+            </>
+          )}
         </>
-        <FooterSU>Rezervační systém SU UTB</FooterSU>
       </SalonsWrapper>
     </SalonsWrapperBg>
   );
