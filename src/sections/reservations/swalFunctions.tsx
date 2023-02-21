@@ -1,8 +1,8 @@
-import Swal from "sweetalert2";
+import Swal from 'sweetalert2';
 
 export const showNotSelected = () => {
   Swal.fire({
-    icon: "warning",
+    icon: 'warning',
     title: `Alespoň 1 místo musí být vybráno`,
     showConfirmButton: false,
     timer: 2000,
@@ -11,7 +11,7 @@ export const showNotSelected = () => {
 
 export const showSomethingGoneWrong = (error: string) => {
   Swal.fire({
-    icon: "warning",
+    icon: 'warning',
     title: `Chyba: ${error}`,
     showConfirmButton: false,
     timer: 2000,
@@ -20,7 +20,7 @@ export const showSomethingGoneWrong = (error: string) => {
 
 export const showSuccessReservation = () => {
   Swal.fire({
-    icon: "success",
+    icon: 'success',
     title: `Rezervace byla vytvořena`,
     showConfirmButton: false,
     timer: 2000,
@@ -29,11 +29,11 @@ export const showSuccessReservation = () => {
 
 export const showAlreadyReservedError = (message: string) => {
   Swal.fire({
-    icon: "error",
+    icon: 'error',
     title: message,
     showConfirmButton: true,
   });
-}
+};
 
 export const showGdprModal = () => {
   Swal.fire({

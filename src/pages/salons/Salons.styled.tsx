@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import theme from "../../theme/theme";
+import styled from 'styled-components';
+import theme from '../../theme/theme';
 
 export const SalonsWrapperBg = styled.div`
   display: flex;
@@ -58,6 +58,7 @@ export const ParagraphWrapper = styled.p`
 
 export const FormWrapper = styled.form`
   display: flex;
+  width: 100%;
   flex-direction: column;
   align-items: center;
   margin-top: 1em;
@@ -65,6 +66,7 @@ export const FormWrapper = styled.form`
 
 export const RowWrapper = styled.div`
   display: flex;
+  width: 100%;
   gap: 1em;
   align-items: center;
 
@@ -78,12 +80,12 @@ export const RowWrapper = styled.div`
   }
 `;
 
-export const RowLabel = styled.div`
+export const Label = styled.div`
   text-align: end;
-  min-width: 120px;
-
+  width: 40%;
   @media screen and (${theme.breakpoints.mobileQuery}) {
     text-align: center;
+    width: 100%;
   }
 `;
 
