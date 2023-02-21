@@ -1,4 +1,4 @@
-const MySvg02 = () => {
+const MapID = () => {
   return (
     <svg
       width='1336'
@@ -6641,4 +6641,4 @@ const MySvg02 = () => {
   );
 };
 
-export default MySvg02;
+export default MapID;

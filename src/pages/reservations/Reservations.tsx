@@ -1,5 +1,5 @@
-import { useEffect, useState } from 'react';
-import '../App.css';
+import { useEffect, useState } from "react";
+import "../../App.css";
 import {
   ButtonClearSelection,
   ButtonReservation,
@@ -12,15 +12,15 @@ import {
   ReservationHeadline,
   WhiteText,
   WrapperContent,
-} from './Reservations.styled';
-import axios from 'axios';
+} from "./Reservations.styled";
+import axios from "axios";
 import {
   showNotSelected,
   showSuccessReservation,
-} from '../sections/reservations/swalFunctions';
-import MultiSelect from 'multiselect-react-dropdown';
-import MapID from '../assets/images/reservations/MapID';
-import Fold from '../components/layout/Fold';
+} from "../../sections/reservations/swalFunctions";
+import MapID from "../../assets/images/reservations/MapID";
+import Fold from "../../components/layout/Fold";
+import Multiselect from "multiselect-react-dropdown";
 
 interface LoginData {
   email: string;
@@ -28,8 +28,8 @@ interface LoginData {
 }
 
 const initialLoginData: LoginData = {
-  email: '',
-  password: '',
+  email: "",
+  password: "",
 };
 
 // ALL SEATS
@@ -48,17 +48,17 @@ interface AllSeats {
 }
 
 const initialAllSeats: AllSeats = {
-  availableStands: '',
-  freeSeats: '',
+  availableStands: "",
+  freeSeats: "",
   seats: [
     {
-      id: '',
-      alias: '',
-      typ: '',
-      rezervace: '',
+      id: "",
+      alias: "",
+      typ: "",
+      rezervace: "",
     },
   ],
-  takenSeats: '',
+  takenSeats: "",
 };
 
 // MULTISELECT
@@ -75,8 +75,8 @@ const Reservations = () => {
 
   useEffect(() => {
     if (
-      localStorage.getItem('token') !== undefined &&
-      localStorage.getItem('token') !== null
+      localStorage.getItem("token") !== undefined &&
+      localStorage.getItem("token") !== null
     ) {
       setLoggedIn(true);
       getAllReservations();
@@ -95,7 +95,7 @@ const Reservations = () => {
 
   const login = () => {
     axios({
-      method: 'post',
+      method: "post",
       url: `https://rezervacesutb.wz.cz/index.php/api/login`,
       data: {
         email: `${loginData.email}`,
@@ -103,7 +103,7 @@ const Reservations = () => {
       },
     }).then(
       (response) => {
-        localStorage.setItem('token', `${response.data.token}`);
+        localStorage.setItem("token", `${response.data.token}`);
         setLoggedIn(true);
         getAllReservations();
         setLoginData(initialLoginData);
@@ -115,15 +115,15 @@ const Reservations = () => {
   };
 
   const logout = () => {
-    localStorage.removeItem('token');
+    localStorage.removeItem("token");
     setLoggedIn(false);
   };
 
   const getAllReservations = () => {
     axios({
-      method: 'get',
+      method: "get",
       url: `https://rezervacesutb.wz.cz/index.php/api/pages/reservations`,
-      headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
+      headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
     }).then(
       (response) => {
         setAllSeats(response.data);
@@ -137,11 +137,11 @@ const Reservations = () => {
 
         const tables = {};
         takenSeats.forEach((takenSeat: any) => {
-          const [table, seat] = takenSeat.split('/');
+          const [table, seat] = takenSeat.split("/");
           tables[table] = (tables[table] || 0) + 1;
           const element = document.getElementById(takenSeat);
           if (element) {
-            element.setAttribute('fill', 'red');
+            element.setAttribute("fill", "red");
           }
         });
 
@@ -151,14 +151,14 @@ const Reservations = () => {
             if (tables[table] === 4) {
               const tableElement = document.getElementById(`${table}/S`);
               if (tableElement) {
-                tableElement.setAttribute('fill', 'red');
+                tableElement.setAttribute("fill", "red");
               }
             }
           } else {
             if (tables[table] === 2) {
               const tableElement = document.getElementById(`${table}/S`);
               if (tableElement) {
-                tableElement.setAttribute('fill', 'red');
+                tableElement.setAttribute("fill", "red");
               }
             }
           }
@@ -185,12 +185,12 @@ const Reservations = () => {
     }
 
     const seatsIds = selectedSeats?.map((seat) => seat.id);
-    seatsIds?.toString().replace(' ', '');
+    seatsIds?.toString().replace(" ", "");
 
     axios({
-      method: 'post',
+      method: "post",
       url: `https://rezervacesutb.wz.cz/index.php/api/reservations`,
-      headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
+      headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
       data: {
         stand: `${selectedStand}`,
         seats: `[${seatsIds}]`,
@@ -291,7 +291,7 @@ const Reservations = () => {
               <br />
               <br />
               <WhiteText>Místa na sezení</WhiteText>
-              <MultiSelect
+              <Multiselect
                 placeholder='Vyber místa k sezení'
                 hidePlaceholder
                 options={allFreeSeats}
@@ -300,23 +300,23 @@ const Reservations = () => {
                 selectedValues={selectedSeats}
                 style={{
                   inputField: {
-                    color: 'white',
-                    borderRadius: '20px !important',
+                    color: "white",
+                    borderRadius: "20px !important",
                   },
                   searchBox: {
-                    color: 'yellow',
-                    maxWidth: '360px',
+                    color: "yellow",
+                    maxWidth: "360px",
                   },
                   chips: {
-                    background: '#171547',
-                    color: 'white',
-                    fontSize: '18px',
-                    padding: '0.5em',
+                    background: "#171547",
+                    color: "white",
+                    fontSize: "18px",
+                    padding: "0.5em",
                   },
                   option: {
-                    color: '#171547',
-                    fontSize: '14px',
-                    fontWeight: 'bold',
+                    color: "#171547",
+                    fontSize: "14px",
+                    fontWeight: "bold",
                   },
                 }}
                 displayValue='alias'
