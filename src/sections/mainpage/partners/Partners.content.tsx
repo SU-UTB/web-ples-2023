@@ -30,6 +30,7 @@ import topNatur from '../../../assets/images/partners/classicPartners/topNatur.s
 import vitar from '../../../assets/images/partners/classicPartners/vitar.svg';
 import infinitMaximus from '../../../assets/images/partners/classicPartners/infinitMaximus.svg';
 import svetPlodu from '../../../assets/images/partners/classicPartners/svetPlodu.png';
+import customShoes from '../../../assets/images/partners/classicPartners/customShoes.png';
 
 export const mainPartners: PartnerItem[] = [
   {
@@ -181,5 +182,10 @@ export const partners: PartnerItem[] = [
   {
     name: 'Svět Plodů',
     logoSrc: svetPlodu,
+  },
+
+  {
+    name: 'Custom Shoes By Anna F.',
+    logoSrc: customShoes,
   },
 ];
