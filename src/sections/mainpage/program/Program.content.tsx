@@ -3,8 +3,17 @@ import ProgramItem from '../../../types/TProgram';
 export const timeline: ProgramItem[] = [
   {
     time: '19:00',
-    activity: 'Otevření Kongresového centra: ve foyer hraje a zpívá ZUŠ Zlín',
+    activity: 'Otevření Kongresového centra:',
   },
+  {
+    time: '',
+    activity: 've foyer hraje a zpívá ZUŠ Zlín',
+  },
+  {
+    time: '',
+    activity: 'ledová show před Kongresovým centrem',
+  },
+
   {
     time: '20:00',
     activity: 'Slavnostní zahájení plesu:',
@@ -15,34 +24,23 @@ export const timeline: ProgramItem[] = [
   },
   {
     time: '',
-    activity: 'úvodní slovo moderátorky',
+    activity: 'proslov rektora prof. Mgr. Milana Adámka, Ph.D.',
   },
+
   {
     time: '20:15',
-    activity: 'Prague Lounge Trio',
+    activity: 'Prestige Symphony Orchestra',
   },
   {
     time: '20:45',
-    activity: 'Prestige Symphony Orchestra',
-  },
-  {
-    time: '21:15',
     activity: 'Prague Lounge Trio',
   },
   {
-    time: '22:00',
-    activity: 'Proslov rektora prof. Mgr. Milana Adámka, Ph.D.',
-  },
-  {
-    time: '',
-    activity: 'Živé spojení s plesem FLKŘ v Uherském Hradišti',
-  },
-  {
-    time: '22:15',
+    time: '21:45',
     activity: 'Prestige Symphony Orchestra',
   },
   {
-    time: '22:45',
+    time: '22:15',
     activity: 'Prague Lounge Trio',
   },
   {
@@ -54,12 +52,11 @@ export const timeline: ProgramItem[] = [
     activity: 'Losování cen',
   },
   {
-    time: '23:55',
+    time: '00:00',
     activity: 'Půlnoční překvapení: finalisté Česko Slovensko má talent',
   },
-
   {
-    time: '00:05',
+    time: '00:10',
     activity: 'Kapela Frontmen',
   },
   {

@@ -7,6 +7,7 @@ import {
   Activity,
   Moderator,
   ProgramHeadline,
+  ChangeReserved,
 } from './Program.styled';
 import { useEffect } from 'react';
 import revealFrom from '../../../functions/reveal';
@@ -57,6 +58,7 @@ const Program = () => {
             </div>
           ))}
         </WrapperTimeline>
+        <ChangeReserved>Změna programu vyhrazena</ChangeReserved>
       </WrapperSection>
     </>
   );

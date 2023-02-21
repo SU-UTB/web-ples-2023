@@ -48,6 +48,9 @@ const Tickets = () => {
         <WrapperCentered>
           <Headline align='left'>Vstupenky</Headline>
           <Paragraph align>
+            VYPRODÁNO
+            <br />
+            <br />
             <NavigateRes onClick={handleClick}>Prodej </NavigateRes>
             vstupenek bude spuštěn <strong>13. 2. 2023</strong> a bude probíhat
             v budově Rektorátu UTB (U13) na nám. T. G. Masaryka 5555, Zlín.
@@ -62,7 +65,8 @@ const Tickets = () => {
             </strong>{' '}
             (350 Kč, možnost sednutí si na volně dostupné sedačky bez stolu a
             bez možnosti místenky), <strong> sezení </strong> (500 Kč,
-            vyprodáno) a <strong> sezení s rautem </strong> (750 Kč).
+            vyprodáno) a <strong> sezení s rautem </strong> (750 Kč, neobsahuje
+            nápoje).
             <br />
             <br />
             Bližší informace k předprodeji: Aneta Nejezchlebová
