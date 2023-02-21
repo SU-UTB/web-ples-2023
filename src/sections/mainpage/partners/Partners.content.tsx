@@ -18,6 +18,7 @@ import tonak from '../../../assets/images/partners/classicPartners/tonak.png';
 import vest from '../../../assets/images/partners/classicPartners/vest.png';
 import lazneLuhacovice from '../../../assets/images/partners/classicPartners/lazneLuhacovice.png';
 import keller from '../../../assets/images/partners/classicPartners/keller.png';
+import trojak from '../../../assets/images/partners/classicPartners/trojak.png';
 
 import buurger from '../../../assets/images/partners/classicPartners/buurger.png';
 import hame from '../../../assets/images/partners/classicPartners/hame.jpg';
@@ -155,10 +156,10 @@ export const partners: PartnerItem[] = [
     logoSrc: topNatur,
   },
 
-  // {
-  //   name: 'Troják',
-  //   logoSrc: trojak,
-  // },
+  {
+    name: 'Troják: Yetty',
+    logoSrc: trojak,
+  },
 
   {
     name: 'Buuurger',
