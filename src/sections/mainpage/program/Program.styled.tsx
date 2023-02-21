@@ -61,3 +61,16 @@ export const Time = styled.div`
 export const Activity = styled.div`
   text-align: left;
 `;
+
+export const ChangeReserved = styled.div`
+  margin-top: 2em;
+  color: ${theme.colors.primary};
+  font-family: ${theme.fonts.monsterRegular};
+  font-style: italic;
+  font-size: ${theme.fontSizeElements.paragraphMobile}px;
+
+  @media screen and (${theme.breakpoints.mobileQuery}) {
+    margin-top: 2em;
+    font-size: ${theme.fontSizeElements.caption}px;
+  }
+`;

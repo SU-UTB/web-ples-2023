@@ -18,6 +18,7 @@ import tonak from '../../../assets/images/partners/classicPartners/tonak.png';
 import vest from '../../../assets/images/partners/classicPartners/vest.png';
 import lazneLuhacovice from '../../../assets/images/partners/classicPartners/lazneLuhacovice.png';
 import keller from '../../../assets/images/partners/classicPartners/keller.png';
+import trojak from '../../../assets/images/partners/classicPartners/trojak.png';
 
 import buurger from '../../../assets/images/partners/classicPartners/buurger.png';
 import hame from '../../../assets/images/partners/classicPartners/hame.jpg';
@@ -30,6 +31,7 @@ import topNatur from '../../../assets/images/partners/classicPartners/topNatur.s
 import vitar from '../../../assets/images/partners/classicPartners/vitar.svg';
 import infinitMaximus from '../../../assets/images/partners/classicPartners/infinitMaximus.svg';
 import svetPlodu from '../../../assets/images/partners/classicPartners/svetPlodu.png';
+import customShoes from '../../../assets/images/partners/classicPartners/customShoes.png';
 
 export const mainPartners: PartnerItem[] = [
   {
@@ -154,10 +156,10 @@ export const partners: PartnerItem[] = [
     logoSrc: topNatur,
   },
 
-  // {
-  //   name: 'Troják',
-  //   logoSrc: trojak,
-  // },
+  {
+    name: 'Troják: Yetty',
+    logoSrc: trojak,
+  },
 
   {
     name: 'Buuurger',
@@ -181,5 +183,10 @@ export const partners: PartnerItem[] = [
   {
     name: 'Svět Plodů',
     logoSrc: svetPlodu,
+  },
+
+  {
+    name: 'Custom Shoes By Anna F.',
+    logoSrc: customShoes,
   },
 ];
