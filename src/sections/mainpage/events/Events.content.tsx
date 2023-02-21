@@ -33,5 +33,6 @@ export const events: EventItem[] = [
     name: 'Dámský salón',
     date: '3. 3. 2023',
     image: `${mirror}`,
+    link: '/salony',
   },
 ];
