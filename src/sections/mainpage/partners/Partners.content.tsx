@@ -8,6 +8,8 @@ import LGZ from '../../../assets/images/partners/mainPartners/LGZ.png';
 import kafeNaRohu from '../../../assets/images/partners/mainPartners/kafeNaRohu.png';
 import amem from '../../../assets/images/partners/mainPartners/amem.png';
 
+import bandi from '../../../assets/images/partners/classicPartners/bandi.svg';
+import iDance from '../../../assets/images/partners/classicPartners/iDance.png';
 import vitco from '../../../assets/images/partners/classicPartners/vitco.png';
 import zff from '../../../assets/images/partners/classicPartners/zff.png';
 import oveckarna from '../../../assets/images/partners/classicPartners/oveckarna.png';
@@ -31,6 +33,13 @@ import topNatur from '../../../assets/images/partners/classicPartners/topNatur.s
 import vitar from '../../../assets/images/partners/classicPartners/vitar.svg';
 import infinitMaximus from '../../../assets/images/partners/classicPartners/infinitMaximus.svg';
 import svetPlodu from '../../../assets/images/partners/classicPartners/svetPlodu.png';
+
+import vinoPortugal from '../../../assets/images/partners/classicPartners/vinoPortugal.png';
+import vertikon from '../../../assets/images/partners/classicPartners/vertikon.png';
+import jamaiCafe from '../../../assets/images/partners/classicPartners/jamaiCafe.png';
+import janek from '../../../assets/images/partners/classicPartners/janek.png';
+import lingua from '../../../assets/images/partners/classicPartners/lingua.png';
+import mpm from '../../../assets/images/partners/classicPartners/mpm.png';
 import customShoes from '../../../assets/images/partners/classicPartners/customShoes.png';
 
 export const mainPartners: PartnerItem[] = [
@@ -76,6 +85,16 @@ export const mainPartners: PartnerItem[] = [
 ];
 
 export const partners: PartnerItem[] = [
+  {
+    name: 'Bandi',
+    logoSrc: bandi,
+  },
+
+  {
+    name: 'iDance',
+    logoSrc: iDance,
+  },
+
   {
     name: 'Vitco',
     logoSrc: vitco,
@@ -183,6 +202,36 @@ export const partners: PartnerItem[] = [
   {
     name: 'Svět Plodů',
     logoSrc: svetPlodu,
+  },
+
+  {
+    name: 'Vino Portugal - Zlate prase',
+    logoSrc: vinoPortugal,
+  },
+
+  {
+    name: 'Vertikon',
+    logoSrc: vertikon,
+  },
+
+  {
+    name: 'Jamai Cafe',
+    logoSrc: jamaiCafe,
+  },
+
+  {
+    name: 'JANEK',
+    logoSrc: janek,
+  },
+
+  {
+    name: 'Lingua',
+    logoSrc: lingua,
+  },
+
+  {
+    name: 'MPM',
+    logoSrc: mpm,
   },
 
   {
