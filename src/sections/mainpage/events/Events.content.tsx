@@ -28,6 +28,7 @@ export const events: EventItem[] = [
     name: 'Promítání filmu',
     date: '28. 2. 2023',
     image: `${film}`,
+    link: 'https://www.facebook.com/events/2507245799424680',
   },
   {
     name: 'Dámský salón',

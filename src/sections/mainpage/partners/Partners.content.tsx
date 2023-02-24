@@ -40,6 +40,7 @@ import jamaiCafe from '../../../assets/images/partners/classicPartners/jamaiCafe
 import janek from '../../../assets/images/partners/classicPartners/janek.png';
 import lingua from '../../../assets/images/partners/classicPartners/lingua.png';
 import mpm from '../../../assets/images/partners/classicPartners/mpm.png';
+import gac from '../../../assets/images/partners/classicPartners/gac.png';
 import customShoes from '../../../assets/images/partners/classicPartners/customShoes.png';
 
 export const mainPartners: PartnerItem[] = [
@@ -232,6 +233,11 @@ export const partners: PartnerItem[] = [
   {
     name: 'MPM',
     logoSrc: mpm,
+  },
+
+  {
+    name: 'Golden Apple Cinema',
+    logoSrc: gac,
   },
 
   {
