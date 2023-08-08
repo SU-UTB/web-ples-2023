@@ -1,5 +1,6 @@
 import { ButtonReservation } from './Reservations.styled';
 
+// function to convert SVG names to desired form
 const GetSVG = () => {
   const assignIDs = () => {
     const places = ['S', 'A', 'B', 'C', 'D', 'A', 'B', 'C', 'D', 'S'];
