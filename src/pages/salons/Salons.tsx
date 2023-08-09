@@ -22,14 +22,13 @@ import {
 } from '../reservations/Reservations.styled';
 import { useNavigate } from 'react-router-dom';
 import Fold from '../../components/layout/Fold';
-import axios, { all } from 'axios';
+import axios from 'axios';
 import {
   showAlreadyReservedError,
   showGdprModal,
   showSuccessReservation,
 } from '../../sections/reservations/swalFunctions';
 import { Oval } from 'react-loader-spinner';
-import { LteDesktop } from '../../theme/MediaQueries';
 
 interface Maker {
   id: number;
@@ -47,25 +46,10 @@ interface AllMakers {
   makerServices: Array<MakerService>;
 }
 
-interface MakerReservation {
-  maker: number;
-  name: string;
-  phone: string;
-  email: string;
-  consent: boolean;
-}
-
 const initialAllMakers: AllMakers = {
   makers: new Array<Maker>(),
   availableTimes: new Map<string, Array<number>>(),
   makerServices: new Array<MakerService>(),
-};
-const initialReservationData: MakerReservation = {
-  maker: 0,
-  name: '',
-  phone: '',
-  email: '',
-  consent: false,
 };
 
 const Salons = () => {
@@ -79,7 +63,7 @@ const Salons = () => {
   const [phone, setPhone] = useState('');
   const [email, setEmail] = useState('');
   const [consent, setConsent] = useState(false);
-  //
+
   const [isLoading, setIsLoading] = useState(true);
   const [allMakers, setAllMakers] = useState(initialAllMakers);
   const [availableTimes, setAvailableTimes] = useState(new Array<string>());
