@@ -25,7 +25,7 @@ export const WrapperSection = styled.div<{
     display: flex;
     width: 80%;
     max-width: 1600px;
-    margin: 0 auto 20em;
+    margin: 0 auto 10em;
 
     &:nth-last-child(2) {
       margin: 0 auto 10em;
@@ -42,10 +42,8 @@ export const WrapperSection = styled.div<{
     @media screen and (${theme.breakpoints.lteTabletQuery}) {
       flex-direction: column;
       gap: 0;
-    }
-
-    @media screen and (${theme.breakpoints.lteTabletQuery}) {
       margin: 0 auto 10em;
+
       &:nth-last-child(2) {
         margin: 0 auto 7em;
       }

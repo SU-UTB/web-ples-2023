@@ -1,8 +1,4 @@
-const revealFrom = (
-  selector: string,
-  elementVisible: number,
-  ...args: any[]
-) => {
+const revealFrom = (selector: string, elementVisible: number) => {
   const reveals = document.querySelectorAll(selector);
 
   for (let i = 0; i < reveals.length; i++) {

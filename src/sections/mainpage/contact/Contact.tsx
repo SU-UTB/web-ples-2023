@@ -57,7 +57,7 @@ const Contact = () => {
             <ContactAction href='tel:+420-731-014-934'>
               +420 731 014 934
             </ContactAction>
-            <ContactAction href='tel:+420-774-980515'>
+            <ContactAction href='tel:+420-774-980-515'>
               +420 774 980 515
             </ContactAction>
           </ContactHalf>
