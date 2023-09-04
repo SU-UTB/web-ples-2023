@@ -1,9 +1,9 @@
 import Headline from "../../../components/headline/Headline";
 import { WrapperSection } from "../../../components/layout/wrapper/Wrapper.styled";
 import Paragraph from "../../../components/paragraph/Paragraph";
-import { CardImage, CardText, CardWrapper, EventCard } from "./Events.styled";
-import { events } from "./Events.content";
 import { GteDesktopCheck } from "../../../theme/MediaQueries";
+import { events } from "./Events.content";
+import { CardImage, CardText, CardWrapper, EventCard } from "./Events.styled";
 
 const Events = () => {
   return (
@@ -11,7 +11,7 @@ const Events = () => {
       <Headline color={GteDesktopCheck() ? "white" : "black"}>
         Doprovodný program
       </Headline>
-      <Paragraph colorMode={GteDesktopCheck() ? "white" : "black"}>
+      <Paragraph colorMode={GteDesktopCheck() ? 'white' : 'black'}>
         Abychom vás správně naladili, připravili jsme si po celý únor několik
         doprovodných programů. Těšit se můžete na bruslení na ledové ploše,
         promítání tématického filmu, tančírnu, či workshop na míchání drinků, ze

@@ -1,47 +1,47 @@
-import PartnerItem from '../../../types/TPartner';
-import plazmaPlus from '../../../assets/images/partners/mainPartners/plazmaPlus.png';
 import EC01 from '../../../assets/images/partners/mainPartners/EC01.png';
 import EC02 from '../../../assets/images/partners/mainPartners/EC02.png';
-import greiner from '../../../assets/images/partners/mainPartners/greiner.png';
-import vincentka from '../../../assets/images/partners/mainPartners/vincentka.png';
 import LGZ from '../../../assets/images/partners/mainPartners/LGZ.png';
-import kafeNaRohu from '../../../assets/images/partners/mainPartners/kafeNaRohu.png';
 import amem from '../../../assets/images/partners/mainPartners/amem.png';
+import greiner from '../../../assets/images/partners/mainPartners/greiner.png';
+import kafeNaRohu from '../../../assets/images/partners/mainPartners/kafeNaRohu.png';
+import plazmaPlus from '../../../assets/images/partners/mainPartners/plazmaPlus.png';
+import vincentka from '../../../assets/images/partners/mainPartners/vincentka.png';
+import PartnerItem from '../../../types/TPartner';
 
 import bandi from '../../../assets/images/partners/classicPartners/bandi.svg';
+import dermacol from '../../../assets/images/partners/classicPartners/dermacol.png';
 import iDance from '../../../assets/images/partners/classicPartners/iDance.png';
+import keller from '../../../assets/images/partners/classicPartners/keller.png';
+import kojetin from '../../../assets/images/partners/classicPartners/kojetin.png';
+import lazneLuhacovice from '../../../assets/images/partners/classicPartners/lazneLuhacovice.png';
+import oveckarna from '../../../assets/images/partners/classicPartners/oveckarna.png';
+import tonak from '../../../assets/images/partners/classicPartners/tonak.png';
+import trojak from '../../../assets/images/partners/classicPartners/trojak.png';
+import vest from '../../../assets/images/partners/classicPartners/vest.png';
+import vitaSana from '../../../assets/images/partners/classicPartners/vitaSana.png';
 import vitco from '../../../assets/images/partners/classicPartners/vitco.png';
 import zff from '../../../assets/images/partners/classicPartners/zff.png';
-import oveckarna from '../../../assets/images/partners/classicPartners/oveckarna.png';
-import kojetin from '../../../assets/images/partners/classicPartners/kojetin.png';
-import vitaSana from '../../../assets/images/partners/classicPartners/vitaSana.png';
-import dermacol from '../../../assets/images/partners/classicPartners/dermacol.png';
-import tonak from '../../../assets/images/partners/classicPartners/tonak.png';
-import vest from '../../../assets/images/partners/classicPartners/vest.png';
-import lazneLuhacovice from '../../../assets/images/partners/classicPartners/lazneLuhacovice.png';
-import keller from '../../../assets/images/partners/classicPartners/keller.png';
-import trojak from '../../../assets/images/partners/classicPartners/trojak.png';
 
 import buurger from '../../../assets/images/partners/classicPartners/buurger.png';
 import hame from '../../../assets/images/partners/classicPartners/hame.jpg';
+import infinitMaximus from '../../../assets/images/partners/classicPartners/infinitMaximus.svg';
 import klenotyAurum from '../../../assets/images/partners/classicPartners/klenotyAurum.jpg';
-import merciiCaffe from '../../../assets/images/partners/classicPartners/merciiCaffe.png';
-import ponozkovice from '../../../assets/images/partners/classicPartners/ponozkovice.svg';
 import lucy from '../../../assets/images/partners/classicPartners/lucy.png';
+import merciiCaffe from '../../../assets/images/partners/classicPartners/merciiCaffe.png';
 import patifu from '../../../assets/images/partners/classicPartners/patifu.jpg';
+import ponozkovice from '../../../assets/images/partners/classicPartners/ponozkovice.svg';
+import svetPlodu from '../../../assets/images/partners/classicPartners/svetPlodu.png';
 import topNatur from '../../../assets/images/partners/classicPartners/topNatur.svg';
 import vitar from '../../../assets/images/partners/classicPartners/vitar.svg';
-import infinitMaximus from '../../../assets/images/partners/classicPartners/infinitMaximus.svg';
-import svetPlodu from '../../../assets/images/partners/classicPartners/svetPlodu.png';
 
-import vinoPortugal from '../../../assets/images/partners/classicPartners/vinoPortugal.png';
-import vertikon from '../../../assets/images/partners/classicPartners/vertikon.png';
+import customShoes from '../../../assets/images/partners/classicPartners/customShoes.png';
+import gac from '../../../assets/images/partners/classicPartners/gac.png';
 import jamaiCafe from '../../../assets/images/partners/classicPartners/jamaiCafe.png';
 import janek from '../../../assets/images/partners/classicPartners/janek.png';
 import lingua from '../../../assets/images/partners/classicPartners/lingua.png';
 import mpm from '../../../assets/images/partners/classicPartners/mpm.png';
-import gac from '../../../assets/images/partners/classicPartners/gac.png';
-import customShoes from '../../../assets/images/partners/classicPartners/customShoes.png';
+import vertikon from '../../../assets/images/partners/classicPartners/vertikon.png';
+import vinoPortugal from '../../../assets/images/partners/classicPartners/vinoPortugal.png';
 
 export const mainPartners: PartnerItem[] = [
   {
@@ -189,12 +189,10 @@ export const partners: PartnerItem[] = [
     name: 'Hame',
     logoSrc: hame,
   },
-
   {
     name: 'Klenoty Aurum',
     logoSrc: klenotyAurum,
   },
-
   {
     name: 'Mercii Caffé',
     logoSrc: merciiCaffe,
