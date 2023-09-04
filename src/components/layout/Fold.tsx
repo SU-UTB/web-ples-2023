@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 const Unfold = styled.div`
   display: none;
@@ -6,6 +6,7 @@ const Unfold = styled.div`
     display: block !important;
     position: fixed;
     overflow: hidden;
+    text-align: center;
     top: 0;
     left: 0;
     right: 0;
@@ -14,8 +15,7 @@ const Unfold = styled.div`
     z-index: 2147483647;
 
     &:after {
-      content: "Please, unfold your device.";
-      display: block;
+      content: 'Prosím použijte větší zařízení.';
       display: flex;
       height: 100vh;
       justify-content: center;
@@ -24,8 +24,4 @@ const Unfold = styled.div`
   }
 `;
 
-function Fold() {
-  return <Unfold />;
-}
-
-export default Fold;
+export default Unfold;

@@ -1,40 +1,38 @@
-import "../../App.css";
+import '../../App.css';
 
-import { getAnalytics, logEvent } from "firebase/analytics";
-import { analyticsApp } from "../../tools/firebase";
-import { useEffect, useState } from "react";
-import styled from "styled-components";
-import theme from "../../theme/theme";
-import revealFrom from "../../functions/reveal";
-import { LteTablet } from "../../theme/MediaQueries";
-import Prime from "../../sections/mainpage/prime/Prime";
-import Countdown from "../../sections/mainpage/countdown/Countdown";
-import Intro from "../../sections/mainpage/intro/Intro";
-import Program from "../../sections/mainpage/program/Program";
-import Tickets from "../../sections/mainpage/tickets/Tickets";
-import Events from "../../sections/mainpage/events/Events";
-import Contact from "../../sections/mainpage/contact/Contact";
-import Partners from "../../sections/mainpage/partners/Partners";
-import Organisers from "../../sections/mainpage/organisers/Organisers";
-import Snowing from "../../components/snowing/Snowing";
-import { WrapperMain } from "../../components/layout/wrapper/Wrapper.styled";
-import Fold from "../../components/layout/Fold";
-import HamburgerMenu from "../../components/layout/navbar/hamburgerMenu/HamburgerMenu";
-import Navbar from "../../components/layout/navbar/Navbar";
-import Footer from "../../components/layout/footer/Footer";
-import CookieConsent from "../../components/consent/Consent";
+import { getAnalytics, logEvent } from 'firebase/analytics';
+import { analyticsApp } from '../../tools/firebase';
+import { useEffect, useState } from 'react';
+import styled from 'styled-components';
+import theme from '../../theme/theme';
+import revealFrom from '../../functions/reveal';
+import { LteTablet } from '../../theme/MediaQueries';
+import Prime from '../../sections/mainpage/prime/Prime';
+import Countdown from '../../sections/mainpage/countdown/Countdown';
+import Intro from '../../sections/mainpage/intro/Intro';
+import Program from '../../sections/mainpage/program/Program';
+import Tickets from '../../sections/mainpage/tickets/Tickets';
+import Events from '../../sections/mainpage/events/Events';
+import Contact from '../../sections/mainpage/contact/Contact';
+import Partners from '../../sections/mainpage/partners/Partners';
+import Organisers from '../../sections/mainpage/organisers/Organisers';
+import Snowing from '../../components/snowing/Snowing';
+import { WrapperMain } from '../../components/layout/wrapper/Wrapper.styled';
+import Fold from '../../components/layout/Fold';
+import HamburgerMenu from '../../components/layout/navbar/hamburgerMenu/HamburgerMenu';
+import Navbar from '../../components/layout/navbar/Navbar';
+import Footer from '../../components/layout/footer/Footer';
+import CookieConsent from '../../components/consent/Consent';
 
-window.addEventListener("scroll", () => revealFrom(".reveal", 50));
+window.addEventListener('scroll', () => revealFrom('.reveal', 50));
 
-const LoadingBackground = styled.div`
+const LoadingBackground = styled.div<{ loading: boolean }>`
   z-index: 990;
   position: fixed;
   left: 0;
   right: 0;
   top: 0;
   bottom: 0;
-  visibility: visible;
-  opacity: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -52,9 +50,13 @@ const LoadingBackground = styled.div`
     #4056b7,
     #b3cef2
   );
+
+  opacity: ${(props) => (props.loading ? 1 : 0)};
+  visibility: ${(props) => (props.loading ? 'visible' : 'hidden')};
+  overflow: ${(props) => (props.loading ? '' : 'hidden')};
 `;
 
-const Loading = styled.div`
+const Loading = styled.div<{ visible: boolean }>`
   display: flex;
   width: 100%;
   height: 75%;
@@ -64,6 +66,9 @@ const Loading = styled.div`
 
   position: fixed;
   z-index: 990;
+
+  opacity: ${(props) => (props.visible ? 1 : 0)};
+  transition: opacity 2s;
 
   font-family: ${theme.fonts.heading};
   font-size: ${theme.fontSizeElements.h1}px;
@@ -77,26 +82,28 @@ const Loading = styled.div`
   }
 `;
 
-function MainPage() {
-  logEvent(getAnalytics(analyticsApp.app), "web_displayed");
+const MainPage = () => {
+  logEvent(getAnalytics(analyticsApp.app), 'web_displayed');
   const [loading, setLoading] = useState(true);
+  const [visibleLoading, setVisibleLoading] = useState(true);
 
   useEffect(() => {
-    const removeLoader = () => setLoading(false);
+    const handleScroll = () => revealFrom('.reveal', 50);
+    window.addEventListener('scroll', handleScroll);
 
-    if (localStorage.getItem("pageLoaded") !== "true") {
-      window.addEventListener("load", removeLoader);
-      localStorage.setItem("pageLoaded", "true");
+    const removeLoader = () => setLoading(false);
+    if (localStorage.getItem('pageLoaded') !== 'true') {
+      window.addEventListener('load', removeLoader);
+      localStorage.setItem('pageLoaded', 'true');
     } else {
       setLoading(false);
     }
 
     return () => {
-      window.removeEventListener("load", removeLoader);
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('load', removeLoader);
     };
   }, []);
-
-  const [visibleLoading, setVisibleLoading] = useState(true);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -108,34 +115,21 @@ function MainPage() {
 
   return (
     <>
-      <LoadingBackground
-        style={{
-          opacity: loading ? 1 : 0,
-          visibility: loading ? "visible" : "hidden",
-          overflow: loading ? "" : "hidden",
-        }}
-      >
-        <Loading
-          style={{
-            opacity: visibleLoading ? 1 : 0,
-            transition: "opacity 2s",
-          }}
-        >
-          Nahrávám...
-        </Loading>
+      <LoadingBackground loading={loading}>
+        <Loading visible={visibleLoading}>Nahrávám...</Loading>
       </LoadingBackground>
       <WrapperMain
         style={{
-          visibility: loading ? "hidden" : "visible",
-          overflow: loading ? "hidden" : "",
+          visibility: loading ? 'hidden' : 'visible',
+          overflow: loading ? 'hidden' : '',
         }}
       >
         <CookieConsent />
         <Fold />
         <LteTablet>
           <HamburgerMenu
-            pageWrapId={"page-wrap"}
-            outerContainerId={"outer-container"}
+            pageWrapId={'page-wrap'}
+            outerContainerId={'outer-container'}
           />
         </LteTablet>
         <Navbar />
@@ -153,6 +147,6 @@ function MainPage() {
       </WrapperMain>
     </>
   );
-}
+};
 
 export default MainPage;
