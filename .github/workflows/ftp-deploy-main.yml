@@ -32,5 +32,5 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           protocol: 'ftps'
           local-dir: 'dist/'
-          remote-dir: 'www/'
+          server-dir: 'www/'
           exclude: '.git*,**/.git*,**/.git*/**,**/.idea*,**/.idea*/**.DS_Store' 
