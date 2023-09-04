@@ -30,6 +30,7 @@ jobs:
           host: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
+          protocol: 'protocol': 'sftp',
           localDir: 'dist/'
           remoteDir: 'www/'
           exclude: '.git*,**/.git*,**/.git*/**,**/.idea*,**/.idea*/**.DS_Store' 
