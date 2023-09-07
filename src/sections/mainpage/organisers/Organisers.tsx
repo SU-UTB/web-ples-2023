@@ -17,7 +17,6 @@ const Organisers = () => {
         {organisers.map((item, index) => (
           <Link
             href={item.link}
-            target='_blank'
             key={index}
             onClick={() =>
               logEvent(getAnalytics(analyticsApp.app), 'organiser_clicked', {
