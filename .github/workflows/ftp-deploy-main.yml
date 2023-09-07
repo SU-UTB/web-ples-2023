@@ -33,4 +33,4 @@ jobs:
           protocol: ${{ env.FTP_PROTOCOL }}
           local-dir: dist/
           server-dir: www/
-          exclude: '.git*,**/.git*,**/.git*/**,**/.idea*,**/.idea*/**.DS_Store' 
+          exclude: '.git*,**/.git*,**/.git*/**,**/.idea*,**/.idea*/**.DS_Store'

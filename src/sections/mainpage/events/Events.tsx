@@ -1,14 +1,14 @@
-import Headline from "../../../components/headline/Headline";
-import { WrapperSection } from "../../../components/layout/wrapper/Wrapper.styled";
-import Paragraph from "../../../components/paragraph/Paragraph";
-import { GteDesktopCheck } from "../../../theme/MediaQueries";
-import { events } from "./Events.content";
-import { CardImage, CardText, CardWrapper, EventCard } from "./Events.styled";
+import Headline from '../../../components/headline/Headline';
+import { WrapperSection } from '../../../components/layout/wrapper/Wrapper.styled';
+import Paragraph from '../../../components/paragraph/Paragraph';
+import { GteDesktopCheck } from '../../../theme/MediaQueries';
+import { events } from './Events.content';
+import { CardImage, CardText, CardWrapper, EventCard } from './Events.styled';
 
 const Events = () => {
   return (
     <WrapperSection centered id="events">
-      <Headline color={GteDesktopCheck() ? "white" : "black"}>
+      <Headline color={GteDesktopCheck() ? 'white' : 'black'}>
         Doprovodný program
       </Headline>
       <Paragraph colorMode={GteDesktopCheck() ? 'white' : 'black'}>
@@ -27,7 +27,7 @@ const Events = () => {
           <EventCard
             key={index}
             href={item.link}
-            target={index === 4 ? "_self" : "_blank"}
+            target={index === 4 ? '_self' : '_blank'}
             className="reveal reveal-slow"
           >
             <Headline align="center" card>

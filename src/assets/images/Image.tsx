@@ -1,5 +1,5 @@
-import styled, { css } from "styled-components";
-import theme from "../../theme/theme";
+import styled, { css } from 'styled-components';
+import theme from '../../theme/theme';
 
 export const StyledImg = styled.img<{
   mirrored?: boolean;
@@ -19,5 +19,5 @@ export const StyledImg = styled.img<{
     @media screen and (${theme.breakpoints.lteTabletQuery}) {
       width: 50%;
     }
-  `
+  `,
 );

@@ -11,7 +11,9 @@ export const WrapperMain = styled.main`
   background-position: center 0;
   visibility: hidden;
   overflow: hidden;
-  transition: visibility 2s linear, overflow 2s linear;
+  transition:
+    visibility 2s linear,
+    overflow 2s linear;
   @media screen and (${theme.breakpoints.mobileQuery}) {
     background-image: url(${bgWinterTablet});
     background-size: auto;
@@ -48,7 +50,7 @@ export const WrapperSection = styled.div<{
         margin: 0 auto 7em;
       }
     }
-  `
+  `,
 );
 
 export const WrapperHalf = styled.div`

@@ -42,7 +42,7 @@ interface AllSeats {
       alias: string;
       typ: string;
       rezervace: string;
-    }
+    },
   ];
   takenSeats: string;
 }
@@ -122,7 +122,7 @@ const Reservations = () => {
       setAllSeats(response.data);
 
       setAllFreeSeats(
-        response.data.seats.filter((seat: any) => seat.rezervace === null)
+        response.data.seats.filter((seat: any) => seat.rezervace === null),
       );
 
       const takenSeats = response.data.seats
@@ -167,7 +167,7 @@ const Reservations = () => {
   const [selectedSeats, setSelectedSeats] = useState<Seats[]>();
 
   const handleSubmitNewReservation = async (
-    event: React.FormEvent<HTMLFormElement>
+    event: React.FormEvent<HTMLFormElement>,
   ) => {
     event.preventDefault();
 
@@ -188,7 +188,7 @@ const Reservations = () => {
         },
         {
           headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
-        }
+        },
       );
 
       showSuccessReservation();
@@ -228,21 +228,21 @@ const Reservations = () => {
             <ReservationHeadline>Přihlášení</ReservationHeadline>
             <FormWrapper onSubmit={handleSubmitLogin}>
               <FormInput
-                type='text'
-                name='email'
+                type="text"
+                name="email"
                 value={loginData.email}
-                placeholder='Email'
+                placeholder="Email"
                 onChange={handleChangeLogin}
               />
               <FormInput
-                type='text'
-                name='password'
+                type="text"
+                name="password"
                 value={loginData.password}
-                placeholder='Password'
+                placeholder="Password"
                 onChange={handleChangeLogin}
               />
 
-              <ButtonSubmit type='submit'>Přihlásit se</ButtonSubmit>
+              <ButtonSubmit type="submit">Přihlásit se</ButtonSubmit>
             </FormWrapper>
           </>
         ) : (
@@ -264,17 +264,17 @@ const Reservations = () => {
             <FormWrapper onSubmit={handleSubmitNewReservation}>
               <label>
                 <WhiteText>Místa na stání:</WhiteText>
-                <FormInput type='text' value={selectedStand} readOnly />
+                <FormInput type="text" value={selectedStand} readOnly />
               </label>
               <ButtonWrapper>
                 <ButtonReservation
-                  type='button'
+                  type="button"
                   onClick={handleIncrementStands}
                 >
                   +
                 </ButtonReservation>
                 <ButtonReservation
-                  type='button'
+                  type="button"
                   onClick={handleDecrementStands}
                 >
                   -
@@ -284,7 +284,7 @@ const Reservations = () => {
               <br />
               <WhiteText>Místa na sezení</WhiteText>
               <Multiselect
-                placeholder='Vyber místa k sezení'
+                placeholder="Vyber místa k sezení"
                 hidePlaceholder
                 options={allFreeSeats}
                 onSelect={setSelectedSeats}
@@ -311,17 +311,17 @@ const Reservations = () => {
                     fontWeight: 'bold',
                   },
                 }}
-                displayValue='alias'
+                displayValue="alias"
               />
               <ButtonClearSelection
-                type='button'
+                type="button"
                 onClick={handleRemoveAllSeats}
               >
                 Smazat výběr
               </ButtonClearSelection>
               <br />
               <br />
-              <ButtonSubmit type='submit'>Koupit vstupenky</ButtonSubmit>
+              <ButtonSubmit type="submit">Koupit vstupenky</ButtonSubmit>
             </FormWrapper>
           </>
         )}

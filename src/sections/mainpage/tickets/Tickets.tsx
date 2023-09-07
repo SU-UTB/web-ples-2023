@@ -23,7 +23,7 @@ const Tickets = () => {
 
     return () => {
       window.removeEventListener('scroll', () =>
-        revealFrom('.reveal-img', 500)
+        revealFrom('.reveal-img', 500),
       );
     };
   }, []);
@@ -34,19 +34,19 @@ const Tickets = () => {
   `;
 
   return (
-    <WrapperSection id='vstupenky'>
+    <WrapperSection id="vstupenky">
       <WrapperHalf>
         <WrapperCentered>
           <StyledImgWrapper
-            className='reveal-img'
+            className="reveal-img"
             src={tickets}
-            alt='vstupenky'
+            alt="vstupenky"
           />
         </WrapperCentered>
       </WrapperHalf>
       <WrapperHalf>
         <WrapperCentered>
-          <Headline align='left'>Vstupenky</Headline>
+          <Headline align="left">Vstupenky</Headline>
           <Paragraph align>
             VYPRODÁNO
             <br />
@@ -78,7 +78,7 @@ const Tickets = () => {
               nejezchlebova@sutb.cz
             </ContactAction>
             <br />
-            <ContactAction href='tel:+420-723-132-295' tickets>
+            <ContactAction href="tel:+420-723-132-295" tickets>
               +420 723 132 295
             </ContactAction>
           </Paragraph>

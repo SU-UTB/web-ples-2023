@@ -19,28 +19,28 @@ const Contact = () => {
 
     return () => {
       window.removeEventListener('scroll', () =>
-        revealFrom('.reveal-left', 100)
+        revealFrom('.reveal-left', 100),
       );
       window.removeEventListener('scroll', () =>
-        revealFrom('.reveal-right', 100)
+        revealFrom('.reveal-right', 100),
       );
     };
   }, []);
 
   return (
-    <WrapperSection centered id='kontakt'>
+    <WrapperSection centered id="kontakt">
       <Headline color={GteHugeDesktopCheck() ? 'white' : 'black'}>
         Kontakty
       </Headline>
       <WrapperContact>
         {contacts.map((item, index) => (
-          <WrapperContactItem key={index} className='reveal'>
-            <ContactHalf className='reveal-left'>
+          <WrapperContactItem key={index} className="reveal">
+            <ContactHalf className="reveal-left">
               <ContactItem>{item.position}</ContactItem>
               <ContactAction href={item.phoneLink}>{item.phone}</ContactAction>
             </ContactHalf>
 
-            <ContactHalf className='reveal-right'>
+            <ContactHalf className="reveal-right">
               <ContactItem>{item.name}</ContactItem>
               <ContactAction
                 href={'mailto:' + item.email + '?subject=Ples UTB 2023'}
@@ -50,14 +50,14 @@ const Contact = () => {
             </ContactHalf>
           </WrapperContactItem>
         ))}
-        <WrapperContactItem className='reveal'>
+        <WrapperContactItem className="reveal">
           <ContactHalf>
             <ContactItem>Správci webu</ContactItem>
             <br />
-            <ContactAction href='tel:+420-731-014-934'>
+            <ContactAction href="tel:+420-731-014-934">
               +420 731 014 934
             </ContactAction>
-            <ContactAction href='tel:+420-774-980-515'>
+            <ContactAction href="tel:+420-774-980-515">
               +420 774 980 515
             </ContactAction>
           </ContactHalf>

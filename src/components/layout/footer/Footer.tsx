@@ -6,7 +6,7 @@ function Footer() {
       <ContentWrapper>
         <LogoText>
           Vytvořila{' '}
-          <a href='https://su.utb.cz/' target='_blank'>
+          <a href="https://su.utb.cz/" target="_blank">
             Studentská Unie UTB
           </a>
         </LogoText>

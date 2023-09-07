@@ -12,12 +12,12 @@ import { analyticsApp } from '../../../tools/firebase';
 const Organisers = () => {
   return (
     <WrapperSection centered>
-      <OrganisersHeadline color='black'>Organizátoři</OrganisersHeadline>
+      <OrganisersHeadline color="black">Organizátoři</OrganisersHeadline>
       <OrganiserWrapper>
         {organisers.map((item, index) => (
           <Link
             href={item.link}
-            target='_blank'
+            target="_blank"
             key={index}
             onClick={() =>
               logEvent(getAnalytics(analyticsApp.app), 'organiser_clicked', {
