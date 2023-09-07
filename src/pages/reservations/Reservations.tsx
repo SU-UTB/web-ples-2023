@@ -13,7 +13,6 @@ import {
   WhiteText,
   WrapperContent,
 } from './Reservations.styled';
-import axios from 'axios';
 import {
   showNotSelected,
   showSuccessReservation,

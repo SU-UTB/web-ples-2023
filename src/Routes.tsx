@@ -11,8 +11,8 @@ const Routing = () => {
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<MainPage />} />
-        {/* <Route path='/rezervace' element={<Reservations />} />
-        <Route path='/salony' element={<Salons />} /> */}
+        <Route path='/rezervace' element={<Reservations />} />
+        <Route path='/salony' element={<Salons />} />
       </Routes>
     </BrowserRouter>
   );
