@@ -29,6 +29,7 @@ import {
   showSuccessReservation,
 } from '../../sections/reservations/swalFunctions';
 import { Oval } from 'react-loader-spinner';
+import { api } from '../../api/api';
 
 interface Maker {
   id: number;
@@ -75,22 +76,15 @@ const Salons = () => {
     getAllMakers();
   }, []);
 
-  const getAllMakers = () => {
-    axios({
-      method: 'get',
-      url: `https://rezervacesutb.wz.cz/api/makers`,
-      headers: {
-        'Content-Type': 'Application/json',
-      },
-    }).then(
-      (response) => {
-        setAllMakers(response.data);
-        setIsLoading(false);
-      },
-      (error) => {
-        console.log(error);
-      }
-    );
+  const getAllMakers = async () => {
+    try {
+      const response = await api.get('makers');
+      setAllMakers(response.data);
+    } catch (error) {
+      console.log(error);
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   useEffect(() => {

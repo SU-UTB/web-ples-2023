@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react";
-import "../../App.css";
+import { useEffect, useState } from 'react';
+import '../../App.css';
 import {
   ButtonClearSelection,
   ButtonReservation,
@@ -12,15 +12,16 @@ import {
   ReservationHeadline,
   WhiteText,
   WrapperContent,
-} from "./Reservations.styled";
-import axios from "axios";
+} from './Reservations.styled';
+import axios from 'axios';
 import {
   showNotSelected,
   showSuccessReservation,
-} from "../../sections/reservations/swalFunctions";
-import MapID from "../../assets/images/reservations/MapID";
-import Fold from "../../components/layout/Fold";
-import Multiselect from "multiselect-react-dropdown";
+} from '../../sections/reservations/swalFunctions';
+import MapID from '../../assets/images/reservations/MapID';
+import Fold from '../../components/layout/Fold';
+import Multiselect from 'multiselect-react-dropdown';
+import { api } from '../../api/api';
 
 interface LoginData {
   email: string;
@@ -28,8 +29,8 @@ interface LoginData {
 }
 
 const initialLoginData: LoginData = {
-  email: "",
-  password: "",
+  email: '',
+  password: '',
 };
 
 // ALL SEATS
@@ -48,17 +49,17 @@ interface AllSeats {
 }
 
 const initialAllSeats: AllSeats = {
-  availableStands: "",
-  freeSeats: "",
+  availableStands: '',
+  freeSeats: '',
   seats: [
     {
-      id: "",
-      alias: "",
-      typ: "",
-      rezervace: "",
+      id: '',
+      alias: '',
+      typ: '',
+      rezervace: '',
     },
   ],
-  takenSeats: "",
+  takenSeats: '',
 };
 
 // MULTISELECT
@@ -75,8 +76,8 @@ const Reservations = () => {
 
   useEffect(() => {
     if (
-      localStorage.getItem("token") !== undefined &&
-      localStorage.getItem("token") !== null
+      localStorage.getItem('token') !== undefined &&
+      localStorage.getItem('token') !== null
     ) {
       setLoggedIn(true);
       getAllReservations();
@@ -93,88 +94,80 @@ const Reservations = () => {
     setLoginData({ ...loginData, [name]: value });
   };
 
-  const login = () => {
-    axios({
-      method: "post",
-      url: `https://rezervacesutb.wz.cz/index.php/api/login`,
-      data: {
-        email: `${loginData.email}`,
-        password: `${loginData.password}`,
-      },
-    }).then(
-      (response) => {
-        localStorage.setItem("token", `${response.data.token}`);
-        setLoggedIn(true);
-        getAllReservations();
-        setLoginData(initialLoginData);
-      },
-      (error) => {
-        console.log(error);
-      }
-    );
+  const login = async () => {
+    try {
+      const response = await api.post('/login', {
+        email: loginData.email,
+        password: loginData.password,
+      });
+      localStorage.setItem('token', response.data.token);
+      setLoggedIn(true);
+      await getAllReservations();
+      setLoginData(initialLoginData);
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   const logout = () => {
-    localStorage.removeItem("token");
+    localStorage.removeItem('token');
     setLoggedIn(false);
   };
 
-  const getAllReservations = () => {
-    axios({
-      method: "get",
-      url: `https://rezervacesutb.wz.cz/index.php/api/pages/reservations`,
-      headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
-    }).then(
-      (response) => {
-        setAllSeats(response.data);
-        setAllFreeSeats(
-          response.data.seats.filter((seat: any) => seat.rezervace === null)
-        );
+  const getAllReservations = async () => {
+    try {
+      const response = await api.get('/pages/reservations', {
+        headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
+      });
 
-        const takenSeats = response.data.seats
-          .filter((item: any) => item.rezervace !== null)
-          .map((item: any) => item.alias);
+      setAllSeats(response.data);
 
-        const tables = {};
-        takenSeats.forEach((takenSeat: any) => {
-          const [table, seat] = takenSeat.split("/");
-          tables[table] = (tables[table] || 0) + 1;
-          const element = document.getElementById(takenSeat);
-          if (element) {
-            element.setAttribute("fill", "red");
-          }
-        });
+      setAllFreeSeats(
+        response.data.seats.filter((seat: any) => seat.rezervace === null)
+      );
 
-        // fill red also full tables
-        Object.keys(tables).forEach((table) => {
-          if (parseInt(table) <= 115 || parseInt(table) >= 128) {
-            if (tables[table] === 4) {
-              const tableElement = document.getElementById(`${table}/S`);
-              if (tableElement) {
-                tableElement.setAttribute("fill", "red");
-              }
-            }
-          } else {
-            if (tables[table] === 2) {
-              const tableElement = document.getElementById(`${table}/S`);
-              if (tableElement) {
-                tableElement.setAttribute("fill", "red");
-              }
+      const takenSeats = response.data.seats
+        .filter((item: any) => item.rezervace !== null)
+        .map((item: any) => item.alias);
+
+      const tables: { [key: string]: number } = {};
+      takenSeats.forEach((takenSeat: any) => {
+        const [table, seat] = takenSeat.split('/');
+        tables[table] = (tables[table] || 0) + 1;
+        const element = document.getElementById(takenSeat);
+        if (element) {
+          element.setAttribute('fill', 'red');
+        }
+      });
+
+      // Fill red also full tables
+      Object.keys(tables).forEach((table) => {
+        if (parseInt(table) <= 115 || parseInt(table) >= 128) {
+          if (tables[table] === 4) {
+            const tableElement = document.getElementById(`${table}/S`);
+            if (tableElement) {
+              tableElement.setAttribute('fill', 'red');
             }
           }
-        });
-      },
-      (error) => {
-        console.log(error);
-      }
-    );
+        } else {
+          if (tables[table] === 2) {
+            const tableElement = document.getElementById(`${table}/S`);
+            if (tableElement) {
+              tableElement.setAttribute('fill', 'red');
+            }
+          }
+        }
+      });
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   // NEW RESERVATION
   const [selectedStand, setSelectedStand] = useState(0);
   const [selectedSeats, setSelectedSeats] = useState<Seats[]>();
 
-  const handleSubmitNewReservation = (
+  const handleSubmitNewReservation = async (
     event: React.FormEvent<HTMLFormElement>
   ) => {
     event.preventDefault();
@@ -185,28 +178,28 @@ const Reservations = () => {
     }
 
     const seatsIds = selectedSeats?.map((seat) => seat.id);
-    seatsIds?.toString().replace(" ", "");
+    const formattedSeatsIds = seatsIds?.toString().replace(' ', '');
 
-    axios({
-      method: "post",
-      url: `https://rezervacesutb.wz.cz/index.php/api/reservations`,
-      headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
-      data: {
-        stand: `${selectedStand}`,
-        seats: `[${seatsIds}]`,
-        note: `rezerva pre UTB`,
-      },
-    }).then(
-      (response) => {
-        setSelectedSeats([]);
-        setSelectedStand(0);
-        getAllReservations();
-        showSuccessReservation();
-      },
-      (error) => {
-        console.log(error);
-      }
-    );
+    try {
+      const response = await api.post(
+        '/reservations',
+        {
+          stand: `${selectedStand}`,
+          seats: `[${formattedSeatsIds}]`,
+        },
+        {
+          headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
+        }
+      );
+
+      showSuccessReservation();
+    } catch (error) {
+      console.log(error);
+    } finally {
+      setSelectedSeats([]);
+      setSelectedStand(0);
+      await getAllReservations();
+    }
   };
 
   const handleIncrementStands = () => {
@@ -300,23 +293,23 @@ const Reservations = () => {
                 selectedValues={selectedSeats}
                 style={{
                   inputField: {
-                    color: "white",
-                    borderRadius: "20px !important",
+                    color: 'white',
+                    borderRadius: '20px !important',
                   },
                   searchBox: {
-                    color: "yellow",
-                    maxWidth: "360px",
+                    color: 'yellow',
+                    maxWidth: '360px',
                   },
                   chips: {
-                    background: "#171547",
-                    color: "white",
-                    fontSize: "18px",
-                    padding: "0.5em",
+                    background: '#171547',
+                    color: 'white',
+                    fontSize: '18px',
+                    padding: '0.5em',
                   },
                   option: {
-                    color: "#171547",
-                    fontSize: "14px",
-                    fontWeight: "bold",
+                    color: '#171547',
+                    fontSize: '14px',
+                    fontWeight: 'bold',
                   },
                 }}
                 displayValue='alias'
