@@ -5,7 +5,10 @@ function Footer() {
     <FooterWrapper>
       <ContentWrapper>
         <LogoText>
-          Vytvořila <a href='https://sunovy.utb.cz/'>Studentská Unie UTB</a>
+          Vytvořila{' '}
+          <a href='https://su.utb.cz/' target='_blank'>
+            Studentská Unie UTB
+          </a>
         </LogoText>
       </ContentWrapper>
     </FooterWrapper>

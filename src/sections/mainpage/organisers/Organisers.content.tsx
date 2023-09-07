@@ -10,7 +10,7 @@ export const organisers: OrganiserItem[] = [
   },
   {
     name: 'SU UTB Zlin',
-    link: 'https://sunovy.utb.cz/',
+    link: 'https://su.utb.cz/',
     imgSrc: `${su}`,
   },
 ];
