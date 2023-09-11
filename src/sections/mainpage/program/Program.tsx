@@ -20,22 +20,22 @@ const Program = () => {
 
     return () => {
       window.removeEventListener('scroll', () =>
-        revealFrom('.reveal-left', 100)
+        revealFrom('.reveal-left', 100),
       );
       window.removeEventListener('scroll', () =>
-        revealFrom('.reveal-right', 100)
+        revealFrom('.reveal-right', 100),
       );
       window.removeEventListener('scroll', () =>
-        revealFrom('.reveal-program', 50)
+        revealFrom('.reveal-program', 50),
       );
     };
   }, []);
 
   return (
     <>
-      <WrapperSection centered id='program'>
-        <ProgramHeadline className='reveal-program'>Program</ProgramHeadline>
-        <Moderator className='reveal-program'>
+      <WrapperSection centered id="program">
+        <ProgramHeadline className="reveal-program">Program</ProgramHeadline>
+        <Moderator className="reveal-program">
           Celým večerem vás provede moderátorka <strong>Lucie Borhyová.</strong>
         </Moderator>
         <br />
@@ -44,15 +44,15 @@ const Program = () => {
             <div key={index}>
               {item.time !== '' && <br />}
               <Row>
-                <Time className='reveal-left'>{item.time}</Time>
+                <Time className="reveal-left">{item.time}</Time>
                 {item.time !== '' ? (
                   <strong>
-                    <Activity className='reveal-right'>
+                    <Activity className="reveal-right">
                       {item.activity}
                     </Activity>
                   </strong>
                 ) : (
-                  <Activity className='reveal-right'>{item.activity}</Activity>
+                  <Activity className="reveal-right">{item.activity}</Activity>
                 )}
               </Row>
             </div>

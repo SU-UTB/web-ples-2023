@@ -19,5 +19,5 @@ export const StyledImgWrapper = styled.img<{
     @media screen and (${theme.breakpoints.lteTabletQuery}) {
       width: 70%;
     }
-  `
+  `,
 );

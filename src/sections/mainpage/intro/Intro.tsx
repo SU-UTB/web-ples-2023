@@ -17,21 +17,21 @@ const Intro = () => {
 
     return () => {
       window.removeEventListener('scroll', () =>
-        revealFrom('.reveal-img', 500)
+        revealFrom('.reveal-img', 500),
       );
     };
   }, []);
 
   return (
-    <WrapperSection id='oplese'>
+    <WrapperSection id="oplese">
       <WrapperHalf>
-        <WrapperCentered className='reveal-img'>
-          <StyledImg src={dress} alt='šaty' />
+        <WrapperCentered className="reveal-img">
+          <StyledImg src={dress} alt="šaty" />
         </WrapperCentered>
       </WrapperHalf>
       <WrapperHalf>
         <WrapperCentered>
-          <Headline align='left'>O plese</Headline>
+          <Headline align="left">O plese</Headline>
           <Paragraph>
             Srdečně vás zveme na již XXI. ročník Reprezentačního plesu
             Univerzity Tomáše Bati ve Zlíně. Jako každý rok se ples ponese v
@@ -39,9 +39,9 @@ const Intro = () => {
             se můžeme na krásnou zimní atmosféru a večer plný elegance a dobré
             zábavy. Aktuální dění a novinky můžete sledovat na {''}
             <Link
-              href='https://www.facebook.com/events/524426676284645'
-              rel='noopener noreferrer'
-              target='_blank'
+              href="https://www.facebook.com/events/524426676284645"
+              rel="noopener noreferrer"
+              target="_blank"
             >
               Facebookové události.
             </Link>
@@ -49,7 +49,7 @@ const Intro = () => {
           <br />
           <br />
           <br />
-          <Headline align='left'>Dress code</Headline>
+          <Headline align="left">Dress code</Headline>
           <Paragraph>
             Letošní téma nabízí spoustu možností pro váš dresscode. Ať už
             zvolíte modrou, bílou, fialovou, stříbrnou nebo šedivou barvu,

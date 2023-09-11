@@ -15,7 +15,7 @@ const Paragraph: React.FC<ParagraphInterface> = ({
 }) => {
   return (
     <ParagraphWrapper
-      className='reveal'
+      className="reveal"
       colorMode={colorMode}
       align={align}
       program={program}

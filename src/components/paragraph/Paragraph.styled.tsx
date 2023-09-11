@@ -29,5 +29,5 @@ export const ParagraphWrapper = styled.p<{
     @media screen and (${theme.breakpoints.mobileQuery}) {
       font-size: ${theme.fontSizeElements.paragraphMobile}px;
     }
-  `
+  `,
 );

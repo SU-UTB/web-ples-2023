@@ -135,7 +135,7 @@ const MainPage = () => {
         <Navbar />
         <Snowing />
         <Prime />
-        <Countdown endTime='2023-03-03T19:00:00' />
+        <Countdown endTime="2023-03-03T19:00:00" />
         <Intro />
         <Program />
         <Tickets />

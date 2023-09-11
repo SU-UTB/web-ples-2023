@@ -37,5 +37,5 @@ export const HeadlineWrapper = styled.span<{
         ? `${theme.fontSizeElements.paragraphMobile}px`
         : `${theme.fontSizeElements.h3}px`};
     }
-  `
+  `,
 );

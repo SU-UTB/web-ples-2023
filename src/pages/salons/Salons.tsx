@@ -29,6 +29,7 @@ import {
   showSuccessReservation,
 } from '../../sections/reservations/swalFunctions';
 import { Oval } from 'react-loader-spinner';
+import { api } from '../../api/api';
 
 interface Maker {
   id: number;
@@ -68,29 +69,22 @@ const Salons = () => {
   const [allMakers, setAllMakers] = useState(initialAllMakers);
   const [availableTimes, setAvailableTimes] = useState(new Array<string>());
   const [availableServices, setAvailableServices] = useState(
-    new Array<string>()
+    new Array<string>(),
   );
 
   useEffect(() => {
     getAllMakers();
   }, []);
 
-  const getAllMakers = () => {
-    axios({
-      method: 'get',
-      url: `https://rezervacesutb.wz.cz/api/makers`,
-      headers: {
-        'Content-Type': 'Application/json',
-      },
-    }).then(
-      (response) => {
-        setAllMakers(response.data);
-        setIsLoading(false);
-      },
-      (error) => {
-        console.log(error);
-      }
-    );
+  const getAllMakers = async () => {
+    try {
+      const response = await api.get('makers');
+      setAllMakers(response.data);
+    } catch (error) {
+      console.log(error);
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   useEffect(() => {
@@ -150,7 +144,7 @@ const Salons = () => {
   function onChangeTimes() {
     // I just love javascript, oh gawd this motherfookin cast shit...
     let availableMakerTimes = Array.from(
-      new Map(Object.entries(allMakers.availableTimes))
+      new Map(Object.entries(allMakers.availableTimes)),
     )
       .map((entry) => {
         if (entry[1].includes(Number.parseInt(maker.toString()))) {
@@ -202,7 +196,7 @@ const Salons = () => {
           showAlreadyReservedError(error.response.data.error);
         }
         setIsLoading(false);
-      }
+      },
     );
   };
 
@@ -243,7 +237,7 @@ const Salons = () => {
         <>
           {isLoading ? (
             <>
-              <Oval color='white' secondaryColor='lightblue' width='80%' />
+              <Oval color="white" secondaryColor="lightblue" width="80%" />
               <FooterSU style={{ position: 'fixed' }}>
                 Rezervační systém SU UTB
               </FooterSU>
@@ -254,9 +248,9 @@ const Salons = () => {
                 <RowWrapper>
                   <Label>Kadeřnice/kosmetička</Label>
                   <FormSelect
-                    id='maker'
-                    placeholder='Obsluha'
-                    name='maker'
+                    id="maker"
+                    placeholder="Obsluha"
+                    name="maker"
                     onChange={onChangeMaker}
                     value={maker}
                   >
@@ -271,9 +265,9 @@ const Salons = () => {
                 <RowWrapper>
                   <Label>Čas rezervace</Label>
                   <FormSelect
-                    id='time'
-                    placeholder='Čas'
-                    name='time'
+                    id="time"
+                    placeholder="Čas"
+                    name="time"
                     onChange={onChangeTime}
                     value={time}
                   >
@@ -291,9 +285,9 @@ const Salons = () => {
                 <RowWrapper>
                   <Label>Služba </Label>
                   <FormSelect
-                    id='service'
-                    placeholder='Služna'
-                    name='service'
+                    id="service"
+                    placeholder="Služna"
+                    name="service"
                     onChange={onChangeService}
                     value={service}
                   >
@@ -310,10 +304,11 @@ const Salons = () => {
                 <RowWrapper>
                   <Label>Jméno</Label>
                   <FormInput
-                    type='text'
-                    id='name'
-                    placeholder='Jméno'
-                    name='name'
+                    type="text"
+                    id="name"
+                    placeholder="Jméno"
+                    name="name"
+
                     onChange={onChangeName}
                     value={name}
                     required
@@ -323,10 +318,10 @@ const Salons = () => {
                 <RowWrapper>
                   <Label>Telefon</Label>
                   <FormInput
-                    type='phone'
-                    id='phone'
-                    placeholder='Telefon'
-                    name='phone'
+                    type="phone"
+                    id="phone"
+                    placeholder="Telefon"
+                    name="phone"
                     onChange={onChangePhone}
                     value={phone}
                     required
@@ -336,10 +331,10 @@ const Salons = () => {
                 <RowWrapper>
                   <Label>Email</Label>
                   <FormInput
-                    type='email'
-                    id='email'
-                    placeholder='Email'
-                    name='email'
+                    type="email"
+                    id="email"
+                    placeholder="Email"
+                    name="email"
                     onChange={onChangeEmail}
                     value={email}
                     required
@@ -351,16 +346,17 @@ const Salons = () => {
                   Souhlasím se zpracováním osobních údajů
                 </SalonsConsent>
                 <FormCheckbox
-                  type='checkbox'
-                  id='consent'
-                  name='consent'
+                  type="checkbox"
+                  id="consent"
+                  name="consent"
                   onChange={onChangeConsent}
                   checked={consent}
                   required
                 />
                 <Spacer />
 
-                <ButtonSubmit type='submit'>Vytvořit rezervaci</ButtonSubmit>
+                <ButtonSubmit type="submit">Vytvořit rezervaci</ButtonSubmit>
+
               </FormWrapper>
               <FooterSU>Rezervační systém SU UTB</FooterSU>
             </>
