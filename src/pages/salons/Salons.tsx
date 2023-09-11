@@ -308,6 +308,7 @@ const Salons = () => {
                     id="name"
                     placeholder="Jméno"
                     name="name"
+
                     onChange={onChangeName}
                     value={name}
                     required
@@ -355,6 +356,7 @@ const Salons = () => {
                 <Spacer />
 
                 <ButtonSubmit type="submit">Vytvořit rezervaci</ButtonSubmit>
+
               </FormWrapper>
               <FooterSU>Rezervační systém SU UTB</FooterSU>
             </>
