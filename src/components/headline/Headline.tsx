@@ -14,7 +14,7 @@ const Headline: React.FC<HeadlineInterface> = ({
   children,
 }) => {
   return (
-    <HeadlineWrapper className='reveal' color={color} align={align} card={card}>
+    <HeadlineWrapper className="reveal" color={color} align={align} card={card}>
       {children}
     </HeadlineWrapper>
   );

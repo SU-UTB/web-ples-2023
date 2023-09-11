@@ -1,9 +1,9 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState } from 'react';
 import {
   CountdownItem,
   CountdownNumber,
   CountdownWrapper,
-} from "./Countdown.styled";
+} from './Countdown.styled';
 
 interface CountdownProps {
   endTime: string;
@@ -27,7 +27,7 @@ const Countdown = ({ endTime }: CountdownProps) => {
 
   const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
   const hours = Math.floor(
-    (timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+    (timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60),
   );
   const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
 

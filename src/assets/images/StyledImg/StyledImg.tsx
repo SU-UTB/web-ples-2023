@@ -1,4 +1,4 @@
-import { StyledImgWrapper } from "./StyledImg.styled";
+import { StyledImgWrapper } from './StyledImg.styled';
 
 interface StyledImgInterface {
   mirrored?: boolean;

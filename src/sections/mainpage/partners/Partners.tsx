@@ -11,16 +11,16 @@ import {
 
 const Partners = () => {
   return (
-    <WrapperSection centered id='partneri'>
-      <Headline color='black'>Generální partner</Headline>
-      <GeneralPartnerLogo className='reveal reveal-slow'>
-        <PartnerImg src={flyUnited} alt='Fly United' />
+    <WrapperSection centered id="partneri">
+      <Headline color="black">Generální partner</Headline>
+      <GeneralPartnerLogo className="reveal reveal-slow">
+        <PartnerImg src={flyUnited} alt="Fly United" />
       </GeneralPartnerLogo>
 
-      <Headline color='black'>Hlavní partneři</Headline>
+      <Headline color="black">Hlavní partneři</Headline>
       <PartnerWrapper>
         {mainPartners.map((item, index) => (
-          <PartnerLogo key={index} className='reveal reveal-slow'>
+          <PartnerLogo key={index} className="reveal reveal-slow">
             <PartnerImg src={item.logoSrc} alt={item.name} />
           </PartnerLogo>
         ))}
@@ -28,10 +28,10 @@ const Partners = () => {
       <br />
       <br />
 
-      <Headline color='black'>Partneři</Headline>
+      <Headline color="black">Partneři</Headline>
       <PartnerWrapper>
         {partners.map((item, index) => (
-          <PartnerLogo key={index} className='reveal reveal-slow'>
+          <PartnerLogo key={index} className="reveal reveal-slow">
             <PartnerImg src={item.logoSrc} alt={item.name} />
           </PartnerLogo>
         ))}

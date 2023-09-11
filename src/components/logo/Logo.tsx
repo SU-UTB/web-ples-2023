@@ -1,5 +1,5 @@
-import logo from "../../assets/images/logos/plesLogo.svg";
-import { Link, WrapperLogo } from "./Logo.styled";
+import logo from '../../assets/images/logos/plesLogo.svg';
+import { Link, WrapperLogo } from './Logo.styled';
 
 const Logo = () => {
   return (

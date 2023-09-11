@@ -62,5 +62,5 @@ export const ContactAction = styled.a<{
     @media screen and (${theme.breakpoints.gteDesktopLgQuery}) {
       color: ${theme.colors.primary};
     }
-  `
+  `,
 );

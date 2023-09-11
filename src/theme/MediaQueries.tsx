@@ -1,6 +1,6 @@
-import { ReactElement } from "react";
-import { useMediaQuery } from "react-responsive";
-import theme from "./theme";
+import { ReactElement } from 'react';
+import { useMediaQuery } from 'react-responsive';
+import theme from './theme';
 
 /*
 lt < (less than)

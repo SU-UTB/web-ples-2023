@@ -9,9 +9,9 @@ const CookieConsent = () => {
 
   return (
     <Consent
-      location='bottom'
-      buttonText='Rozumím'
-      cookieName='cookie-consent'
+      location="bottom"
+      buttonText="Rozumím"
+      cookieName="cookie-consent"
       style={{
         fontSize: `${LteTabletCheck() ? '12px' : '14px'}`,
         background: `${theme.colors.dark}`,
